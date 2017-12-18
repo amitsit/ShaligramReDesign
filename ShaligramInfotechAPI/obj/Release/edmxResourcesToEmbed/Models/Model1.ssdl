@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShaligramConsultancyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CityList">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactUsEnquiry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="Phone" Type="varchar" MaxLength="200" />
+    <Property Name="City" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="InquiryDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InquiryFor" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rupees" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMI" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ShaligramConsultancyModelStoreContainer">
+    <EntitySet Name="CityList" EntityType="Self.CityList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactUsEnquiry" EntityType="Self.ContactUsEnquiry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InquiryDetails" EntityType="Self.InquiryDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

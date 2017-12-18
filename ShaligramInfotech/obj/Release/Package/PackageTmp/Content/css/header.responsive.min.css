@@ -1,0 +1,33 @@
+@media (max-width:1199px) {
+	.mainHeader .navbar-nav { width:100%; text-align:center; margin:0; }
+	.mainHeader .navbar-nav > li { float:none; display:inline-block; }
+	.navbar-nav > li { position:static; }
+	.subMenu { width:530px; left:0; }
+	.subMenu.fourColumn { right:0; min-width:980px; }
+	.subMenu > li { width:235px; }
+}
+@media (max-width:991px) {
+	#navbar > .nav > li > a { padding-left:5px; padding-right:13px; }
+	.subMenu.fourColumn, .subMenu.threeColumn { min-width:740px; }
+	.subMenu > li { width:235px; }
+}
+@media (max-width:767px) {
+	.navbar-default { background:#fff; }
+	.top-nav .navbar-nav { float:left; width:auto; margin:0; }
+	.top-nav .navbar-nav li { float:left; width:auto; }
+	.mainHeader .navbar-nav > li { width:100%; text-align:left; }
+	.mainHeader .navbar-nav > li > a { padding-left:0; padding-right:0; }
+	footer { text-align:center; }
+	footer h6 { margin:15px 0; }
+	.separater { border-right:none; border-bottom:solid 1px #ccc; }
+	#MainBanner .carousel-caption h1 { font-size:25px; }
+	#navbar { max-height:301px; }
+	.subMenu { position:relative; min-width:0 !important; opacity:1; z-index:9; visibility:visible; display:none; transform:none; transition:none; border-radius:0; border-width:2px; }
+	.subMenu > li { width:100%; text-align:left; padding:0 0 15px; }
+	.subMenu li h4 { border:none; margin-bottom:0; }
+	#navbar > .nav > li > a { padding-left:0; }
+}
+@media (max-width:639px) {
+	.top-nav .navbar-nav.pull-right { float:left !important; width:100%; }
+	.top-nav .navbar-nav > li > a { padding-left:0; }
+}

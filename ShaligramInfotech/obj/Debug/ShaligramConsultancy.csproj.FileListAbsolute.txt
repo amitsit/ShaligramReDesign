@@ -1,0 +1,269 @@
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\ApplicationInsights.config
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\csc.exe
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\System.Collections.Immutable.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\System.Reflection.Metadata.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\vbc.exe
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe.config
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll.config
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\App.ShaligramConsultancy.pdb
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Antlr3.Runtime.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Web.Infrastructure.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Newtonsoft.Json.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Owin.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Helpers.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Mvc.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Optimization.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Razor.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Razor.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\WebGrease.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Antlr3.Runtime.pdb
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\Newtonsoft.Json.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Helpers.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Mvc.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Optimization.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Razor.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Razor.xml
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.dll
+C:\Apexa Thakor\Practicals\SC\ShaligramConsultancy\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.pdb
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\ApplicationInsights.config
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\csc.exe
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\vbc.exe
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll.config
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\App.ShaligramConsultancy.pdb
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Antlr3.Runtime.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Newtonsoft.Json.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Owin.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Helpers.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Mvc.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Optimization.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Razor.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Razor.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\WebGrease.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Antlr3.Runtime.pdb
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\Newtonsoft.Json.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Helpers.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Mvc.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Optimization.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.Razor.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\bin\System.Web.WebPages.Razor.xml
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\obj\Debug\ShaligramConsultancy.csprojResolveAssemblyReference.cache
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.dll
+E:\Projects\ShaligramConsultancy\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.pdb
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\ApplicationInsights.config
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\csc.exe
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\vbc.exe
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll.config
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.pdb
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Antlr3.Runtime.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Newtonsoft.Json.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Owin.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Helpers.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Mvc.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Optimization.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Razor.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Razor.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\WebGrease.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Antlr3.Runtime.pdb
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Newtonsoft.Json.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Helpers.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Mvc.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Optimization.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Razor.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Razor.xml
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\ShaligramConsultancy.csprojResolveAssemblyReference.cache
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.dll
+C:\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.pdb
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\ApplicationInsights.config
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\csc.exe
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\System.Collections.Immutable.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\System.Reflection.Metadata.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\vbc.exe
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe.config
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll.config
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.pdb
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Antlr3.Runtime.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Web.Infrastructure.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Newtonsoft.Json.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Owin.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Helpers.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Mvc.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Optimization.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Razor.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Razor.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\WebGrease.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Antlr3.Runtime.pdb
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Newtonsoft.Json.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Helpers.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Mvc.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Optimization.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Razor.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Razor.xml
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\ShaligramConsultancy.csprojResolveAssemblyReference.cache
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.dll
+C:\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.pdb
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\ApplicationInsights.config
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\csc.exe
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\System.Collections.Immutable.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\System.Reflection.Metadata.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\vbc.exe
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\roslyn\VBCSCompiler.exe.config
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll.config
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\App.ShaligramConsultancy.pdb
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Antlr3.Runtime.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Web.Infrastructure.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Newtonsoft.Json.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Owin.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Helpers.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Mvc.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Optimization.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Razor.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Razor.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\WebGrease.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Antlr3.Runtime.pdb
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\Newtonsoft.Json.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Helpers.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Mvc.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Optimization.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.Razor.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Deployment.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\bin\System.Web.WebPages.Razor.xml
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\ShaligramConsultancy.csprojResolveAssemblyReference.cache
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.dll
+D:\Mansi Data\Projects\ShaligramConsultancy\trunk\ShaligramConsultancy\obj\Debug\App.ShaligramConsultancy.pdb

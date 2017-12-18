@@ -1,0 +1,197 @@
+﻿@{
+    PageData["keyword"] = "Contact Shaligram Consultancy";
+    PageData["description"] = "We love to hear from you, all you need to run your firm, with half the effort, free, easy and smart.";
+}
+
+<section class="page-banner pt-0 pb-0">
+    <div id="map"></div>
+</section>
+
+<div class="loader img" style="display:none">
+    <p><img src="./Images/Spinner.gif" style="height:100px; width:100px"></p>
+</div>
+
+
+<div class="clearfix"></div>
+
+<section class="white-bg contact-us pt-30 pb-30">
+    <div class="container">
+        <div class="row">
+            <h2 class="pageHeading text-center pt-0 mb-10 mt-30">We'd love to hear from you!</h2>
+            <div class="col-sm-6">
+                <h4 class="pb-10"><i class="fa fa-map-marker"></i> India</h4>
+                <span class="address">Shaligram House, Behind Rajpath Club,</span>
+                <span class="address">Off. S.G. Road, Bodakdev</span>
+                <span class="address">Ahmedabad-380059, India</span>
+                <h4 class="pb-10 pt-30">Work with Us</h4>
+                <a href="mailto:info@shaligramconsultancy.com" class="pb-30">info@shaligramconsultancy.com</a>
+
+                <h4 class="pb-10 pt-10">Talk To An Expert</h4>
+                <a href="tel:07929702400" class="pb-10">07929702400</a>
+                <div class="clearfix"></div>
+                <a href="tel:07929702500">07929702500</a>
+
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="service-form">
+                    <form name="contactUsForm">
+                        <div class="sidebar-form">
+                            <div class="input-field">
+                                <i class="fa fa-user"></i>
+                                <input class="form-input" type="text" placeholder="Name" ng-model="ContactUs.Name" maxlength="40" required/>
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-envelope"></i>
+                                <input class="form-input" type="email" placeholder="Email" ng-model="ContactUs.Email" maxlength="50" required/>
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-phone"></i>
+                                <input class="form-input" type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || (event.charCode === 0)"  placeholder="Phone" ng-model="ContactUs.Phone"  maxlength="12" required/>
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-building-o"></i>
+                                <input class="form-input" type="text" placeholder="City" ng-model="ContactUs.City" maxlength="40" required=""/>
+                            </div>
+                            @*<div class="input-field">
+                                <div class="dropdown select-city">
+                                    <i class="fa fa-building-o"></i>
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Select City*
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#" ng-repeat="testData in cityList">{{testData.CityName}}</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>*@
+                            
+                            
+                            @*<div class="input-field">
+                                <div class="dropdown select-city">
+                                    <select class="form-control">
+                                        <option ng-repeat="testData in cityList" value="{{testData.CityId}}" ng-model="City">{{testData.CityName}}</option>
+                                    </select>
+                                </div>
+                            </div>*@
+
+                            @*<div class="input-field">
+                                <div class="dropdown account">
+                                    <i class="fa fa-book"></i>
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Accounting And Book Keeping
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>*@
+                            <div class="input-field">
+                                <input type="submit" value="Get Started" class="btn" ng-click="SaveContactUs(contactUsForm)"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs0LY5vEDZM87Fp0f4mRyLsANzWmvE9c0&callback=initMap"> </script>
+<script>
+    	function initMap() {
+    		var uluru = {lat: 23.038035, lng: 72.507588};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			    zoom: 15,
+			    center: uluru
+			});
+			var marker = new google.maps.Marker({
+			  	position: uluru,
+			  	map: map
+			});
+		}
+</script>
+@*<script type="text/javascript">
+    $(document).ready(function() {
+        var stickyOffset = $('.navbar').offset().top;
+        $(window).scroll(function() {
+            var sticky = $('.navbar'),
+                scroll = $(window).scrollTop();
+            if (scroll >= stickyOffset) sticky.addClass('navbar-fixed-top');
+            else sticky.removeClass('navbar-fixed-top');
+        });
+
+        if($(window).width() < 767)
+        {
+            $("#navbar .nav li").click(function() {
+                $(this).children(".subMenu").slideToggle();
+                //$("#navbar .nav li .fa").toggleClass("fa-angle-down fa-angle-up");
+            });
+        }
+
+        $(".navbar-toggle").click(function() {
+            $(this).toggleClass("open");
+        });
+
+        $('#mediaSlider').carousel({
+            interval: false
+        });
+
+        var clickEvent = false;
+        $('#mediaSlider').on('click', '.nav a', function() {
+            clickEvent = true;
+            $('.nav li').removeClass('active');
+            $(this).parent().addClass('active');
+        }).on('slid.bs.carousel', function(e) {
+            if (!clickEvent) {
+                var count = $('.nav').children().length - 1;
+                var current = $('.nav li.active');
+                current.removeClass('active').next().addClass('active');
+                var id = parseInt(current.data('slide-to'));
+                if (count == id) {
+                    $('.nav li').first().addClass('active');
+                }
+            }
+            clickEvent = false;
+        });
+
+        //right side fixed form will move -->
+        var windw = this;
+        $.fn.followTo = function(elem) {
+            var $this = this,
+                $window = $(windw),
+                $bumper = $(elem),
+                bumperPos = $bumper.offset().top,
+                thisHeight = $this.outerHeight(),
+                setPosition = function() {
+                    if ($window.scrollTop() > (bumperPos - thisHeight)) {
+                        $this.css({
+                            position: 'absolute',
+                            top: (bumperPos - thisHeight)
+                        });
+                    } else {
+                        $this.css({
+                            position: 'fixed',
+                            top: 0
+                        });
+                    }
+                };
+            $window.resize(function() {
+                bumperPos = pos.offset().top;
+                thisHeight = $this.outerHeight();
+                setPosition();
+            });
+            $window.scroll(setPosition);
+            setPosition();
+        };
+        $('#one').followTo('#two');
+    });
+</script>*@
