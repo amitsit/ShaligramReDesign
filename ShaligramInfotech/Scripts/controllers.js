@@ -62,43 +62,43 @@ angular.module('app.controllers', [])
      $scope.$root.title = 'Contact Us-Shaligram Consultancy';
      $scope.$on('$viewContentLoaded', function () {
          $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
-     });
+     })
 
      $scope.SaveContactUs = function (form) {
-         
-            if (form.$valid) {
-                $scope.allData = new Object();
-                $scope.allData.Name = $scope.ContactUs.Name;
-                $scope.allData.Phone = $scope.ContactUs.Phone;
-                $scope.allData.Email = $scope.ContactUs.Email;
-                $scope.allData.City = $scope.ContactUs.City;
-                $('.loader').show();
-                $http.post("ShaligramConsultancyApi/api/CommonApi/SaveContactUSInformation", $scope.allData)
-                    .then(function (response) {
-                        if (response) {
-                            form.$submitted = false;
-                            //toastr.success("Request Send Successfully");
-                            $("#myModal").modal('show');
-                            
-                            //$scope.ContactUs = new Object();
 
-                            //$scope.ContactUs.Name = new Object();
-                            //$scope.ContactUs.Phone = new Object();
-                            //$scope.ContactUs.Email = new Object();
-                            //$scope.ContactUs.City = new Object();
+         if (form.$valid) {
+             $scope.allData = new Object();
+             $scope.allData.Name = $scope.ContactUs.Name;
+             $scope.allData.Phone = $scope.ContactUs.Phone;
+             $scope.allData.Email = $scope.ContactUs.Email;
+             $scope.allData.City = $scope.ContactUs.City;
+             $('.loader').show();
+             $http.post("ShaligramConsultancyApi/api/CommonApi/SaveContactUSInformation", $scope.allData)
+                 .then(function (response) {
+                     if (response) {
+                         form.$submitted = false;
+                         //toastr.success("Request Send Successfully");
+                         $("#myModal").modal('show');
 
-                            //alert('success');
-                        } else {
-                            //alert('error');
-                        }
-                        $('.loader').hide();
-                    })
-                    .catch(function (response) {
-                        $('.loader').hide();
-                    });
-            }
-        };
-     
+                         //$scope.ContactUs = new Object();
+
+                         //$scope.ContactUs.Name = new Object();
+                         //$scope.ContactUs.Phone = new Object();
+                         //$scope.ContactUs.Email = new Object();
+                         //$scope.ContactUs.City = new Object();
+
+                         //alert('success');
+                     } else {
+                         //alert('error');
+                     }
+                     $('.loader').hide();
+                 })
+                 .catch(function (response) {
+                     $('.loader').hide();
+                 });
+         }
+     };
+
 
  })
 .controller('ProprietorshipCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
@@ -613,7 +613,7 @@ angular.module('app.controllers', [])
     }])
         .controller('CommonController', function ($scope, $location, $window, $rootScope, $http, toastr) {
 
-            $scope.pageReload = function() {
+            $scope.pageReload = function () {
                 $window.location.reload();
             }
 
@@ -636,7 +636,7 @@ angular.module('app.controllers', [])
                             if (response) {
                                 $('.loader').hide();
                                 $("#myModal").modal('show');
-                               // toastr.success("Inquiry Send Successfully");
+                                // toastr.success("Inquiry Send Successfully");
                                 $scope.Name = "";
                                 $scope.Phone = "";
                                 $scope.Email = "";

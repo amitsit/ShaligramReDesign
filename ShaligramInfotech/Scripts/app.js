@@ -350,6 +350,21 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                 templateUrl: '/views/SCPages/share-purchase-agreement',
                 controller: 'SharePurchaseAgreementCtrl'
             })
+            .state('application-development', {
+                url: '/application-development',
+                templateUrl: '/views/SCPages/application-development',
+                controller: 'ApplicationDevelopmentCtrl'
+            })
+            .state('sharepoint', {
+                url: '/sharepoint',
+                templateUrl: '/views/SCPages/sharepoint',
+                controller: 'SharepointCtrl'
+            })
+            .state('java', {
+                url: '/java',
+                templateUrl: '/views/SCPages/java',
+                controller: 'JavaCtrl'
+            })
             .state('otherwise', {
                 url: '*path',
                 templateUrl: '/views/404',

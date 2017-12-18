@@ -6,7 +6,9 @@
     padding: 0;
 }
 
-body { font-family: "Lato", Arial, Helvetica, sans-serif }
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+}
 
 /*body {
     float: left;
@@ -26,7 +28,7 @@ body { font-family: "Lato", Arial, Helvetica, sans-serif }
     padding: 0;
 }*/
 
-    /*p + p {
+/*p + p {
         margin-top: 30px;
     }*/
 
@@ -1559,6 +1561,8 @@ input[type=number]::-webkit-outer-spin-button {
         width: 100%;
         text-align: center;
     }
+
+    .bground { width: 100%; padding-left: 0; padding-right: 0 }
 }
 
 
@@ -1937,7 +1941,7 @@ label.addhead {
 
 
 @media(max-width:767px) {
-      .aboutbody {
+    .aboutbody {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 100% 100%;
@@ -1988,15 +1992,15 @@ label.addhead {
     }
 
 
-#page-wrap strong {
-    font-style: italic;
-    font-size: xx-large;
-    color: #215DA9;
-    text-shadow: 1px 1px 2px #F58634,0 0 25px gray;
-}
+    #page-wrap strong {
+        font-style: italic;
+        font-size: xx-large;
+        color: #215DA9;
+        text-shadow: 1px 1px 2px #F58634,0 0 25px gray;
+    }
 
 @media(max-width:767px) {
-     #page-wrap {
+    #page-wrap {
         width: 100%;
         background-color: #fff;
         padding-left: 15px;
@@ -2006,7 +2010,7 @@ label.addhead {
 
 
 @media(max-width:480px) {
-     #page-wrap strong {
+    #page-wrap strong {
         color: #215da9;
         font-size: 25px;
         font-style: italic;
@@ -2026,7 +2030,7 @@ ul.who_we_are_content {
 }
 
 @media (max-width:378px) {
-     ul.who_we_are_content {
+    ul.who_we_are_content {
         font-size: 12px;
     }
 }
@@ -2044,10 +2048,11 @@ ul.who_we_are_content {
         color: #f58634;
     }
 
-    
+
 .shadow {
     box-shadow: none;
 }
+
 .panel {
     float: left;
 }
@@ -2062,27 +2067,31 @@ ul.who_we_are_content {
 @media(max-width:767px) {
     .smallpro {
         display: block;
-        border-bottom-width:thin;
+        border-bottom-width: thin;
         border-bottom-style: solid;
         border-bottom-color: #215DA9;
     }
+
     .procont {
         display: none;
     }
+
     .propic {
-        width:100%;
+        width: 100%;
         text-align: center;
     }
-    .propic > img {
-        width: 45%;
-        height: auto;
-        margin-bottom: 0;
-	
-    }
-    .line{
+
+        .propic > img {
+            width: 45%;
+            height: auto;
+            margin-bottom: 0;
+        }
+
+    .line {
         border: none;
     }
-    .pro1{
+
+    .pro1 {
         border: none;
     }
 }
@@ -2094,16 +2103,16 @@ ul.who_we_are_content {
 }
 
 
- /*.contact, .contactinfo, .contactpost {
+    /*.contact, .contactinfo, .contactpost {
         text-align: center;
         margin-top: 0;
     }*/
 
 
-.portfolio-item h3, .procont .contact, .scrum, .scrum li, .shaligram-panel, .tab-content {
-    width: 100%;
-    float: left;
-}
+    .portfolio-item h3, .procont .contact, .scrum, .scrum li, .shaligram-panel, .tab-content {
+        width: 100%;
+        float: left;
+    }
 
 
 .contact {
@@ -2119,4 +2128,37 @@ ul.who_we_are_content {
 }
 
 
+
+
+/*Application Development Page*/
+
+.pline {
+    text-align: justify;
+    margin-left: 30%;
+    padding-left: 50px;
+    line-height: 1.5;
+    border-left: 1px solid #215da9;
+    margin-bottom: 0;
+}
+
+    .pline + ul {
+        margin-left: 410px;
+    }
+
+.table_app .fa, .serv .fa, .list-icon .fa, .benifit_list .fa, .list2 .fa, .tech_service .fa {
+    color: #f58634;
+}
+
+#myTabContent .fa {
+    padding-right: 10px;
+}
+
+/*Application Development Page*/
+
+
+/*Sharepoint Page*/
+
+.aboutbody { -webkit-background-size: 100%; -moz-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; width: 100%; float: left; margin-bottom: 20px }
+
+/*Sharepoint Page*/
 

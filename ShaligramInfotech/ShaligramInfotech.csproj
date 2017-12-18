@@ -204,6 +204,7 @@
     <Content Include="Images\aboutUs.jpg" />
     <Content Include="Images\addDesignatedPartner.jpg" />
     <Content Include="Images\addDirector.jpg" />
+    <Content Include="Images\ApplicationDevelop.jpg" />
     <Content Include="Images\changeCompanyAddress.jpg" />
     <Content Include="Images\changeCompanyName.jpg" />
     <Content Include="Images\changeLlpAgreement.jpg" />
@@ -779,6 +780,7 @@
     <Content Include="Views\SCPages\term-sheet.cshtml" />
     <Content Include="Views\SCPages\shareholders-agreement.cshtml" />
     <Content Include="Views\SCPages\share-purchase-agreement.cshtml" />
+    <Content Include="Views\SCPages\application-development.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
