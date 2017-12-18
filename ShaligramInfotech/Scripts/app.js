@@ -39,6 +39,66 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                    templateUrl: '/views/SCPages/who-we-are',
                    controller: 'WhoWeAreCntrl'
                })
+            .state('infrastructure', {
+                url: '/infrastructure',
+                templateUrl: '/views/SCPages/infrastructure',
+                controller: 'InfrastructureCntrl'
+            })
+        .state('career', {
+            url: '/career',
+            templateUrl: '/views/SCPages/career',
+            controller: 'careerCntrl'
+        })
+             .state('development-process', {
+                 url: '/development-process',
+                 templateUrl: '/views/SCPages/development-process',
+                 controller: 'DevelopmentProcessCntrl'
+             })
+            .state('crm-solution', {
+                url: '/crm-solution',
+                templateUrl: '/views/SCPages/crm-solution',
+                controller: 'CrmSolutionCntrl'
+            })
+             .state('ecommerce-solution', {
+                 url: '/ecommerce-solution',
+                 templateUrl: '/views/SCPages/ecommerce-solution',
+                 controller: 'EcommerceSolutionCntrl'
+             })
+             .state('hrandjob-portal-solution', {
+                 url: '/hrandjob-portal-solution',
+                 templateUrl: '/views/SCPages/hrandjob-portal-solution',
+                 controller: 'hrandjobPortalSolutionCntrl'
+             })
+
+                .state('enterprise-content-management', {
+                    url: '/enterprise-content-management',
+                    templateUrl: '/views/SCPages/enterprise-content-management',
+                    controller: 'enterpriseContentManagementCntrl'
+                })
+
+                .state('live-chat-and-support', {
+                    url: '/live-chat-and-support',
+                    templateUrl: '/views/SCPages/live-chat-and-support',
+                    controller: 'liveChatAndSupportCntrl'
+                })
+
+            .state('angularjs-development', {
+                url: '/angularjs-development',
+                templateUrl: '/views/SCPages/angularjs-development',
+                controller: 'angularjsDevelopmentCntrl'
+            })
+
+             .state('ajax-development', {
+                 url: '/ajax-development',
+                 templateUrl: '/views/SCPages/ajax-development',
+                 controller: 'ajaxDevelopmentCntrl'
+             })
+
+             .state('html5-development', {
+                 url: '/html5-development',
+                 templateUrl: '/views/SCPages/html5-development',
+                 controller: 'html5DevelopmentCntrl'
+             })
 
              .state('about-us', {
                  url: '/about-us',

@@ -2120,3 +2120,65 @@ ul.who_we_are_content {
 
 
 
+/*==============---------------------Infrastructure page------------------============*/
+
+.row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.infracture_detail {
+    line-height: 27px;
+    padding-left: 0;
+}
+
+
+.infracture_detail li {
+    position: relative;
+    padding-left: 20px;
+}
+
+    .infracture_detail li .fa {
+        position: absolute;
+        left: 0px;
+        top: 7px;
+        color: #f58634;
+    }
+
+
+#query, thead tr {
+    background-color: #215da9;
+}
+
+
+#query h1, thead tr {
+    color: #fff;
+}
+
+
+/*================-----------------------------Crm page---------------======================*/
+.benifit_list {
+    padding-left: 0;
+}
+
+
+.table_app .fa, .serv .fa, .list-icon .fa, .benifit_list .fa, .list2 .fa, .tech_service .fa {
+    color: #f58634;
+}
+
+#myTabContent .fa {
+    padding-right: 10px;
+}
+
+/*====================-------------------------angular page-----------====================*/
+
+.aboutbody {
+    -webkit-background-size: 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}

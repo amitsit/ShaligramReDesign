@@ -22,6 +22,88 @@ angular.module('app.controllers', [])
         });
     }])
 
+    // Path: /about
+    .controller('InfrastructureCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Infrastructure | Application Management Service Provider | Application Management Service Provider USA';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     // Path: /about
+    .controller('careerCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Career | Carrer Objective | Carreres | Current Job Opening';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+      .controller('DevelopmentProcessCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+          $scope.$root.title = 'Shaligram Infotech Development Process | Embedded Software Development | Embedded Software Development Company USA';
+          $scope.$on('$viewContentLoaded', function () {
+              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+          });
+      }])
+
+        .controller('CrmSolutionCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+            $scope.$root.title = 'Shaligram Infotech CRM Solutions | CRM Solutions Provider | CRM Solutions Provider USA | CRM Solutions Provider UK';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+        }])
+
+
+       .controller('EcommerceSolutionCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+           $scope.$root.title = 'Shaligram Infotech Ecommerce Solution | Ecommerce Solution Provider USA | Ecommerce Solution Provider UK';
+           $scope.$on('$viewContentLoaded', function () {
+               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+           });
+       }])
+
+       .controller('hrandjobPortalSolutionCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+           $scope.$root.title = 'Shaligram Infotech HR and Job Portal Solution | HR And Job Portal Solution USA | HR And Job Portal Solution UK<';
+           $scope.$on('$viewContentLoaded', function () {
+               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+           });
+       }])
+
+
+     .controller('enterpriseContentManagementCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Shaligram Infotech Enterprise Content Management | Enterprise Content Management Development Company USA';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+
+     .controller('angularjsDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Shaligram Infotech AngularJS | Software Product Development Company | Software Product Development Company  UK';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+    .controller('ajaxDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech AJAX | Custom Software Development Company | Custom Software Development Company UK';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+       .controller('html5DevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+           $scope.$root.title = 'Shaligram Infotech HTML5 | Silverlight Application Development Company | Silverlight Application Development Company USA';
+           $scope.$on('$viewContentLoaded', function () {
+               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+           });
+       }])
+
+     .controller('liveChatAndSupportCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Live Chat and Support Ticket System | Live Chat Support Skype | Live Chat Support For Website';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
     // Path: /login
     .controller('LoginCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
         $scope.$root.title = 'AngularJS SPA | Sign In';
