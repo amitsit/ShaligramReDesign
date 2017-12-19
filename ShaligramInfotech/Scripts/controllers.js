@@ -913,7 +913,6 @@ angular.module('app.controllers', [])
     });
 }])
   .controller('CommonImagesController', ['$scope', '$location', '$window', '$rootScope', '$http', function ($scope, $location, $window, $rootScope, $http) {
-
       $scope.GetFilesList = function (folderPath) {
           $scope.FolderPath = folderPath;
           $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath)
