@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
 
-* {
+/** {
     margin: 0;
     padding: 0;
-}
+}*/
 
 body { font-family: "Lato", Arial, Helvetica, sans-serif }
 
@@ -2100,12 +2100,6 @@ ul.who_we_are_content {
     }*/
 
 
-.portfolio-item h3, .procont .contact, .scrum, .scrum li, .shaligram-panel, .tab-content {
-    width: 100%;
-    float: left;
-}
-
-
 .contact {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
@@ -2181,4 +2175,34 @@ ul.who_we_are_content {
     width: 100%;
     float: left;
     margin-bottom: 20px;
+}
+
+
+/*====================-------------------------domain expertise-----------====================*/
+.pline {
+    text-align: justify;
+    margin-left: 30%;
+    padding-left: 50px;
+    line-height: 1.5;
+    border-left: 1px solid #215da9;
+    margin-bottom: 0;
+}
+
+
+.pline + ul {
+    margin-left: 360px;
+}
+
+.pline + .pline {
+    padding-top: 10px;
+}
+
+.btn-countries{
+	text-align: left;
+}
+.btn-countries a{
+	padding-left:10px;
+}
+.btn-countries a:hover{
+	text-decoration: underline;
 }

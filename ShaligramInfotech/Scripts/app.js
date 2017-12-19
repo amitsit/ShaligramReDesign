@@ -99,6 +99,90 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                  templateUrl: '/views/SCPages/html5-development',
                  controller: 'html5DevelopmentCntrl'
              })
+            .state('php-open-source', {
+                url: '/php-open-source',
+                templateUrl: '/views/SCPages/php-open-source',
+                controller: 'phpOpenSourceCntrl'
+            })
+             .state('hadoop-development', {
+                 url: '/hadoop-development',
+                 templateUrl: '/views/SCPages/hadoop-development',
+                 controller: 'hadoopDevelopmentCntrl'
+             })
+
+             .state('domain-expertise', {
+                 url: '/domain-expertise',
+                 templateUrl: '/views/SCPages/domain-expertise',
+                 controller: 'domainExpertiseCntrl'
+             })
+
+            .state('software-product-development', {
+                url: '/software-product-development',
+                templateUrl: '/views/SCPages/software-product-development',
+                controller: 'softwareProductDevelopmentCntrl'
+            })
+
+
+            .state('software-application-migration', {
+                url: '/software-application-migration',
+                templateUrl: '/views/SCPages/software-application-migration',
+                controller: 'softwareApplicationMigrationCntrl'
+            })
+
+
+            .state('software-application-support', {
+                url: '/software-application-support',
+                templateUrl: '/views/SCPages/software-application-support',
+                controller: 'softwareApplicationSupportCntrl'
+            })
+
+            .state('web-portal-development', {
+                url: '/web-portal-development',
+                templateUrl: '/views/SCPages/web-portal-development',
+                controller: 'webPortalDevelopmentCntrl'
+            })
+
+            .state('responsive-website-development', {
+                url: '/responsive-website-development',
+                templateUrl: '/views/SCPages/responsive-website-development',
+                controller: 'responsiveWebsiteDevelopmentCntrl'
+            })
+
+             .state('hire-resource', {
+                 url: '/hire-resource',
+                 templateUrl: '/views/SCPages/hire-resource',
+                 controller: 'hireResourceCntrl'
+             })
+
+             .state('bi-services', {
+                 url: '/bi-services',
+                 templateUrl: '/views/SCPages/bi-services',
+                 controller: 'biServicesCntrl'
+             })
+
+               .state('testing-qa-services', {
+                   url: '/testing-qa-services',
+                   templateUrl: '/views/SCPages/testing-qa-services',
+                   controller: 'testingQaServicesCntrl'
+               })
+
+             .state('offshore-development-center', {
+                 url: '/offshore-development-center',
+                 templateUrl: '/views/SCPages/offshore-development-center',
+                 controller: 'offshoreDevelopmentCenterCntrl'
+             })
+
+              .state('mobile-app-development', {
+                  url: '/mobile-app-development',
+                  templateUrl: '/views/SCPages/mobile-app-development',
+                  controller: 'mobileAppDevelopmentCntrl'
+              })
+
+            .state('cloud-services', {
+                url: '/cloud-services',
+                templateUrl: '/views/SCPages/cloud-services',
+                controller: 'cloudServicesCntrl'
+            })
 
              .state('about-us', {
                  url: '/about-us',
@@ -427,7 +511,7 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
 
     // Gets executed after the injector is created and are used to kickstart the application. Only instances and constants
     // can be injected here. This is to prevent further system configuration during application run time.
-    .run(['$templateCache', '$rootScope', '$state', '$stateParams', function ($templateCache, $rootScope, $state, $stateParams) {
+    .run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', function ($templateCache, $rootScope, $state, $stateParams, $sce) {
 
         // <ui-view> contains a pre-rendered template for the current view
         // caching it will prevent a round-trip to a server at the first page load
@@ -446,4 +530,21 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
             // based on which page the user is located
             $rootScope.layout = toState.layout;
         });
+
+        //$rootScope.tech_image = function (tech_name, tech_url) {
+        //    debugger
+        //    var dir_img_path='/Images/';
+        //    var dire_name= dir_img_path+tech_name;
+             
+        //    $.ajax({
+        //        url: dire_name,
+        //        async: false,
+        //        cache: false,
+        //        success: function (data) {
+        //            debugger;
+        //        }
+        //    });
+
+        //    //return $sce.trustAsHtml('<div class="res img-responsive">  <img src="'.$src.$imgname .'" alt="'.$name[0].'" title="'.$name[0].'"  /></div>');
+        //}
     }]);
