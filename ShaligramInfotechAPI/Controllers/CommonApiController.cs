@@ -107,7 +107,6 @@ namespace ShaligramConsultancyAPI.Controllers
         [HttpGet]
         public HttpResponseMessage GetFiles(string folderPath)
         {
-            //HttpContext.Current.Server.MapPath("~/")
             List<string> fileList = new List<string>();
             if (!string.IsNullOrWhiteSpace(folderPath) && System.IO.Directory.Exists(HttpContext.Current.Server.MapPath("~") + folderPath))
             {
