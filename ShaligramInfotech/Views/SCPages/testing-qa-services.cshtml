@@ -158,52 +158,32 @@
     <div class="tech-list">
         <div class="tech-list">
             <h3>Automated Testing:</h3>
-            <?php
-
-            $techname ="services/auto-test/";
-            $techurl = "../images/services/auto-test/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/auto-test')">
+            </div>
         </div>
 
         <div class="tech-list">
             <h3>Bug Tracking:</h3>
-            <?php
-
-            $techname ="services/bug-track/";
-            $techurl = "../images/services/bug-track/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/bug-track')">
+            </div>
         </div>
 
         <div class="tech-list">
             <h3>Performance & Load Testing:</h3>
-            <?php
-
-            $techname ="services/load-test/";
-            $techurl = "../images/services/load-test/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/load-test')">
+            </div>
         </div>
 
         <div class="tech-list">
             <h3>Security and Performance Testing:</h3>
-            <?php
-
-            $techname ="services/securty-test/";
-            $techurl = "../images/services/securty-test/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/securty-test')">
+            </div>
         </div>
 
         <div class="tech-list">
             <h3>Quality Management:</h3>
-            <?php
-
-            $techname ="services/quality-test/";
-            $techurl = "../images/services/quality-test/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/quality-test')">
+            </div>
         </div>
     </div>
 </div>

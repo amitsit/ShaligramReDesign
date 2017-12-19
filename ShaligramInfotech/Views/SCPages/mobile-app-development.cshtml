@@ -46,19 +46,9 @@
 
     <h2>Expertise:</h2> <span>We hold expertise in:</span>
     <div class="tech-list">
-
-
-        <div class="tech-list">
-            <h3>Mobile Technologies:</h3>
-            <?php
-
-            $techname ="services/mobile/";
-            $techurl = "../images/services/mobile/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+        <h3>Mobile Technologies:</h3>
+        <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/mobile')">
         </div>
-
-
     </div>
 </div>
 

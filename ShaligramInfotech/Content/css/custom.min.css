@@ -612,6 +612,7 @@ ol, ul, li {
     border-top: solid 3px #225da9;
     border-left: solid 1px #225da9;
     border-right: solid 1px #225da9;
+    border-bottom: solid 1px #225da9;
     padding: 10px 15px 0;
     border-radius: 5px;
     text-align: center;
@@ -2273,4 +2274,40 @@ ul.who_we_are_content {
 .btn-countries a:hover{
 	text-decoration: underline;
 }
->>>>>>> 85729d813e2a80a3c791a575dbec423fe5817f2a
+
+.skills-heading {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.skill-list {
+    padding: 0;
+    margin-top: 15px;
+}
+
+    .skill-list li span {
+        color: #f58634;
+        position: absolute;
+        left: 0;
+        top: 4px;
+    }
+
+    .skill-list li {
+        position: relative;
+        padding-left: 20px;
+    }
+
+
+
+.company-counselor, .job-description .panel {
+    width: 100%;
+    float: left;
+}
+
+
+.company-counselor table tr td {
+    padding: 2px 0;
+    border: none;
+}

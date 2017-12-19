@@ -205,8 +205,6 @@
     <Content Include="Images\aboutUs.jpg" />
     <Content Include="Images\addDesignatedPartner.jpg" />
     <Content Include="Images\addDirector.jpg" />
-    <Content Include="Images\ApplicationDevelop.jpg" />
-    <Content Include="Images\biztalk.jpg" />
     <Content Include="Images\aus-flag.jpg" />
     <Content Include="Images\big\conference-room- 12.jpg" />
     <Content Include="Images\big\conference-room.jpg" />
@@ -250,7 +248,6 @@
     <Content Include="Images\designRegistration.jpg" />
     <Content Include="Images\development-area.jpg" />
     <Content Include="Images\digitalSignature.jpg" />
-    <Content Include="Images\dotnet.jpg" />
     <Content Include="Images\director-chamber.jpg" />
     <Content Include="Images\Domain\1.jpg" />
     <Content Include="Images\Domain\e_learning.jpg" />
@@ -288,7 +285,6 @@
     <Content Include="Images\importExportCode.jpg" />
     <Content Include="Images\incomeTaxFiling.jpg" />
     <Content Include="Images\indianSubsidiary.jpg" />
-    <Content Include="Images\java.jpg" />
     <Content Include="Images\infrastructure\big\conference-room.jpg" />
     <Content Include="Images\infrastructure\big\development-area.jpg" />
     <Content Include="Images\infrastructure\big\director-chamber.jpg" />
@@ -334,7 +330,6 @@
     <Content Include="Images\msmeRegistration.jpg" />
     <Content Include="Images\ndtv.png" />
     <Content Include="Images\nidhiCompany.jpg" />
-    <Content Include="Images\nodejs.jpg" />
     <Content Include="Images\nonDisclosureAgreement.jpg" />
     <Content Include="Images\onePersonCompany.jpg" />
     <Content Include="Images\partnership.jpg" />
@@ -512,7 +507,6 @@
     <Content Include="Images\Shaligram-4.jpg" />
     <Content Include="Images\shaligram_logo.png" />
     <Content Include="Images\shareholdersAgreement.jpg" />
-    <Content Include="Images\sharepoint.jpg" />
     <Content Include="Images\sharePurchaseAgreement.jpg" />
     <Content Include="Images\slider\1g.jpg" />
     <Content Include="Images\slider\3-banner-400x200.jpg" />
@@ -1185,12 +1179,6 @@
     <Content Include="Views\SCPages\term-sheet.cshtml" />
     <Content Include="Views\SCPages\shareholders-agreement.cshtml" />
     <Content Include="Views\SCPages\share-purchase-agreement.cshtml" />
-    <Content Include="Views\SCPages\application-development.cshtml" />
-    <Content Include="Views\SCPages\sharepoint.cshtml" />
-    <Content Include="Views\SCPages\java.cshtml" />
-    <Content Include="Views\SCPages\biztalk.cshtml" />
-    <Content Include="Views\SCPages\microsoft-dot-net.cshtml" />
-    <Content Include="Views\SCPages\nodejs.cshtml" />
     <Content Include="Views\SCPages\who-we-are.cshtml" />
     <Content Include="Views\SCPages\leadership.cshtml" />
     <Content Include="Views\SCPages\infrastructure.cshtml" />
@@ -1222,7 +1210,14 @@
     <Content Include="Views\SCPages\fresher-business-development-executive.cshtml" />
     <Content Include="Views\SCPages\jr-business-development-executive.cshtml" />
     <Content Include="Views\SCPages\sr-business-development-executive.cshtml" />
-    <Content Include="Views\SCPages\srsharepointdeveloper.cshtml" />
+    <Content Include="Views\SCPages\sr-sharepoint-developer.cshtml" />
+    <Content Include="Views\SCPages\sr-java-developer.cshtml" />
+    <Content Include="Views\SCPages\application-development.cshtml" />
+    <Content Include="Views\SCPages\biztalk.cshtml" />
+    <Content Include="Views\SCPages\java.cshtml" />
+    <Content Include="Views\SCPages\microsoft-dot-net.cshtml" />
+    <Content Include="Views\SCPages\nodejs.cshtml" />
+    <Content Include="Views\SCPages\sharepoint.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1234,7 +1229,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controller\GetFilesFromFolderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1244,7 +1238,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\GetFilesFromFolder\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
