@@ -44,11 +44,6 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                 templateUrl: '/views/SCPages/infrastructure',
                 controller: 'InfrastructureCntrl'
             })
-        .state('career', {
-            url: '/career',
-            templateUrl: '/views/SCPages/career',
-            controller: 'careerCntrl'
-        })
              .state('development-process', {
                  url: '/development-process',
                  templateUrl: '/views/SCPages/development-process',
@@ -549,6 +544,11 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                 url: '/nodejs',
                 templateUrl: '/views/SCPages/nodejs',
                 controller: 'NodejsCtrl'
+            })
+            .state('career', {
+                url: '/career',
+                templateUrl: '/views/SCPages/career',
+                controller: 'careerCntrl'
             })
             .state('otherwise', {
                 url: '*path',
