@@ -263,6 +263,6 @@ D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Secu
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\System.Web.Http.Owin.xml
+D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.csprojResolveAssemblyReference.cache
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramConsultancyAPI.dll
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramConsultancyAPI.pdb
-D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.csprojResolveAssemblyReference.cache

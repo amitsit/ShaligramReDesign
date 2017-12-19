@@ -119,36 +119,23 @@
         </div>
         <div class="tech-list">
             <h3>Microsoft Technologies:</h3>
-            <?php
-                $techname ="services/microsoft/";
-                $techurl = "../images/services/microsoft/";
-                tech_image($techname,$techurl,$dir_img_path);
-                ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/microsoft-technologies')">
+            </div>
         </div>
         <div class="tech-list">
             <h3>Open Source Technologies:</h3>
-            <?php
-            $techname ="services/Opensource/";
-            $techurl = "../images/services/Opensource/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/Opensource')">
+            </div>
         </div>
         <div class="tech-list">
             <h3>Mobile Technologies:</h3>
-            <?php
-            $techname ="services/mobile/";
-            $techurl = "../images/services/mobile/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/mobile')">
+            </div>
         </div>
         <div class="tech-list">
             <h3>Other Technologies:</h3>
-
-            <?php
-            $techname ="services/others/";
-            $techurl = "../images/services/others/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/others')">
+            </div>
         </div>
     </div>
 </div>

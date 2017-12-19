@@ -200,11 +200,15 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                   controller: 'srBusinessDevelopmentExecutiveCntrl'
               })
             .state('sr-sharepoint-developer', {
-                url: '/srsr-sharepoint-developer',
+                url: '/sr-sharepoint-developer',
                 templateUrl: '/views/SCPages/sr-sharepoint-developer',
                 controller: 'srSharepointDeveloperCntrl'
             })
-
+          .state('sr-java-developer', {
+              url: '/sr-java-developer',
+              templateUrl: '/views/SCPages/sr-java-developer',
+              controller: 'srJavaDeveloperCntrl'
+          })
              .state('about-us', {
                  url: '/about-us',
                  templateUrl: '/views/SCPages/about-us',

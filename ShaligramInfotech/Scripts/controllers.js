@@ -237,6 +237,13 @@ angular.module('app.controllers', [])
          });
      }])
 
+    .controller('srJavaDeveloperCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Software Development Company - Senior Java Developer Job Opportunities - Shaligram InfoTech';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
      .controller('liveChatAndSupportCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
          $scope.$root.title = 'Live Chat and Support Ticket System | Live Chat Support Skype | Live Chat Support For Website';
          $scope.$on('$viewContentLoaded', function () {
