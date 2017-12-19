@@ -22,6 +22,228 @@ angular.module('app.controllers', [])
         });
     }])
 
+    // Path: /about
+    .controller('InfrastructureCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Infrastructure | Application Management Service Provider | Application Management Service Provider USA';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     // Path: /about
+    .controller('careerCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Career | Carrer Objective | Carreres | Current Job Opening';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+      .controller('DevelopmentProcessCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+          $scope.$root.title = 'Shaligram Infotech Development Process | Embedded Software Development | Embedded Software Development Company USA';
+          $scope.$on('$viewContentLoaded', function () {
+              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+          });
+      }])
+
+        .controller('CrmSolutionCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+            $scope.$root.title = 'Shaligram Infotech CRM Solutions | CRM Solutions Provider | CRM Solutions Provider USA | CRM Solutions Provider UK';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+        }])
+
+
+       .controller('EcommerceSolutionCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+           $scope.$root.title = 'Shaligram Infotech Ecommerce Solution | Ecommerce Solution Provider USA | Ecommerce Solution Provider UK';
+           $scope.$on('$viewContentLoaded', function () {
+               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+           });
+       }])
+
+       .controller('hrandjobPortalSolutionCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+           $scope.$root.title = 'Shaligram Infotech HR and Job Portal Solution | HR And Job Portal Solution USA | HR And Job Portal Solution UK<';
+           $scope.$on('$viewContentLoaded', function () {
+               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+           });
+       }])
+
+
+     .controller('enterpriseContentManagementCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Shaligram Infotech Enterprise Content Management | Enterprise Content Management Development Company USA';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+
+     .controller('angularjsDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Shaligram Infotech AngularJS | Software Product Development Company | Software Product Development Company  UK';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+    .controller('ajaxDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech AJAX | Custom Software Development Company | Custom Software Development Company UK';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+       .controller('html5DevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+           $scope.$root.title = 'Shaligram Infotech HTML5 | Silverlight Application Development Company | Silverlight Application Development Company USA';
+           $scope.$on('$viewContentLoaded', function () {
+               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+           });
+       }])
+
+     .controller('phpOpenSourceCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'PHP Open Source Project Development | PHP Open Source Project Development Company | PHP Open Source Project Development Company USA';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+     .controller('hadoopDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'PHP Open Source Project Development | PHP Open Source Project Development Company | PHP Open Source Project Development Company USA';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+      .controller('domainExpertiseCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+          $scope.$root.title = 'Shaligram Infotech Domain Expertise | Civil And Construction Software Development | Healthcare Software Development Company';
+          $scope.$on('$viewContentLoaded', function () {
+              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+          });
+      }])
+
+
+    .controller('softwareProductDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Product Development | Retail ERP Software Development Company | Retail ERP Software Development Company USA';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+    .controller('softwareApplicationMigrationCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Application Migration & Modernization | Application Migration & Modernization Trends';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+    .controller('softwareApplicationSupportCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Application Maintenance & Support | Application Maintenance & Support USA | Application Maintenance & Support UK';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     .controller('webPortalDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Shaligram Infotech Web Portal Development | Web Portal Development Company USA| Web Portal Development Company UK';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+     .controller('responsiveWebsiteDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Shaligram Infotech Responsive Website Development | Responsive Website Development Company USA| Responsive Website Development Company UK';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+        .controller('hireResourceCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+            $scope.$root.title = 'Shaligram Infotech Hire Resource | Hire ASP.Net resource | Hire iOS resource | Hire PHP resource USA | Hire SharePoint resource';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+        }])
+
+    .controller('biServicesCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Business Intelligence | Business Intelligence Software Development | Business Intelligence Software Development Company';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+    }])
+
+    .controller('testingQaServicesCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Software Testing | Software Testing Lifecycle | Software Quality Assurance';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+       .controller('offshoreDevelopmentCenterCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+           $scope.$root.title = 'Offshore Development Center India | Offshore Development Center USA | Offshore Development Center UK';
+           $scope.$on('$viewContentLoaded', function () {
+               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+           });
+       }])
+
+     .controller('mobileAppDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Mobile App Development Company | Mobile App Development Company USA | Mobile App Development Company UK';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+    .controller('cloudServicesCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Cloud Service Provider In India | Cloud Service Provider In USA | Cloud Service Provider In UK';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+    .controller('LeadershipCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Leadership | ERP Software Manufacturing Company | ERP Software Manufacturing Company UK';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+    .controller('fresherAspnetCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Software Development Company - Fresher ASP.NET Job Opportunities - Shaligram InfoTech';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+    .controller('fresherBusinessDevelopmentExecutiveCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Software Development Company - Fresher Business Development Executive Job Opportunities - Shaligram InfoTech';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     .controller('jrBusinessDevelopmentExecutiveCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Software Development Company - Junior Business Development Executive Job Opportunities - Shaligram InfoTech';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+     .controller('srBusinessDevelopmentExecutiveCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Software Development Company - Senior Business Development Executive Job Opportunities - Shaligram InfoTech';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+     .controller('srSharepointDeveloperCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Software Development Company - Senior Sharepoint Developer Job Opportunities - Shaligram InfoTech';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+     .controller('liveChatAndSupportCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Live Chat and Support Ticket System | Live Chat Support Skype | Live Chat Support For Website';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
     // Path: /login
     .controller('LoginCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
         $scope.$root.title = 'AngularJS SPA | Sign In';

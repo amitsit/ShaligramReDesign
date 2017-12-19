@@ -39,6 +39,176 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                    templateUrl: '/views/SCPages/who-we-are',
                    controller: 'WhoWeAreCntrl'
                })
+            .state('infrastructure', {
+                url: '/infrastructure',
+                templateUrl: '/views/SCPages/infrastructure',
+                controller: 'InfrastructureCntrl'
+            })
+        .state('career', {
+            url: '/career',
+            templateUrl: '/views/SCPages/career',
+            controller: 'careerCntrl'
+        })
+             .state('development-process', {
+                 url: '/development-process',
+                 templateUrl: '/views/SCPages/development-process',
+                 controller: 'DevelopmentProcessCntrl'
+             })
+            .state('crm-solution', {
+                url: '/crm-solution',
+                templateUrl: '/views/SCPages/crm-solution',
+                controller: 'CrmSolutionCntrl'
+            })
+             .state('ecommerce-solution', {
+                 url: '/ecommerce-solution',
+                 templateUrl: '/views/SCPages/ecommerce-solution',
+                 controller: 'EcommerceSolutionCntrl'
+             })
+             .state('hrandjob-portal-solution', {
+                 url: '/hrandjob-portal-solution',
+                 templateUrl: '/views/SCPages/hrandjob-portal-solution',
+                 controller: 'hrandjobPortalSolutionCntrl'
+             })
+
+                .state('enterprise-content-management', {
+                    url: '/enterprise-content-management',
+                    templateUrl: '/views/SCPages/enterprise-content-management',
+                    controller: 'enterpriseContentManagementCntrl'
+                })
+
+                .state('live-chat-and-support', {
+                    url: '/live-chat-and-support',
+                    templateUrl: '/views/SCPages/live-chat-and-support',
+                    controller: 'liveChatAndSupportCntrl'
+                })
+
+            .state('angularjs-development', {
+                url: '/angularjs-development',
+                templateUrl: '/views/SCPages/angularjs-development',
+                controller: 'angularjsDevelopmentCntrl'
+            })
+
+             .state('ajax-development', {
+                 url: '/ajax-development',
+                 templateUrl: '/views/SCPages/ajax-development',
+                 controller: 'ajaxDevelopmentCntrl'
+             })
+
+             .state('html5-development', {
+                 url: '/html5-development',
+                 templateUrl: '/views/SCPages/html5-development',
+                 controller: 'html5DevelopmentCntrl'
+             })
+            .state('php-open-source', {
+                url: '/php-open-source',
+                templateUrl: '/views/SCPages/php-open-source',
+                controller: 'phpOpenSourceCntrl'
+            })
+             .state('hadoop-development', {
+                 url: '/hadoop-development',
+                 templateUrl: '/views/SCPages/hadoop-development',
+                 controller: 'hadoopDevelopmentCntrl'
+             })
+
+             .state('domain-expertise', {
+                 url: '/domain-expertise',
+                 templateUrl: '/views/SCPages/domain-expertise',
+                 controller: 'domainExpertiseCntrl'
+             })
+
+            .state('software-product-development', {
+                url: '/software-product-development',
+                templateUrl: '/views/SCPages/software-product-development',
+                controller: 'softwareProductDevelopmentCntrl'
+            })
+
+
+            .state('software-application-migration', {
+                url: '/software-application-migration',
+                templateUrl: '/views/SCPages/software-application-migration',
+                controller: 'softwareApplicationMigrationCntrl'
+            })
+
+
+            .state('software-application-support', {
+                url: '/software-application-support',
+                templateUrl: '/views/SCPages/software-application-support',
+                controller: 'softwareApplicationSupportCntrl'
+            })
+
+            .state('web-portal-development', {
+                url: '/web-portal-development',
+                templateUrl: '/views/SCPages/web-portal-development',
+                controller: 'webPortalDevelopmentCntrl'
+            })
+
+            .state('responsive-website-development', {
+                url: '/responsive-website-development',
+                templateUrl: '/views/SCPages/responsive-website-development',
+                controller: 'responsiveWebsiteDevelopmentCntrl'
+            })
+
+             .state('hire-resource', {
+                 url: '/hire-resource',
+                 templateUrl: '/views/SCPages/hire-resource',
+                 controller: 'hireResourceCntrl'
+             })
+
+             .state('bi-services', {
+                 url: '/bi-services',
+                 templateUrl: '/views/SCPages/bi-services',
+                 controller: 'biServicesCntrl'
+             })
+
+               .state('testing-qa-services', {
+                   url: '/testing-qa-services',
+                   templateUrl: '/views/SCPages/testing-qa-services',
+                   controller: 'testingQaServicesCntrl'
+               })
+
+             .state('offshore-development-center', {
+                 url: '/offshore-development-center',
+                 templateUrl: '/views/SCPages/offshore-development-center',
+                 controller: 'offshoreDevelopmentCenterCntrl'
+             })
+
+              .state('mobile-app-development', {
+                  url: '/mobile-app-development',
+                  templateUrl: '/views/SCPages/mobile-app-development',
+                  controller: 'mobileAppDevelopmentCntrl'
+              })
+
+            .state('cloud-services', {
+                url: '/cloud-services',
+                templateUrl: '/views/SCPages/cloud-services',
+                controller: 'cloudServicesCntrl'
+            })
+
+             .state('fresher-asp-net', {
+                 url: '/fresher-asp-net',
+                 templateUrl: '/views/SCPages/fresher-asp-net',
+                 controller: 'fresherAspnetCntrl'
+             })
+              .state('fresher-business-development-executive', {
+                  url: '/fresher-business-development-executive',
+                  templateUrl: '/views/SCPages/fresher-business-development-executive',
+                  controller: 'fresherBusinessDevelopmentExecutiveCntrl'
+              })
+            .state('jr-business-development-executive', {
+                url: '/jr-business-development-executive',
+                templateUrl: '/views/SCPages/jr-business-development-executive',
+                controller: 'jrBusinessDevelopmentExecutiveCntrl'
+            })
+              .state('sr-business-development-executive', {
+                  url: '/sr-business-development-executive',
+                  templateUrl: '/views/SCPages/sr-business-development-executive',
+                  controller: 'srBusinessDevelopmentExecutiveCntrl'
+              })
+            .state('sr-sharepoint-developer', {
+                url: '/srsr-sharepoint-developer',
+                templateUrl: '/views/SCPages/sr-sharepoint-developer',
+                controller: 'srSharepointDeveloperCntrl'
+            })
 
              .state('about-us', {
                  url: '/about-us',
@@ -397,7 +567,7 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
 
     // Gets executed after the injector is created and are used to kickstart the application. Only instances and constants
     // can be injected here. This is to prevent further system configuration during application run time.
-    .run(['$templateCache', '$rootScope', '$state', '$stateParams', function ($templateCache, $rootScope, $state, $stateParams) {
+    .run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', function ($templateCache, $rootScope, $state, $stateParams, $sce) {
 
         // <ui-view> contains a pre-rendered template for the current view
         // caching it will prevent a round-trip to a server at the first page load
@@ -416,4 +586,21 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
             // based on which page the user is located
             $rootScope.layout = toState.layout;
         });
+
+        //$rootScope.tech_image = function (tech_name, tech_url) {
+        //    debugger
+        //    var dir_img_path='/Images/';
+        //    var dire_name= dir_img_path+tech_name;
+             
+        //    $.ajax({
+        //        url: dire_name,
+        //        async: false,
+        //        cache: false,
+        //        success: function (data) {
+        //            debugger;
+        //        }
+        //    });
+
+        //    //return $sce.trustAsHtml('<div class="res img-responsive">  <img src="'.$src.$imgname .'" alt="'.$name[0].'" title="'.$name[0].'"  /></div>');
+        //}
     }]);

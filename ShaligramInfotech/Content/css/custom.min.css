@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
 
-* {
+/** {
     margin: 0;
     padding: 0;
-}
+}*/
 
 body {
     font-family: "Lato", Arial, Helvetica, sans-serif;
@@ -2133,7 +2133,6 @@ ul.who_we_are_content {
 
 
 
-
 /*Application Development Page*/
 
 .pline {
@@ -2181,7 +2180,59 @@ ul.who_we_are_content {
 
 
 /*Sharepoint Page*/
+=======
+/*==============---------------------Infrastructure page------------------============*/
 
+.row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.infracture_detail {
+    line-height: 27px;
+    padding-left: 0;
+}
+
+
+.infracture_detail li {
+    position: relative;
+    padding-left: 20px;
+}
+
+    .infracture_detail li .fa {
+        position: absolute;
+        left: 0px;
+        top: 7px;
+        color: #f58634;
+    }
+
+
+#query, thead tr {
+    background-color: #215da9;
+}
+
+
+#query h1, thead tr {
+    color: #fff;
+}
+
+
+/*================-----------------------------Crm page---------------======================*/
+.benifit_list {
+    padding-left: 0;
+}
+
+
+.table_app .fa, .serv .fa, .list-icon .fa, .benifit_list .fa, .list2 .fa, .tech_service .fa {
+    color: #f58634;
+}
+
+#myTabContent .fa {
+    padding-right: 10px;
+}
+
+/*====================-------------------------angular page-----------====================*/
 .aboutbody {
     -webkit-background-size: 100%;
     -moz-background-size: 100% 100%;
@@ -2194,3 +2245,32 @@ ul.who_we_are_content {
 
 /*Sharepoint Page*/
 
+/*====================-------------------------domain expertise-----------====================*/
+.pline {
+    text-align: justify;
+    margin-left: 30%;
+    padding-left: 50px;
+    line-height: 1.5;
+    border-left: 1px solid #215da9;
+    margin-bottom: 0;
+}
+
+
+.pline + ul {
+    margin-left: 360px;
+}
+
+.pline + .pline {
+    padding-top: 10px;
+}
+
+.btn-countries{
+	text-align: left;
+}
+.btn-countries a{
+	padding-left:10px;
+}
+.btn-countries a:hover{
+	text-decoration: underline;
+}
+>>>>>>> 85729d813e2a80a3c791a575dbec423fe5817f2a
