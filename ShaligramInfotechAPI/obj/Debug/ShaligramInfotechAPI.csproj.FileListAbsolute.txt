@@ -266,3 +266,4 @@ D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\System.Web.Http.Owi
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramConsultancyAPI.dll
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramConsultancyAPI.pdb
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.csprojResolveAssemblyReference.cache
+C:\Projects\ShaligramReDesign\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.csprojResolveAssemblyReference.cache
