@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Http;
 using ShaligramConsultancyAPI.Common;
 using ShaligramConsultancyAPI.Models;
+using System.IO;
 
 namespace ShaligramConsultancyAPI.Controllers
 {
@@ -41,12 +42,12 @@ namespace ShaligramConsultancyAPI.Controllers
             bodyTemplate = bodyTemplate.Replace("[@Phone]", allDataobj.Phone);
             bodyTemplate = bodyTemplate.Replace("[@EnquiryFor]", allDataobj.InquiryFor);
             bodyTemplate = bodyTemplate.Replace("[@Path]", imagepath);
-            EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Enquiry For - " + allDataobj.InquiryFor ,bodyTemplate,true);
+            EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Enquiry For - " + allDataobj.InquiryFor, bodyTemplate, true);
 
             //thank u email
             var mappedPathThankU = HttpContext.Current.Server.MapPath("~/EmailTemplate/ThankuEmail.html");
             string bodyTemplateThankYou = System.IO.File.ReadAllText(mappedPathThankU);
-            
+
             bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Name]", allDataobj.Name);
             bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@EnquiryFor]", allDataobj.InquiryFor);
             bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Email]", allDataobj.Email);
@@ -84,7 +85,7 @@ namespace ShaligramConsultancyAPI.Controllers
             bodyTemplate = bodyTemplate.Replace("[@Phone]", allDataobj.Phone);
             bodyTemplate = bodyTemplate.Replace("[@City]", allDataobj.City);
             bodyTemplate = bodyTemplate.Replace("[@Path]", imagepath);
-            EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Contact Us Request" , bodyTemplate, true);
+            EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Contact Us Request", bodyTemplate, true);
 
             //thank u email
             var mappedPathThankU = HttpContext.Current.Server.MapPath("~/EmailTemplate/contactUsThankuEmail.html");
@@ -102,6 +103,23 @@ namespace ShaligramConsultancyAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, true);
 
         }
+
+        [HttpGet]
+        public HttpResponseMessage GetFiles(string folderPath)
+        {
+            //HttpContext.Current.Server.MapPath("~/")
+            List<string> fileList = new List<string>();
+            if (!string.IsNullOrWhiteSpace(folderPath) && System.IO.Directory.Exists(HttpContext.Current.Server.MapPath("~") + folderPath))
+            {
+                fileList = new DirectoryInfo(HttpContext.Current.Server.MapPath("~/") + folderPath).GetFiles().Select(o => o.Name).ToList();
+                return Request.CreateResponse(HttpStatusCode.OK, fileList);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, fileList);
+            }
+        }
+
         //[HttpGet]
         //public HttpResponseMessage GetCityList()
         //{

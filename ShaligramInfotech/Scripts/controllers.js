@@ -653,6 +653,24 @@ angular.module('app.controllers', [])
 
                 }
             }
-        });
+        })
+  .controller('ApplicationDevelopmentCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+      $scope.$on('$viewContentLoaded', function () {
+          $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+      });
+  }])
+  .controller('CommonImagesController', ['$scope', '$location', '$window', '$rootScope', '$http', function ($scope, $location, $window, $rootScope, $http) {
+      
+      $scope.GetFilesList = function (folderPath) {
+          $scope.FolderPath = folderPath;
+          $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath)
+                         .then(function (response) {
+                             $scope.GetList = response.data;
+                         });
+      }
+      $scope.GetFilesList("/Images/services/microsoft-technologies");
+  }])
+
+;
 
 

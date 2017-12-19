@@ -1,4 +1,4 @@
-﻿<div class="row">
+﻿<div class="row" ng-controller="ApplicationDevelopmentCtrl">
     <div class="img_pic"> <img src="~/Images/ApplicationDevelop.jpg" alt="Software Application Development" title="Application Development Company | Application Development Company USA"> </div>
 </div>
 <div class="container">
@@ -51,6 +51,8 @@
         <h2>Expertise:</h2> <span>We hold expertise in:</span>
         <div class="tech-list">
             <h3>Microsoft Technologies:</h3>
+            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController">
+            </div>
         </div>
         <div class="tech-list">
             <h3>Open Source Technologies:</h3>

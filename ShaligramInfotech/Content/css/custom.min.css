@@ -1562,7 +1562,11 @@ input[type=number]::-webkit-outer-spin-button {
         text-align: center;
     }
 
-    .bground { width: 100%; padding-left: 0; padding-right: 0 }
+    .bground {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 
@@ -2153,12 +2157,40 @@ ul.who_we_are_content {
     padding-right: 10px;
 }
 
+.tech-list {
+    padding-bottom: 15px;
+}
+
+.bf, .bground1, .logoslider, .tech-list {
+    overflow: hidden;
+}
+
+.res {
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    float: left;
+    height: 70px;
+    width: 284px;
+}
+
+#query h1, #sticky-social a, .res, td.center {
+    text-align: center;
+}
+
 /*Application Development Page*/
 
 
 /*Sharepoint Page*/
 
-.aboutbody { -webkit-background-size: 100%; -moz-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; width: 100%; float: left; margin-bottom: 20px }
+.aboutbody {
+    -webkit-background-size: 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
 
 /*Sharepoint Page*/
 

@@ -205,6 +205,7 @@
     <Content Include="Images\addDesignatedPartner.jpg" />
     <Content Include="Images\addDirector.jpg" />
     <Content Include="Images\ApplicationDevelop.jpg" />
+    <Content Include="Images\biztalk.jpg" />
     <Content Include="Images\changeCompanyAddress.jpg" />
     <Content Include="Images\changeCompanyName.jpg" />
     <Content Include="Images\changeLlpAgreement.jpg" />
@@ -213,6 +214,7 @@
     <Content Include="Images\copyrightRegistration.jpg" />
     <Content Include="Images\designRegistration.jpg" />
     <Content Include="Images\digitalSignature.jpg" />
+    <Content Include="Images\dotnet.jpg" />
     <Content Include="Images\esiRegistration.jpg" />
     <Content Include="Images\esiReturn.jpg" />
     <Content Include="Images\fassaiRegistration.jpg" />
@@ -245,6 +247,7 @@
     <Content Include="Images\msmeRegistration.jpg" />
     <Content Include="Images\ndtv.png" />
     <Content Include="Images\nidhiCompany.jpg" />
+    <Content Include="Images\nodejs.jpg" />
     <Content Include="Images\nonDisclosureAgreement.jpg" />
     <Content Include="Images\onePersonCompany.jpg" />
     <Content Include="Images\partnership.jpg" />
@@ -261,6 +264,125 @@
     <Content Include="Images\removeDesignatedPartner.jpg" />
     <Content Include="Images\removeDirector.jpg" />
     <Content Include="Images\sectionEightCompany.jpg" />
+    <Content Include="Images\services\auto-test\big-logo.jpg" />
+    <Content Include="Images\services\auto-test\varshneyinfotechqtptrainingmumbai.jpg" />
+    <Content Include="Images\services\bi2.png" />
+    <Content Include="Images\services\boostrap.jpg" />
+    <Content Include="Images\services\bug-track\22nd-July_How-to-Report-an-Issue-with-Mantis-Bug-Tracking-Tool.jpg" />
+    <Content Include="Images\services\bug-track\bugzilla-0d1d13253c39acc09666736956c77ffc.jpg" />
+    <Content Include="Images\services\bug-track\d2-2.jpg" />
+    <Content Include="Images\services\cloud-services\amazon.jpg" />
+    <Content Include="Images\services\cloud-services\mongodb-logo.jpg" />
+    <Content Include="Images\services\cloud-services\rackspacelogoclra04.jpg" />
+    <Content Include="Images\services\cloud-services\rds.jpg" />
+    <Content Include="Images\services\cloud-services\salesforce-logo.jpg" />
+    <Content Include="Images\services\cloud-services\SQL-Azure.jpg" />
+    <Content Include="Images\services\cloud-services\vmware.jpg" />
+    <Content Include="Images\services\cloud-services\windows-azure.jpg" />
+    <Content Include="Images\services\codignator.jpg" />
+    <Content Include="Images\services\dotnet.jpg" />
+    <Content Include="Images\services\drupal.jpg" />
+    <Content Include="Images\services\hadoop.jpg" />
+    <Content Include="Images\services\java-technology\java.jpg" />
+    <Content Include="Images\services\java-technology\javaee.jpg" />
+    <Content Include="Images\services\java.png" />
+    <Content Include="Images\services\joomla.jpg" />
+    <Content Include="Images\services\load-test\jmeter.jpg" />
+    <Content Include="Images\services\load-test\varshneyinfotechloadrunnertrainingmumbai.jpg" />
+    <Content Include="Images\services\magento.jpg" />
+    <Content Include="Images\services\microsoft-technologies\aspdotnet.jpg" />
+    <Content Include="Images\services\microsoft-technologies\aspdotnetmvc.jpg" />
+    <Content Include="Images\services\microsoft-technologies\aspdotnetmvvm.jpg" />
+    <Content Include="Images\services\microsoft-technologies\aspdotnetwcf.jpg" />
+    <Content Include="Images\services\microsoft-technologies\aspdotnetwpf.jpg" />
+    <Content Include="Images\services\microsoft-technologies\crystalreport.jpg" />
+    <Content Include="Images\services\microsoft-technologies\devexpress.jpg" />
+    <Content Include="Images\services\microsoft-technologies\dynamics-crm.jpg" />
+    <Content Include="Images\services\microsoft-technologies\infragistics.jpg" />
+    <Content Include="Images\services\microsoft-technologies\microsoft-aspdotnet.jpg" />
+    <Content Include="Images\services\microsoft-technologies\microsoft-aspdotnetmvc.jpg" />
+    <Content Include="Images\services\microsoft-technologies\microsoft-biztalk.jpg" />
+    <Content Include="Images\services\microsoft-technologies\microsoftsharepoint.jpg" />
+    <Content Include="Images\services\microsoft-technologies\MicrosoftSQLServer.jpg" />
+    <Content Include="Images\services\microsoft-technologies\neveron.jpg" />
+    <Content Include="Images\services\microsoft-technologies\nopcommerce.jpg" />
+    <Content Include="Images\services\microsoft-technologies\nuke.jpg" />
+    <Content Include="Images\services\microsoft-technologies\sitefinity.jpg" />
+    <Content Include="Images\services\microsoft-technologies\telerik.jpg" />
+    <Content Include="Images\services\microsoft-technologies\windows-azure.jpg" />
+    <Content Include="Images\services\microsoft-technologies\windows-phone.jpg" />
+    <Content Include="Images\services\microsoft.png" />
+    <Content Include="Images\services\microsoft\crystalreport.jpg" />
+    <Content Include="Images\services\microsoft\devexpress.jpg" />
+    <Content Include="Images\services\microsoft\infragistics.jpg" />
+    <Content Include="Images\services\microsoft\microsoft-aspdotnet.jpg" />
+    <Content Include="Images\services\microsoft\microsoft-aspdotnetmvc.jpg" />
+    <Content Include="Images\services\microsoft\microsoft-aspdotnetmvvm.jpg" />
+    <Content Include="Images\services\microsoft\microsoft-biztalk.jpg" />
+    <Content Include="Images\services\microsoft\neveron.jpg" />
+    <Content Include="Images\services\microsoft\nopcommerce.jpg" />
+    <Content Include="Images\services\microsoft\nuke.jpg" />
+    <Content Include="Images\services\microsoft\sharepoint.jpg" />
+    <Content Include="Images\services\microsoft\sitefinity.jpg" />
+    <Content Include="Images\services\microsoft\sqlserver.jpg" />
+    <Content Include="Images\services\microsoft\telerik.jpg" />
+    <Content Include="Images\services\microsoft\umbraco.jpg" />
+    <Content Include="Images\services\microsoft\wcf.jpg" />
+    <Content Include="Images\services\microsoft\windows-azure.jpg" />
+    <Content Include="Images\services\microsoft\windows-phone.jpg" />
+    <Content Include="Images\services\microsoft\wpf.jpg" />
+    <Content Include="Images\services\mobile.png" />
+    <Content Include="Images\services\mobile\android.jpg" />
+    <Content Include="Images\services\mobile\ios.jpg" />
+    <Content Include="Images\services\mobile\phonegap.jpg" />
+    <Content Include="Images\services\mobile\windows-phone.jpg" />
+    <Content Include="Images\services\mysql.jpg" />
+    <Content Include="Images\services\opensource-technology\php.jpg" />
+    <Content Include="Images\services\opensource-technology\sql.jpg" />
+    <Content Include="Images\services\Opensource\codignator.jpg" />
+    <Content Include="Images\services\Opensource\hadoop.jpg" />
+    <Content Include="Images\services\Opensource\joomla.jpg" />
+    <Content Include="Images\services\Opensource\magento.jpg" />
+    <Content Include="Images\services\Opensource\mysql.jpg" />
+    <Content Include="Images\services\Opensource\php.jpg" />
+    <Content Include="Images\services\Opensource\prestashop.jpg" />
+    <Content Include="Images\services\Opensource\wordpress.jpg" />
+    <Content Include="Images\services\others\alfresco.jpg" />
+    <Content Include="Images\services\others\angularjs.jpg" />
+    <Content Include="Images\services\others\html5.jpg" />
+    <Content Include="Images\services\others\java.jpg" />
+    <Content Include="Images\services\others\javaee.jpg" />
+    <Content Include="Images\services\others\liferay.jpg" />
+    <Content Include="Images\services\others\nodejs.jpg" />
+    <Content Include="Images\services\pentaho\pentaho-ba.jpg" />
+    <Content Include="Images\services\pentaho\pentaho-dataintegration.jpg" />
+    <Content Include="Images\services\pentaho\pentaho-metadaeditor.jpg" />
+    <Content Include="Images\services\pentaho\pentaho-mondrian.jpg" />
+    <Content Include="Images\services\pentaho\pentaho-reportdesigner.jpg" />
+    <Content Include="Images\services\pentaho\pentaho-weka.jpg" />
+    <Content Include="Images\services\php\codeigniter.jpg" />
+    <Content Include="Images\services\php\joomla.jpg" />
+    <Content Include="Images\services\php\magento.jpg" />
+    <Content Include="Images\services\php\mysql.jpg" />
+    <Content Include="Images\services\php\php.jpg" />
+    <Content Include="Images\services\php\rpestashop.jpg" />
+    <Content Include="Images\services\php\wordpress.jpg" />
+    <Content Include="Images\services\prestashop.jpg" />
+    <Content Include="Images\services\quality-parameters.png" />
+    <Content Include="Images\services\quality-test\050215_0601_Top20TestMa1.jpg" />
+    <Content Include="Images\services\quality-test\Qualitycenter.jpg" />
+    <Content Include="Images\services\salesforce\salesforce-logo.jpg" />
+    <Content Include="Images\services\securty-test\27logoprop2.jpg" />
+    <Content Include="Images\services\services.png" />
+    <Content Include="Images\services\test-services.png" />
+    <Content Include="Images\services\vtire.jpg" />
+    <Content Include="Images\services\web-ms\microsoft-aspdotnet.jpg" />
+    <Content Include="Images\services\web-ms\microsoft-aspdotnetmvc.jpg" />
+    <Content Include="Images\services\web-ms\nopcommerce.jpg" />
+    <Content Include="Images\services\web-ms\nuke.jpg" />
+    <Content Include="Images\services\web-ms\sharepoint.jpg" />
+    <Content Include="Images\services\web-ms\umbraco.jpg" />
+    <Content Include="Images\services\wordpress.jpg" />
     <Content Include="Images\shareholdersAgreement.jpg" />
     <Content Include="Images\sharepoint.jpg" />
     <Content Include="Images\sharePurchaseAgreement.jpg" />
@@ -692,6 +814,7 @@
     <Content Include="Content\fonts\FontAwesome.otf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="banners\Thumbs.db" />
+    <Content Include="Images\services\Thumbs.db" />
     <None Include="Properties\PublishProfiles\ShaligramConsultancy.pubxml" />
     <None Include="Scripts\vendor\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\vendor\jquery-2.0.3.js" />
@@ -709,6 +832,7 @@
     </Content>
     <Content Include="robots.txt" />
     <Content Include="Views\SCPages\CommonInformation.html" />
+    <Content Include="Views\SCPages\GetImages.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -785,6 +909,9 @@
     <Content Include="Views\SCPages\application-development.cshtml" />
     <Content Include="Views\SCPages\sharepoint.cshtml" />
     <Content Include="Views\SCPages\java.cshtml" />
+    <Content Include="Views\SCPages\biztalk.cshtml" />
+    <Content Include="Views\SCPages\microsoft-dot-net.cshtml" />
+    <Content Include="Views\SCPages\nodejs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -796,6 +923,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controller\GetFilesFromFolderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -805,6 +933,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\GetFilesFromFolder\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
