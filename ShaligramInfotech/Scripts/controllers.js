@@ -195,6 +195,48 @@ angular.module('app.controllers', [])
         });
     }])
 
+    .controller('LeadershipCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Shaligram Infotech Leadership | ERP Software Manufacturing Company | ERP Software Manufacturing Company UK';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+    .controller('fresherAspnetCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Software Development Company - Fresher ASP.NET Job Opportunities - Shaligram InfoTech';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+    .controller('fresherBusinessDevelopmentExecutiveCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        $scope.$root.title = 'Software Development Company - Fresher Business Development Executive Job Opportunities - Shaligram InfoTech';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     .controller('jrBusinessDevelopmentExecutiveCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Software Development Company - Junior Business Development Executive Job Opportunities - Shaligram InfoTech';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+     .controller('srBusinessDevelopmentExecutiveCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Software Development Company - Senior Business Development Executive Job Opportunities - Shaligram InfoTech';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+     .controller('srSharepointDeveloperCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Software Development Company - Senior Sharepoint Developer Job Opportunities - Shaligram InfoTech';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
      .controller('liveChatAndSupportCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
          $scope.$root.title = 'Live Chat and Support Ticket System | Live Chat Support Skype | Live Chat Support For Website';
          $scope.$on('$viewContentLoaded', function () {

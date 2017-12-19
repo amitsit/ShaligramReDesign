@@ -184,6 +184,32 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                 controller: 'cloudServicesCntrl'
             })
 
+             .state('fresher-asp-net', {
+                 url: '/fresher-asp-net',
+                 templateUrl: '/views/SCPages/fresher-asp-net',
+                 controller: 'fresherAspnetCntrl'
+             })
+              .state('fresher-business-development-executive', {
+                  url: '/fresher-business-development-executive',
+                  templateUrl: '/views/SCPages/fresher-business-development-executive',
+                  controller: 'fresherBusinessDevelopmentExecutiveCntrl'
+              })
+            .state('jr-business-development-executive', {
+                url: '/jr-business-development-executive',
+                templateUrl: '/views/SCPages/jr-business-development-executive',
+                controller: 'jrBusinessDevelopmentExecutiveCntrl'
+            })
+              .state('sr-business-development-executive', {
+                  url: '/sr-business-development-executive',
+                  templateUrl: '/views/SCPages/sr-business-development-executive',
+                  controller: 'srBusinessDevelopmentExecutiveCntrl'
+              })
+            .state('sr-sharepoint-developer', {
+                url: '/srsr-sharepoint-developer',
+                templateUrl: '/views/SCPages/sr-sharepoint-developer',
+                controller: 'srSharepointDeveloperCntrl'
+            })
+
              .state('about-us', {
                  url: '/about-us',
                  templateUrl: '/views/SCPages/about-us',

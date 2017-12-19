@@ -1204,7 +1204,12 @@
     <Content Include="Views\SCPages\testing-qa-services.cshtml" />
     <Content Include="Views\SCPages\offshore-development-center.cshtml" />
     <Content Include="Views\SCPages\mobile-app-development.cshtml" />
-    <Content Include="Views\SCPages\cloudservices.cshtml" />
+    <Content Include="Views\SCPages\cloud-services.cshtml" />
+    <Content Include="Views\SCPages\fresher-asp-net.cshtml" />
+    <Content Include="Views\SCPages\fresher-business-development-executive.cshtml" />
+    <Content Include="Views\SCPages\jr-business-development-executive.cshtml" />
+    <Content Include="Views\SCPages\sr-business-development-executive.cshtml" />
+    <Content Include="Views\SCPages\srsharepointdeveloper.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
