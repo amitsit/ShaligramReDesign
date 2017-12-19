@@ -162,9 +162,9 @@ angular.module('app.controllers', [])
 
     .controller('biServicesCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
         $scope.$root.title = 'Shaligram Infotech Business Intelligence | Business Intelligence Software Development | Business Intelligence Software Development Company';
-            $scope.$on('$viewContentLoaded', function () {
-                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
-            });
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
     }])
 
     .controller('testingQaServicesCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
@@ -877,12 +877,43 @@ angular.module('app.controllers', [])
             }
         })
   .controller('ApplicationDevelopmentCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+      $scope.$root.title = "Application Development";
       $scope.$on('$viewContentLoaded', function () {
           $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
       });
   }])
+.controller('WhoWeAreCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Who We Are";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('LeadershipCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Leadership";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('InfrastructureCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Infrastructure";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('careerCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Career";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('DevelopmentProcessCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Development Process";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
   .controller('CommonImagesController', ['$scope', '$location', '$window', '$rootScope', '$http', function ($scope, $location, $window, $rootScope, $http) {
-      
+
       $scope.GetFilesList = function (folderPath) {
           $scope.FolderPath = folderPath;
           $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath)
