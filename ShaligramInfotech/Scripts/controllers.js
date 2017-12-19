@@ -668,7 +668,6 @@ angular.module('app.controllers', [])
                              $scope.GetList = response.data;
                          });
       }
-      $scope.GetFilesList("/Images/services/microsoft-technologies");
   }])
 
 ;
