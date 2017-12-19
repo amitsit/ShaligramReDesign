@@ -230,6 +230,7 @@
     <Content Include="Images\importExportCode.jpg" />
     <Content Include="Images\incomeTaxFiling.jpg" />
     <Content Include="Images\indianSubsidiary.jpg" />
+    <Content Include="Images\java.jpg" />
     <Content Include="Images\latest-news1.jpg" />
     <Content Include="Images\latest-news2.jpg" />
     <Content Include="Images\latest-news3.jpg" />
@@ -261,6 +262,7 @@
     <Content Include="Images\removeDirector.jpg" />
     <Content Include="Images\sectionEightCompany.jpg" />
     <Content Include="Images\shareholdersAgreement.jpg" />
+    <Content Include="Images\sharepoint.jpg" />
     <Content Include="Images\sharePurchaseAgreement.jpg" />
     <Content Include="Images\soleProprietorshipToPvtLtd.jpg" />
     <Content Include="Images\Spinner.gif" />
@@ -781,6 +783,8 @@
     <Content Include="Views\SCPages\shareholders-agreement.cshtml" />
     <Content Include="Views\SCPages\share-purchase-agreement.cshtml" />
     <Content Include="Views\SCPages\application-development.cshtml" />
+    <Content Include="Views\SCPages\sharepoint.cshtml" />
+    <Content Include="Views\SCPages\java.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

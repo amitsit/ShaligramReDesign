@@ -365,6 +365,21 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                 templateUrl: '/views/SCPages/java',
                 controller: 'JavaCtrl'
             })
+            .state('biztalk', {
+                url: '/biztalk',
+                templateUrl: '/views/SCPages/biztalk',
+                controller: 'BiztalkCtrl'
+            })
+            .state('microsoft-dot-net', {
+                url: '/microsoft-dot-net',
+                templateUrl: '/views/SCPages/microsoft-dot-net',
+                controller: 'MicrosoftDotNetCtrl'
+            })
+            .state('nodejs', {
+                url: '/nodejs',
+                templateUrl: '/views/SCPages/nodejs',
+                controller: 'NodejsCtrl'
+            })
             .state('otherwise', {
                 url: '*path',
                 templateUrl: '/views/404',
