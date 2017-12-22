@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using ShaligramConsultancyAPI.Areas.HelpPage.ModelDescriptions;
+using ShaligramInfotechAPI.Areas.HelpPage.ModelDescriptions;
 
-namespace ShaligramConsultancyAPI.Areas.HelpPage.Models
+namespace ShaligramInfotechAPI.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

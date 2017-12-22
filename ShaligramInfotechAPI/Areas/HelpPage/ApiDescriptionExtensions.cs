@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace ShaligramConsultancyAPI.Areas.HelpPage
+namespace ShaligramInfotechAPI.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

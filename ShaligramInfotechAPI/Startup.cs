@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(ShaligramConsultancyAPI.Startup))]
+[assembly: OwinStartup(typeof(ShaligramInfotechAPI.Startup))]
 
-namespace ShaligramConsultancyAPI
+namespace ShaligramInfotechAPI
 {
     public partial class Startup
     {

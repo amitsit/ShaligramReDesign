@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShaligramConsultancyAPI.Models
+namespace ShaligramInfotechAPI.Models
 {
     // Models returned by AccountController actions.
 

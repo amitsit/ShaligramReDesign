@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using ShaligramConsultancyAPI.Providers;
-using ShaligramConsultancyAPI.Models;
+using ShaligramInfotechAPI.Providers;
+using ShaligramInfotechAPI.Models;
 
-namespace ShaligramConsultancyAPI
+namespace ShaligramInfotechAPI
 {
     public partial class Startup
     {

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
 
-/** {
+* {
     margin: 0;
     padding: 0;
-}*/
+}
 
 body {
     font-family: "Lato", Arial, Helvetica, sans-serif;
@@ -1476,7 +1476,7 @@ input[type=number]::-webkit-outer-spin-button {
     visibility: hidden;
 }
 
-/*======================New Style from Shaligram Consultancy=======================*/
+/*======================New Style from Shaligram Infotech=======================*/
 .main-heading {
     float: left;
     width: 100%;

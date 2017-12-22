@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace ShaligramConsultancyAPI.Models
+namespace ShaligramInfotechAPI.Models
 {
     // Models used as parameters to AccountController actions.
 

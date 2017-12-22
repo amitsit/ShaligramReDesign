@@ -1,6 +1,6 @@
 using System;
 
-namespace ShaligramConsultancyAPI.Areas.HelpPage.ModelDescriptions
+namespace ShaligramInfotechAPI.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

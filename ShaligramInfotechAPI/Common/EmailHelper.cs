@@ -5,7 +5,7 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 
 
-namespace ShaligramConsultancyAPI.Common
+namespace ShaligramInfotechAPI.Common
 {
     public class EmailHelper
     {

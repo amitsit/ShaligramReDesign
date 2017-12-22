@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace ShaligramConsultancyAPI.Areas.HelpPage.ModelDescriptions
+namespace ShaligramInfotechAPI.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

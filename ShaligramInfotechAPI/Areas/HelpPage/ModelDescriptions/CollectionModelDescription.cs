@@ -1,4 +1,4 @@
-namespace ShaligramConsultancyAPI.Areas.HelpPage.ModelDescriptions
+namespace ShaligramInfotechAPI.Areas.HelpPage.ModelDescriptions
 {
     public class CollectionModelDescription : ModelDescription
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace ShaligramConsultancyAPI.Areas.HelpPage.ModelDescriptions
+namespace ShaligramInfotechAPI.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterDescription
     {

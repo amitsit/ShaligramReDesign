@@ -8,7 +8,7 @@
 angular.module('app.controllers', [])
     // Path: /
     .controller('HomeCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
-        $scope.$root.title = 'Shaligram Consultancy';
+        $scope.$root.title = 'Shaligram Infotech';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
@@ -16,7 +16,7 @@ angular.module('app.controllers', [])
 
     // Path: /about
     .controller('SCIndexCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
-        $scope.$root.title = 'Shaligram Consultancy';
+        $scope.$root.title = 'Shaligram Infotech';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
@@ -76,8 +76,10 @@ angular.module('app.controllers', [])
      }])
 
 
-     .controller('angularjsDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+     .controller('angularjsDevelopmentCntrl', ['$scope', '$location', '$window', '$rootScope','localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
          $scope.$root.title = 'Shaligram Infotech AngularJS | Software Product Development Company | Software Product Development Company  UK';
+         $rootScope.TechnologyId = 8;
+         localStorageService.TechnologyId = 8;
          $scope.$on('$viewContentLoaded', function () {
              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
          });
@@ -97,15 +99,19 @@ angular.module('app.controllers', [])
            });
        }])
 
-     .controller('phpOpenSourceCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+     .controller('phpOpenSourceCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
          $scope.$root.title = 'PHP Open Source Project Development | PHP Open Source Project Development Company | PHP Open Source Project Development Company USA';
+         $rootScope.TechnologyId = 5;
+         localStorageService.TechnologyId = 5;
          $scope.$on('$viewContentLoaded', function () {
              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
          });
      }])
 
-     .controller('hadoopDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+     .controller('hadoopDevelopmentCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
          $scope.$root.title = 'PHP Open Source Project Development | PHP Open Source Project Development Company | PHP Open Source Project Development Company USA';
+         $rootScope.TechnologyId = 6;
+         localStorageService.TechnologyId = 6;
          $scope.$on('$viewContentLoaded', function () {
              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
          });
@@ -244,8 +250,67 @@ angular.module('app.controllers', [])
         });
     }])
 
+    .controller('MicrosoftDotNetCtrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+        $scope.$root.title = 'Shaligram Infotech Microsoft Dot Net | ASP.NET Web Development | ASP.NET Web Development Company USA | ASP.NET Web Development Company UK';
+        $rootScope.TechnologyId = 1;
+        localStorageService.set('TechnologyId',1);
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
      .controller('liveChatAndSupportCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
          $scope.$root.title = 'Live Chat and Support Ticket System | Live Chat Support Skype | Live Chat Support For Website';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+    .controller('SharePointNETTController', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+        //$scope.$root.title = 'Live Chat and Support Ticket System | Live Chat Support Skype | Live Chat Support For Website';
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     .controller('civilNetCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+    .controller('SharepointCtrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+        $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+        $rootScope.TechnologyId = 2;
+        localStorageService.set('TechnologyId', 2);
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     .controller('JavaCtrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+         $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+         $rootScope.TechnologyId = 3;
+         localStorageService.set('TechnologyId', 3);
+         $scope.$on('$viewContentLoaded', function () {
+             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+         });
+     }])
+
+    .controller('NodejsCtrl', ['$scope', '$location', '$window', '$rootScope','localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+        $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+        $rootScope.TechnologyId = 7;
+        localStorageService.set('TechnologyId', 7);
+        $scope.$on('$viewContentLoaded', function () {
+            $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+        });
+    }])
+
+     .controller('CommonPortfolioCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+         $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+         $rootScope.TechnologyId = 0;
+         localStorageService.set('TechnologyId', 0);
          $scope.$on('$viewContentLoaded', function () {
              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
          });
@@ -281,14 +346,14 @@ angular.module('app.controllers', [])
         });
     }])
     .controller('AboutUsCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
-        $scope.$root.title = 'About Us-Shaligram Consultancy';
+        $scope.$root.title = 'About Us-Shaligram Infotech';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
     }])
 
  .controller('ContactUsCtrl', function ($scope, $location, $window, $http, toastr) {
-     $scope.$root.title = 'Contact Us-Shaligram Consultancy';
+     $scope.$root.title = 'Contact Us-Shaligram Infotech';
      $scope.$on('$viewContentLoaded', function () {
          $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
      })
@@ -302,7 +367,7 @@ angular.module('app.controllers', [])
              $scope.allData.Email = $scope.ContactUs.Email;
              $scope.allData.City = $scope.ContactUs.City;
              $('.loader').show();
-             $http.post("ShaligramConsultancyApi/api/CommonApi/SaveContactUSInformation", $scope.allData)
+             $http.post("ShaligramInfotechAPI/api/CommonApi/SaveContactUSInformation", $scope.allData)
                  .then(function (response) {
                      if (response) {
                          form.$submitted = false;
@@ -587,7 +652,7 @@ angular.module('app.controllers', [])
                 $scope.allData.EMI = "";
                 $scope.allData.Rupees = "Free";
                 $('.loader').show();
-                $http.post("ShaligramConsultancyApi/api/CommonApi/SaveInformation", $scope.allData)
+                $http.post("ShaligramInfotechAPI/api/CommonApi/SaveInformation", $scope.allData)
                     .then(function (response) {
 
                         if (response) {
@@ -859,7 +924,7 @@ angular.module('app.controllers', [])
                     $scope.allData.EMI = $rootScope.EMIText;
                     $scope.allData.Rupees = $rootScope.FromRsText;
                     $('.loader').show();
-                    $http.post("ShaligramConsultancyApi/api/CommonApi/SaveInformation", $scope.allData)
+                    $http.post("ShaligramInfotechAPI/api/CommonApi/SaveInformation", $scope.allData)
                         .then(function (response) {
 
                             if (response) {
@@ -925,6 +990,7 @@ angular.module('app.controllers', [])
           $scope.FolderPath = folderPath;
           $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath)
                          .then(function (response) {
+                             debugger;
                              $scope.GetList = response.data;
                          });
       }

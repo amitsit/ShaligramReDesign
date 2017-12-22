@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using ShaligramConsultancyAPI.Models;
-using ShaligramConsultancyAPI.Providers;
-using ShaligramConsultancyAPI.Results;
+using ShaligramInfotechAPI.Models;
+using ShaligramInfotechAPI.Providers;
+using ShaligramInfotechAPI.Results;
 
-namespace ShaligramConsultancyAPI.Controllers
+namespace ShaligramInfotechAPI.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

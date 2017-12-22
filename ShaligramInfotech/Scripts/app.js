@@ -1,15 +1,17 @@
 ﻿'use strict';
 
 // Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
-angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers'])
+angular.module('app', ['LocalStorageModule','toastr', 'ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers'])
 //angular.module('app', ['ngAnimate', 'toastr'])
 
     // Gets executed during the provider registrations and configuration phase. Only providers and constants can be
     // injected here. This is to prevent accidental instantiation of services before they have been fully configured.
-    .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
+    .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider, localStorageServiceProvider) {
 
         // UI States, URL Routing & Mapping. For more info see: https://github.com/angular-ui/ui-router
         // ------------------------------------------------------------------------------------------------------------
+     //   localStorageServiceProvider
+     //.setStorageType('localStorage');
 
         $stateProvider
             .state('home', {
@@ -554,6 +556,22 @@ angular.module('app', ['toastr', 'ui.router', 'app.filters', 'app.services', 'ap
                 templateUrl: '/views/SCPages/career',
                 controller: 'careerCntrl'
             })
+            .state('civil-net', {
+                url: '/portfolio-civil-net',
+                templateUrl: '/views/SCPages/portfolio/portfolio-civil-net',
+                controller: 'civilNetCntrl'
+            })
+            .state('portfolio-detail', {
+                url: '/portfolio-detail/:title',
+                templateUrl: '/views/SCPages/GetParticularPortfolioDetail',
+                controller: 'ParticularPortfolioController'
+            })
+              .state('portfolio', {
+                  url: '/portfolio',
+                  templateUrl: '/views/SCPages/portfolio-index',
+                  controller: 'ProfolioController'
+              })
+
             .state('otherwise', {
                 url: '*path',
                 templateUrl: '/views/404',

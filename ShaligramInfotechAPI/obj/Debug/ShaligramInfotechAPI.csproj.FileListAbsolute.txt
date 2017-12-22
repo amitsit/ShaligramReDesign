@@ -189,9 +189,9 @@ D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\roslyn\System.Refle
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\roslyn\vbc.exe
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\roslyn\VBCSCompiler.exe
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\roslyn\VBCSCompiler.exe.config
-D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\ShaligramConsultancyAPI.dll.config
-D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\ShaligramConsultancyAPI.dll
-D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\ShaligramConsultancyAPI.pdb
+D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\ShaligramInfotechAPI.dll.config
+D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\ShaligramInfotechAPI.dll
+D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\ShaligramInfotechAPI.pdb
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\Antlr3.Runtime.dll
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\EntityFramework.dll
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\EntityFramework.SqlServer.dll
@@ -264,5 +264,5 @@ D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Secu
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\bin\System.Web.Http.Owin.xml
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.csprojResolveAssemblyReference.cache
-D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramConsultancyAPI.dll
-D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramConsultancyAPI.pdb
+D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.dll
+D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.pdb

@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using ShaligramConsultancyAPI.Areas.HelpPage.ModelDescriptions;
-using ShaligramConsultancyAPI.Areas.HelpPage.Models;
+using ShaligramInfotechAPI.Areas.HelpPage.ModelDescriptions;
+using ShaligramInfotechAPI.Areas.HelpPage.Models;
 
-namespace ShaligramConsultancyAPI.Areas.HelpPage.Controllers
+namespace ShaligramInfotechAPI.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

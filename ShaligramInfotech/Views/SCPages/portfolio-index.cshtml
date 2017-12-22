@@ -1,0 +1,27 @@
+﻿
+<div class="main" style="margin-top: 2%">
+    <div class="container" ng-controller="ProfolioController">
+        <div id="isotope-options" class="port_menu">
+            <ul id="filters" class="option-set clearfix p_menu" data-option-key="filter">
+                <li><a href="" ng-click="GetPortfolioListForFront(0)">All</a></li>
+                <li ng-repeat="techlist in TechnologyList">
+                    <a href="" ng-click="GetPortfolioListForFront(techlist.TechnologyId)"><span ng-bind="techlist.TechnologyName"></span></a>
+                </li>
+            </ul>
+
+            <div ng-repeat="pl in PorfolioList" class="isotope-element isotope-element-3">
+                <div class="project-field">
+                    <div class="logo-img">
+                        <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl)">
+                            <img title="{{pl.Title}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.Title}}" />
+                        </a>
+
+                    </div>
+                    <div class="detail-wrapper">
+                        <h4><span ng-bind="pl.Title"></span> </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

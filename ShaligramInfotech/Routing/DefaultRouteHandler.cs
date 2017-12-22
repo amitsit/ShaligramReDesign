@@ -30,7 +30,23 @@ namespace App.ShaligramInfotech.Routing
             {
                 if (!filePath.StartsWith("~/views/SCPages/", StringComparison.OrdinalIgnoreCase))
                 {
-                    filePath = filePath.Insert(2, "views/SCPages/");
+                    if (filePath.StartsWith("~/portfolio-detail/ShaligramInfotechAPI/api/PortfolioApi/", StringComparison.OrdinalIgnoreCase))
+                    {
+                        filePath = filePath.Replace("portfolio-detail/", "");
+                    }
+                    else
+                    {
+                        if (filePath.StartsWith("~/portfolio-detail", StringComparison.OrdinalIgnoreCase))
+                        {
+                            filePath = "~/views/SCPages/GetParticularPortfolioDetail";
+                            //requestContext.HttpContext.Request.AppRelativeCurrentExecutionFilePath = "~/views/SCPages/portfolio/GetParticularPortfolioDetail";
+                        }
+                        else
+                        {
+                            filePath = filePath.Insert(2, "views/SCPages/");
+                        }
+                    }
+
                 }
 
                 if (!filePath.EndsWith(".cshtml", StringComparison.OrdinalIgnoreCase))

@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using ShaligramConsultancyAPI.Areas.HelpPage.ModelDescriptions;
-using ShaligramConsultancyAPI.Areas.HelpPage.Models;
+using ShaligramInfotechAPI.Areas.HelpPage.ModelDescriptions;
+using ShaligramInfotechAPI.Areas.HelpPage.Models;
 
-namespace ShaligramConsultancyAPI.Areas.HelpPage
+namespace ShaligramInfotechAPI.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

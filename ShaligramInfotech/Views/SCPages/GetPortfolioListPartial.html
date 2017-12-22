@@ -1,0 +1,107 @@
+﻿<!--<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="" ui-sref="civil-net">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/civilProjectMgmt.jpg" alt="Civil Project Management  Software Development | Civil Project Management  Software Development  Company" title="Civil Project Management  Software Development | Civil Project Management  Software Development  Company" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Civil Project Management</h4>
+        </div>
+    </a>
+</div>-->
+<!--<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/oil_net.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/oilGas.jpg" alt="Oil and Gas Business Intelligence System | Oil and Gas Business Intelligence System Development" title="Oil and Gas Business Intelligence System | Oil and Gas Business Intelligence System Development" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Oil and Gas business intelligence system</h4>
+        </div>
+    </a>
+</div>
+<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/business_net.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/businessAnalysis.jpg" alt="Business Analysis Tools | Business Analysis Tools And Techniques" title="Business Analysis Tools | Business Analysis Tools And Techniques" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Business Analysis Tool </h4>
+        </div>
+    </a>
+</div>
+<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/insurance-policy-administration.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/insurancePolicy.jpg" alt="Insurance Policy Administration System Software | Insurance Policy Administration System Software Development" title="Insurance Policy Administration System Software | Insurance Policy Administration System Software Development" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Insurance Policy Administration</h4>
+        </div>
+    </a>
+</div>
+<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/recruitment-process-management.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/recruitmntProcess.jpg" alt="Recruitment Process Management Software Development | Recruitment Process Management Software Development  USA" title="Recruitment Process Management Software Development | Recruitment Process Management Software Development  USA" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Recruitment Process Management</h4>
+        </div>
+    </a>
+</div>
+<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/online-book-store.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/onlineBookStore.jpg" alt="Online Book Store | Online Book Store USA" title="Online Book Store | Online Book Store USA" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Online Book Store</h4>
+        </div>
+    </a>
+</div>
+<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/Shipping-Management-System.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/shippingMgmtSystem.jpg" alt="Shipping Management System | Shipping Management System Project" title="Shipping Management System | Shipping Management System Project" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Shipping Management System Development</h4>
+        </div>
+    </a>
+</div>
+<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/restaurant_portal.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/restaurentPortal.jpg" alt="Restaurant Portal Development Company  USA | Restaurant Portal Development Company  UK" title="Restaurant Portal Development Company  USA | Restaurant Portal Development Company  UK" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Restaurant Portal</h4>
+        </div>
+    </a>
+</div>
+<div class="isotope-element isotope-element-3 net" data-category="net">
+    <a href="../portfolio/net_customer_management_portal.php">
+        <div class="logo-img">
+            <img src="../../../Images/portfolio/newPortfolioImg/customerMgmtSystem.jpg" alt="Customer Management Portal Development  Company USA | Customer Management Portal Development  UK" title="Customer Management Portal Development  Company USA | Customer Management Portal Development  UK" />
+        </div>
+        <div class="detail-wrapper">
+            <h4>Customer Management Portal</h4>
+        </div>
+    </a>
+</div>*@-->
+
+
+<div ng-controller="ProfolioController">
+    <div ng-repeat="pl in PorfolioList" class="isotope-element isotope-element-3">
+        <div class="project-field">
+            <div class="logo-img">
+                <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl)">
+                    <img title="{{pl.Title}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.Title}}" />
+                </a>
+                
+            </div>
+            <div class="detail-wrapper">
+                <h4><span ng-bind="pl.Title"></span> </h4>
+            </div>
+        </div>
+    </div>
+</div>
