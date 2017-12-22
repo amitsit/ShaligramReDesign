@@ -112,6 +112,8 @@ angular.module('app.controllers', [])
          $scope.$root.title = 'PHP Open Source Project Development | PHP Open Source Project Development Company | PHP Open Source Project Development Company USA';
          $rootScope.TechnologyId = 6;
          localStorageService.TechnologyId = 6;
+     .controller('hadoopDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+         $scope.$root.title = 'Hadoop Development | PHP Open Source Project Development | PHP Open Source Project Development Company | PHP Open Source Project Development Company USA';
          $scope.$on('$viewContentLoaded', function () {
              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
          });
@@ -984,8 +986,38 @@ angular.module('app.controllers', [])
         $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
     });
 }])
-  .controller('CommonImagesController', ['$scope', '$location', '$window', '$rootScope', '$http', function ($scope, $location, $window, $rootScope, $http) {
+.controller('SharepointCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Sharepoint";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('JavaCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Java";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('BiztalkCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Biztalk";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('MicrosoftDotNetCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Microsoft .Net";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
+.controller('NodejsCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
+    $scope.$root.title = "Nodejs";
+    $scope.$on('$viewContentLoaded', function () {
+        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+    });
+}])
 
+  .controller('CommonImagesController', ['$scope', '$location', '$window', '$rootScope', '$http', function ($scope, $location, $window, $rootScope, $http) {
       $scope.GetFilesList = function (folderPath) {
           $scope.FolderPath = folderPath;
           $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath)
