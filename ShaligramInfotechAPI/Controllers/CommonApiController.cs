@@ -9,11 +9,49 @@ using System.Web.Http;
 using ShaligramInfotechAPI.Common;
 using ShaligramInfotechAPI.Models;
 using System.IO;
+using ShaligramInfotechAPI.Entities;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
+using ShaligramInfotechAPI.Helper;
 
 namespace ShaligramInfotechAPI.Controllers
 {
     public class CommonApiController : ApiController
     {
+        private readonly UnitOfWork _unitOfWork = null;
+
+        public CommonApiController()
+        {
+            _unitOfWork = new UnitOfWork();
+            //_CandidateService = new CandidateService();
+        }
+
+        [HttpPost]
+        public HttpResponseMessage SaveContactInformation(ContactUsEntity objContactUsEntity)
+        {
+            var list = _unitOfWork.SQLNonQuery("EXEC SaveContactInformation @Name,@PhoneNumber,@EmailAddress,@City,@Company,@Message", new SqlParameter[]
+                         {
+                             new SqlParameter("@Name",objContactUsEntity.Name),
+                             new SqlParameter("@PhoneNumber",objContactUsEntity.PhoneNumber),
+                             new SqlParameter("@EmailAddress",objContactUsEntity.EmailAddress),
+                             new SqlParameter("@City",objContactUsEntity.City),
+                             new SqlParameter("@Company",objContactUsEntity.Company),
+                             new SqlParameter("@Message",objContactUsEntity.Message),
+                         });
+            string AdminMail = "mansi.p@shaligraminfotech.com";
+            string bodyAdminTemplate = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.MapPath("~/EmailTemplate/AdminContactUs.html"));
+            bodyAdminTemplate = bodyAdminTemplate.Replace("[@Name]", objContactUsEntity.Name);
+            bodyAdminTemplate = bodyAdminTemplate.Replace("[@Email]", objContactUsEntity.EmailAddress);
+            bodyAdminTemplate = bodyAdminTemplate.Replace("[@Mobile]", objContactUsEntity.PhoneNumber);
+            bodyAdminTemplate = bodyAdminTemplate.Replace("[@company]", objContactUsEntity.Company);
+            bodyAdminTemplate = bodyAdminTemplate.Replace("[@Message]", objContactUsEntity.Message);
+
+            Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Mail Sent Successfully", "", null));
+            Admintask.Start();
+
+            return Request.CreateResponse(HttpStatusCode.OK, list);
+        }
+
         //[HttpPost]
         //public HttpResponseMessage SaveInformation(InquiryDetail allDataobj)
         //{
@@ -42,7 +80,7 @@ namespace ShaligramInfotechAPI.Controllers
         //    bodyTemplate = bodyTemplate.Replace("[@Phone]", allDataobj.Phone);
         //    bodyTemplate = bodyTemplate.Replace("[@EnquiryFor]", allDataobj.InquiryFor);
         //    bodyTemplate = bodyTemplate.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail("", "[Shaligram Infotech] Receive New Enquiry For - " + allDataobj.InquiryFor, bodyTemplate, true);
+        //    EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Enquiry For - " + allDataobj.InquiryFor, bodyTemplate, true);
 
         //    //thank u email
         //    var mappedPathThankU = HttpContext.Current.Server.MapPath("~/EmailTemplate/ThankuEmail.html");
@@ -53,7 +91,7 @@ namespace ShaligramInfotechAPI.Controllers
         //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Email]", allDataobj.Email);
         //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Phone]", allDataobj.Phone);
         //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail(allDataobj.Email, "Thank You For Your Inquiry With Shaligram Infotech.", bodyTemplateThankYou, true);
+        //    EmailHelper.SendAsyncEmail(allDataobj.Email, "Thank You For Your Inquiry With Shaligram Consultancy.", bodyTemplateThankYou, true);
 
 
 
@@ -85,7 +123,7 @@ namespace ShaligramInfotechAPI.Controllers
         //    bodyTemplate = bodyTemplate.Replace("[@Phone]", allDataobj.Phone);
         //    bodyTemplate = bodyTemplate.Replace("[@City]", allDataobj.City);
         //    bodyTemplate = bodyTemplate.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail("", "[Shaligram Infotech] Receive New Contact Us Request", bodyTemplate, true);
+        //    EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Contact Us Request", bodyTemplate, true);
 
         //    //thank u email
         //    var mappedPathThankU = HttpContext.Current.Server.MapPath("~/EmailTemplate/contactUsThankuEmail.html");
@@ -96,7 +134,7 @@ namespace ShaligramInfotechAPI.Controllers
         //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Email]", allDataobj.Email);
         //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Phone]", allDataobj.Phone);
         //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail(allDataobj.Email, "Thank You For Your Contact Request With Shaligram Infotech.", bodyTemplateThankYou, true);
+        //    EmailHelper.SendAsyncEmail(allDataobj.Email, "Thank You For Your Contact Request With Shaligram Consultancy.", bodyTemplateThankYou, true);
 
 
 
@@ -104,20 +142,20 @@ namespace ShaligramInfotechAPI.Controllers
 
         //}
 
-        //[HttpGet]
-        //public HttpResponseMessage GetFiles(string folderPath)
-        //{
-        //    List<string> fileList = new List<string>();
-        //    if (!string.IsNullOrWhiteSpace(folderPath) && System.IO.Directory.Exists(HttpContext.Current.Server.MapPath("~") + folderPath))
-        //    {
-        //        fileList = new DirectoryInfo(HttpContext.Current.Server.MapPath("~/") + folderPath).GetFiles().Select(o => o.Name).ToList();
-        //        return Request.CreateResponse(HttpStatusCode.OK, fileList);
-        //    }
-        //    else
-        //    {
-        //        return Request.CreateResponse(HttpStatusCode.OK, fileList);
-        //    }
-        //}
+        [HttpGet]
+        public HttpResponseMessage GetFiles(string folderPath)
+        {
+            List<string> fileList = new List<string>();
+            if (!string.IsNullOrWhiteSpace(folderPath) && System.IO.Directory.Exists(HttpContext.Current.Server.MapPath("~") + folderPath))
+            {
+                fileList = new DirectoryInfo(HttpContext.Current.Server.MapPath("~/") + folderPath).GetFiles().Select(o => o.Name).ToList();
+                return Request.CreateResponse(HttpStatusCode.OK, fileList);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, fileList);
+            }
+        }
 
         //[HttpGet]
         //public HttpResponseMessage GetCityList()
@@ -129,6 +167,7 @@ namespace ShaligramInfotechAPI.Controllers
         //    return Request.CreateResponse(HttpStatusCode.OK, objListcity);
 
         //}
+
 
     }
 }
