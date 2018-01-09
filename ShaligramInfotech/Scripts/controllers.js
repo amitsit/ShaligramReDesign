@@ -79,7 +79,7 @@ angular.module('app.controllers', [])
      .controller('angularjsDevelopmentCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
          $scope.$root.title = 'Shaligram Infotech AngularJS | Software Product Development Company | Software Product Development Company  UK';
          $rootScope.TechnologyId = 8;
-         localStorageService.set('TechnologyId',8);
+         localStorageService.set('TechnologyId', 8);
          $scope.$on('$viewContentLoaded', function () {
              $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
          });
@@ -355,49 +355,49 @@ angular.module('app.controllers', [])
             });
         }])
 
-     .controller('ContactUsCtrl', function ($scope, $location, $window, $http, toastr) {
-         $scope.$root.title = 'Contact Us-Shaligram Infotech';
-         $scope.$on('$viewContentLoaded', function () {
-             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
-         })
+     //.controller('ContactUsCtrl', function ($scope, $location, $window, $http, toastr) {
+     //    $scope.$root.title = 'Contact Us-Shaligram Infotech';
+     //    $scope.$on('$viewContentLoaded', function () {
+     //        $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+     //    })
 
-         $scope.SaveContactUs = function (form) {
+     //    $scope.SaveContactUs = function (form) {
 
-             if (form.$valid) {
-                 $scope.allData = new Object();
-                 $scope.allData.Name = $scope.ContactUs.Name;
-                 $scope.allData.Phone = $scope.ContactUs.Phone;
-                 $scope.allData.Email = $scope.ContactUs.Email;
-                 $scope.allData.City = $scope.ContactUs.City;
-                 $('.loader').show();
-                 $http.post("ShaligramInfotechAPI/api/CommonApi/SaveContactUSInformation", $scope.allData)
-                     .then(function (response) {
-                         if (response) {
-                             form.$submitted = false;
-                             //toastr.success("Request Send Successfully");
-                             $("#myModal").modal('show');
+     //        if (form.$valid) {
+     //            $scope.allData = new Object();
+     //            $scope.allData.Name = $scope.ContactUs.Name;
+     //            $scope.allData.Phone = $scope.ContactUs.Phone;
+     //            $scope.allData.Email = $scope.ContactUs.Email;
+     //            $scope.allData.City = $scope.ContactUs.City;
+     //            $('.loader').show();
+     //            $http.post("ShaligramInfotechAPI/api/CommonApi/SaveContactUSInformation", $scope.allData)
+     //                .then(function (response) {
+     //                    if (response) {
+     //                        form.$submitted = false;
+     //                        //toastr.success("Request Send Successfully");
+     //                        $("#myModal").modal('show');
 
-                             //$scope.ContactUs = new Object();
+     //                        //$scope.ContactUs = new Object();
 
-                             //$scope.ContactUs.Name = new Object();
-                             //$scope.ContactUs.Phone = new Object();
-                             //$scope.ContactUs.Email = new Object();
-                             //$scope.ContactUs.City = new Object();
+     //                        //$scope.ContactUs.Name = new Object();
+     //                        //$scope.ContactUs.Phone = new Object();
+     //                        //$scope.ContactUs.Email = new Object();
+     //                        //$scope.ContactUs.City = new Object();
 
-                             //alert('success');
-                         } else {
-                             //alert('error');
-                         }
-                         $('.loader').hide();
-                     })
-                     .catch(function (response) {
-                         $('.loader').hide();
-                     });
-             }
-         };
+     //                        //alert('success');
+     //                    } else {
+     //                        //alert('error');
+     //                    }
+     //                    $('.loader').hide();
+     //                })
+     //                .catch(function (response) {
+     //                    $('.loader').hide();
+     //                });
+     //        }
+     //    };
 
 
-     })
+     //})
     .controller('ProprietorshipCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
         $scope.$root.title = 'Proprietorship';
         $rootScope.EMIText = "EMI: Rs.257";
@@ -908,49 +908,49 @@ angular.module('app.controllers', [])
                 $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
             });
         }])
-            .controller('CommonController', function ($scope, $location, $window, $rootScope, $http, toastr) {
+        .controller('CommonController', function ($scope, $location, $window, $rootScope, $http, toastr) {
 
-                $scope.pageReload = function () {
-                    $window.location.reload();
-                }
+            $scope.pageReload = function () {
+                $window.location.reload();
+            }
 
-                $scope.Savedata = function (form) {
+            $scope.Savedata = function (form) {
 
-                    if (form.$valid) {
+                if (form.$valid) {
 
-                        //  toastr.success("Inquiry Send Successfully");
-                        $scope.allData = new Object();
-                        $scope.allData.Name = $scope.Name;
-                        $scope.allData.Phone = $scope.Phone;
-                        $scope.allData.Email = $scope.Email;
-                        $scope.allData.InquiryFor = $scope.$root.title;
-                        $scope.allData.EMI = $rootScope.EMIText;
-                        $scope.allData.Rupees = $rootScope.FromRsText;
-                        $('.loader').show();
-                        $http.post("ShaligramInfotechAPI/api/CommonApi/SaveInformation", $scope.allData)
-                            .then(function (response) {
+                    //  toastr.success("Inquiry Send Successfully");
+                    $scope.allData = new Object();
+                    $scope.allData.Name = $scope.Name;
+                    $scope.allData.Phone = $scope.Phone;
+                    $scope.allData.Email = $scope.Email;
+                    $scope.allData.InquiryFor = $scope.$root.title;
+                    $scope.allData.EMI = $rootScope.EMIText;
+                    $scope.allData.Rupees = $rootScope.FromRsText;
+                    $('.loader').show();
+                    $http.post("ShaligramInfotechAPI/api/CommonApi/SaveInformation", $scope.allData)
+                        .then(function (response) {
 
-                                if (response) {
-                                    $('.loader').hide();
-                                    $("#myModal").modal('show');
-                                    // toastr.success("Inquiry Send Successfully");
-                                    $scope.Name = "";
-                                    $scope.Phone = "";
-                                    $scope.Email = "";
-                                    //alert('success');
-                                } else {
-                                    //alert('error');
-                                }
+                            if (response) {
                                 $('.loader').hide();
-                            })
-                            .catch(function (response) {
-                                $('.loader').hide();
-                            });
-                    } else {
+                                $("#myModal").modal('show');
+                                // toastr.success("Inquiry Send Successfully");
+                                $scope.Name = "";
+                                $scope.Phone = "";
+                                $scope.Email = "";
+                                //alert('success');
+                            } else {
+                                //alert('error');
+                            }
+                            $('.loader').hide();
+                        })
+                        .catch(function (response) {
+                            $('.loader').hide();
+                        });
+                } else {
 
-                    }
                 }
-            })
+            }
+        })
       .controller('ApplicationDevelopmentCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
           $scope.$root.title = "Application Development";
           $scope.$on('$viewContentLoaded', function () {

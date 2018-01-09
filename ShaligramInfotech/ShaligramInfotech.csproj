@@ -251,6 +251,7 @@
     <Content Include="Images\closePrivateLimitedCompany.jpg" />
     <Content Include="Images\conference-room.jpg" />
     <Content Include="Images\copyrightRegistration.jpg" />
+    <Content Include="Images\del-attach.png" />
     <Content Include="Images\designRegistration.jpg" />
     <Content Include="Images\development-area.jpg" />
     <Content Include="Images\digitalSignature.jpg" />
@@ -1707,13 +1708,14 @@
     <Content Include="Scripts\js\Priceformscript.js" />
     <Content Include="Scripts\js\sticky-kit.min.js" />
     <Content Include="Scripts\ParticularPortfolioController.js" />
-    <Content Include="Scripts\PorfolioController.js" />
+    <Content Include="Scripts\PortfolioController.js" />
     <Content Include="Scripts\services.js" />
     <Content Include="Scripts\services.spec.js">
       <DependentUpon>services.js</DependentUpon>
     </Content>
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\vendor\angular-csp.css" />
+    <Content Include="Scripts\vendor\angular-recaptcha.js" />
     <Content Include="Scripts\vendor\angular-ui-router.js" />
     <Content Include="Scripts\vendor\angular-ui-router.min.js" />
     <Content Include="Scripts\vendor\i18n\angular-locale_af-na.js" />

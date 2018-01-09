@@ -2311,3 +2311,6 @@ ul.who_we_are_content {
     padding: 2px 0;
     border: none;
 }
+
+a.remove_field img { width: 15px; height: 15px; float: right; margin-top: 2px }
+input[type=file] { float: left; width: 60% }

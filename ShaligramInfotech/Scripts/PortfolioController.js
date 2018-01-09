@@ -1,10 +1,11 @@
 ﻿
-angular.module('app.controllers').controller('ProfolioController', function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService) {
+angular.module('app.controllers').controller('PortfolioController', function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService) {
+    debugger;
     $scope.PorfolioList = [];
     $scope.PortfolioDetail = [];
     $scope.TechnologyList = [];
     $scope.TechnologyId = 0;
-    debugger;
+
     if ($rootScope.TechnologyId != undefined && $rootScope.TechnologyId != "" && $rootScope.TechnologyId != null) {
         $scope.TechnologyId = $rootScope.TechnologyId;
     }
@@ -14,6 +15,9 @@ angular.module('app.controllers').controller('ProfolioController', function ($sc
 
     $scope.GetPortfolioListForFront = function (technologyID) {
         localStorageService.set('TechnologyId', technologyID);
+        if (technologyID == null || technologyID == undefined) {
+            technologyID = 0;
+        }
         var getPorfolioList = $http.get(configurationService.basePath + 'api/PortfolioApi/GetPortfolioListForFront?technologyId=' + technologyID);
         getPorfolioList.success(function (data) {
             $scope.PorfolioList = [];

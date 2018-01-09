@@ -2,7 +2,7 @@
 
 angular.module('app.directives', [])
 
-    .directive('appVersion', ['version', function (version) {
+.directive('appVersion', ['version', function (version) {
         return function (scope, elm, attrs) {
             elm.text(version);
         };
@@ -18,5 +18,20 @@ angular.module('app.directives', [])
             var contents = element.html(response).contents();
             $compile(contents)(scope);
         });
+    };
+})
+.directive('uploadFiles', function () {
+    return {
+        scope: true,        //create a new scope  
+        link: function (scope, el, attrs) {
+            el.bind('change', function (event) {
+                var files = event.target.files;
+                //iterate files since 'multiple' may be specified on the element  
+                for (var i = 0; i < files.length; i++) {
+                    //emit event upward  
+                    scope.$emit("seletedFile", { file: files[i] });
+                }
+            });
+        }
     };
 });

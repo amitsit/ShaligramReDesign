@@ -186,40 +186,40 @@ angular.module('app', ['LocalStorageModule','toastr', 'ui.router', 'app.filters'
                  templateUrl: '/views/SCPages/fresher-asp-net',
                  controller: 'fresherAspnetCntrl'
              })
-              .state('fresher-business-development-executive', {
-                  url: '/fresher-business-development-executive',
-                  templateUrl: '/views/SCPages/fresher-business-development-executive',
-                  controller: 'fresherBusinessDevelopmentExecutiveCntrl'
-              })
+            .state('fresher-business-development-executive', {
+                url: '/fresher-business-development-executive',
+                templateUrl: '/views/SCPages/fresher-business-development-executive',
+                controller: 'fresherBusinessDevelopmentExecutiveCntrl'
+            })
             .state('jr-business-development-executive', {
                 url: '/jr-business-development-executive',
                 templateUrl: '/views/SCPages/jr-business-development-executive',
                 controller: 'jrBusinessDevelopmentExecutiveCntrl'
             })
-              .state('sr-business-development-executive', {
-                  url: '/sr-business-development-executive',
-                  templateUrl: '/views/SCPages/sr-business-development-executive',
-                  controller: 'srBusinessDevelopmentExecutiveCntrl'
-              })
+            .state('sr-business-development-executive', {
+                url: '/sr-business-development-executive',
+                templateUrl: '/views/SCPages/sr-business-development-executive',
+                controller: 'srBusinessDevelopmentExecutiveCntrl'
+            })
             .state('sr-sharepoint-developer', {
                 url: '/sr-sharepoint-developer',
                 templateUrl: '/views/SCPages/sr-sharepoint-developer',
                 controller: 'srSharepointDeveloperCntrl'
             })
-          .state('sr-java-developer', {
-              url: '/sr-java-developer',
-              templateUrl: '/views/SCPages/sr-java-developer',
-              controller: 'srJavaDeveloperCntrl'
-          })
-             .state('about-us', {
-                 url: '/about-us',
-                 templateUrl: '/views/SCPages/about-us',
-                 controller: 'AboutUsCtrl'
-             })
+            .state('sr-java-developer', {
+                url: '/sr-java-developer',
+                templateUrl: '/views/SCPages/sr-java-developer',
+                controller: 'srJavaDeveloperCntrl'
+            })
+            .state('about-us', {
+                url: '/about-us',
+                templateUrl: '/views/SCPages/about-us',
+                controller: 'AboutUsCtrl'
+            })
             .state('contact-us', {
                 url: '/contact-us',
                 templateUrl: '/views/SCPages/contact-us',
-                controller: 'ContactUsCtrl'
+                controller: 'ContactUsController'
             })
             .state('proprietorship', {
                 url: '/proprietorship',
@@ -569,7 +569,7 @@ angular.module('app', ['LocalStorageModule','toastr', 'ui.router', 'app.filters'
               .state('portfolio', {
                   url: '/portfolio',
                   templateUrl: '/views/SCPages/portfolio-index',
-                  controller: 'ProfolioController'
+                  controller: 'PortfolioController'
               })
 
             .state('otherwise', {
