@@ -1,6 +1,6 @@
 ﻿<div class="container" ng-controller="ContactUsController">
     <!-- Contact Form -->
-
+    <br/><br />
     <div class="row">
         <form class="form-horizontal" name="ContactUsForm" novalidate>
             <div role="tabpanel" class="form-horizontal" id="messages">
@@ -12,6 +12,7 @@
                         <li ng-show="ContactUsForm.FullName.$error.required">Name is required.</li>
                         <li ng-show="ContactUsForm.EmailAddress.$error.required">Email Address is required.</li>
                         <li ng-show="ContactUsForm.EmailAddress.$error.email">Please enter valid email address.</li>
+                        <li ng-show="!ContactUsForm.PhoneNumber.$valid">Please enter valid phone number.</li>
                         @*<li ng-show="ContactUsForm.Company.$error.required">Company is required.</li>*@
                         <li ng-show="ContactUsForm.Message.$error.required">Message is required.</li>
                         <li ng-show="googleRecaptchaValidationMessage">Please fill Captcha.</li>
@@ -34,7 +35,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>Phone Number</label>
-                            <input type="number" ng-model="ContactUs.PhoneNumber" name="PhoneNumber" class="form-control" />
+                            <input type="number" ng-model="ContactUs.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control" />
                             @*@Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = "Phone Number", @Class = "form-control", @type = "number", @maxlength = "10" })
                                 @Html.ValidationMessageFor(model => model.PhoneNumber)*@
                         </div>
