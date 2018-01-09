@@ -284,7 +284,6 @@ angular.module('app.controllers', [])
 
         .controller('SharepointCtrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
             $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
-            debugger;
             $rootScope.TechnologyId = 2;
             localStorageService.set('TechnologyId', 2);
             $scope.$on('$viewContentLoaded', function () {
@@ -1023,11 +1022,9 @@ angular.module('app.controllers', [])
               $scope.FolderPath = folderPath;
               $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath)
                              .then(function (response) {
-                                 debugger;
                                  $scope.GetList = response.data;
                              });
           }
-
       }]);
 
 

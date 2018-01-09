@@ -1,6 +1,7 @@
 ﻿
-angular.module('app.controllers', ['vcRecaptcha']).controller('ContactUsController',
-        function ($scope, $location, $window, $http, configurationService, $state, $rootScope, vcRecaptchaService) {
+angular.module('app.controllers')
+    .controller('ContactUsController',
+        function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService, vcRecaptchaService) {
 
             //    var valid;
 

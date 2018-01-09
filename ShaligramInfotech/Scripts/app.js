@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 // Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
-angular.module('app', ['LocalStorageModule','toastr', 'ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers'])
+angular.module('app', ['LocalStorageModule', 'toastr', 'ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers', 'vcRecaptcha'])
 //angular.module('app', ['ngAnimate', 'toastr'])
 
     // Gets executed during the provider registrations and configuration phase. Only providers and constants can be
@@ -216,11 +216,7 @@ angular.module('app', ['LocalStorageModule','toastr', 'ui.router', 'app.filters'
                 templateUrl: '/views/SCPages/about-us',
                 controller: 'AboutUsCtrl'
             })
-            .state('contact-us', {
-                url: '/contact-us',
-                templateUrl: '/views/SCPages/contact-us',
-                controller: 'ContactUsController'
-            })
+            
             .state('proprietorship', {
                 url: '/proprietorship',
                 templateUrl: '/views/SCPages/proprietorship',
@@ -566,12 +562,16 @@ angular.module('app', ['LocalStorageModule','toastr', 'ui.router', 'app.filters'
                 templateUrl: '/views/SCPages/GetParticularPortfolioDetail',
                 controller: 'ParticularPortfolioController'
             })
-              .state('portfolio', {
-                  url: '/portfolio',
-                  templateUrl: '/views/SCPages/portfolio-index',
-                  controller: 'PortfolioController'
-              })
-
+            .state('portfolio', {
+                url: '/portfolio',
+                templateUrl: '/views/SCPages/portfolio-index',
+                controller: 'PortfolioController'
+            })
+            .state('contact-us', {
+                url: '/contact-us',
+                templateUrl: '/views/SCPages/contact-us',
+                controller: 'ContactUsController'
+            })
             .state('otherwise', {
                 url: '*path',
                 templateUrl: '/views/404',

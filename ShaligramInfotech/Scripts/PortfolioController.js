@@ -1,6 +1,5 @@
 ﻿
 angular.module('app.controllers').controller('PortfolioController', function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService) {
-    debugger;
     $scope.PorfolioList = [];
     $scope.PortfolioDetail = [];
     $scope.TechnologyList = [];
@@ -40,7 +39,6 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
 
     $scope.RedirectToProtfolioDetail = function (TitleSeoUrl) {
         TitleSeoUrl = TitleSeoUrl.trim();
-        debugger;
         $state.go('portfolio-detail', { title: TitleSeoUrl });
 
     }

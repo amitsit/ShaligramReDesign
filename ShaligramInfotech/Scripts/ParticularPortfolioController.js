@@ -32,7 +32,6 @@ angular.module('app.controllers').controller('ParticularPortfolioController', fu
     }
 
     $scope.showDivs = function (n) {
-        debugger;
         var i;
         var x = $(".mySlides");
         var dots = $(".demo");

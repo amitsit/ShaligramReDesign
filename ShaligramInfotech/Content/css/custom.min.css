@@ -2146,7 +2146,7 @@ ul.who_we_are_content {
 }
 
     .pline + ul {
-        margin-left: 410px;
+        margin-left: 420px !important;
     }
 
 .table_app .fa, .serv .fa, .list-icon .fa, .benifit_list .fa, .list2 .fa, .tech_service .fa {
@@ -2257,9 +2257,6 @@ ul.who_we_are_content {
 }
 
 
-.pline + ul {
-    margin-left: 360px;
-}
 
 .pline + .pline {
     padding-top: 10px;
@@ -2314,3 +2311,13 @@ ul.who_we_are_content {
 
 a.remove_field img { width: 15px; height: 15px; float: right; margin-top: 2px }
 input[type=file] { float: left; width: 60% }
+
+.scrum li {
+    text-align: center;
+}
+
+
+.portfolio-item img {
+    min-height: 190px;
+    max-width: 250px;
+}
