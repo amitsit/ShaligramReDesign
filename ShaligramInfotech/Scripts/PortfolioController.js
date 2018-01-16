@@ -1,5 +1,7 @@
 ﻿
 angular.module('app.controllers').controller('PortfolioController', function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService) {
+
+    localStorageService.set('TechnologyId', 0);
     $scope.PorfolioList = [];
     $scope.PortfolioDetail = [];
     $scope.TechnologyList = [];
@@ -26,7 +28,6 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
     }
 
     $scope.GetPortfolioListForFront($scope.TechnologyId);
-
 
     GetAllTechnologies()
     function GetAllTechnologies() {
