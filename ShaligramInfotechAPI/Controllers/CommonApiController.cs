@@ -143,7 +143,7 @@ namespace ShaligramInfotechAPI.Controllers
                         }
                     }
 
-                    string AdminMail = "atul.p@sgit.in";
+                    string AdminMail = "richa.t@shaligraminfotech.com";
                     string bodyAdminTemplate = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.MapPath("~/EmailTemplate/AdminContactUs.html"));
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@Name]", objContactUsEntity.Name);
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@Email]", objContactUsEntity.EmailAddress);
