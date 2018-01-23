@@ -25,8 +25,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <ol class="breadcrumb">
-                    <li><a href="" ui-sref="home">Home</a></li>
-                    <li><a>Portfolio</a></li>
+                    <li><a href="./" ui-sref="home" >Home</a></li>
+                    <li><a href="/portfolio" ui-sref="portfolio">Portfolio</a></li>
                     <li class="active">{{PortfolioDetail.Title}}</li>
                 </ol>
             </div>
@@ -68,7 +68,7 @@
                                 <div class="col-sm-4">
                                     <ul class="slides port_slid">
                                         <li ng-repeat="image in PortfolioDetail.objPortfolioImageEntity track by $index" class="flex-active-slide">
-                                            <a class="popup-link fancybox" rel="ligthbox" data-fancybox-group="gallery">
+                                            <a class="popup-link fancybox" href="/PortfolioImages/OtherImages/{{image.ImageURL}}" rel="ligthbox" data-fancybox-group="gallery">
                                                 <img ng-src="/PortfolioImages/OtherImages/{{image.ImageURL}}" alt="Image" class="mySlides" style="cursor:zoom-in" />
                                             </a>
                                         </li>
