@@ -16,14 +16,15 @@ namespace App.ShaligramInfotech
         {
             bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css",
                 "~/content/css/bootstrap.min.css",
-                "~/content/css/custom.min.css",
                 "~/content/css/font-awesome.min.css",
                 //"~/content/css/header.custom.min.css",
                 "~/content/css/header.responsive.min.css",
                 "~/content/css/responsive.min.css",
                 //"~/Content/css/portfoliot.css",
                 "~/Content/css/portfolio.css",
-                "~/Content/css/pricing_style.css"
+                "~/Content/css/pricing_style.css",
+                "~/Scripts/js/fancybox/jquery.fancybox.css",
+                "~/content/css/custom.min.css"
                 ));
                 
             bundles.Add(new ScriptBundle("~/js/jquery").Include("~/scripts/vendor/jquery-{version}.js"));

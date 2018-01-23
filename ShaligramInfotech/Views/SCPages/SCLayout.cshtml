@@ -959,7 +959,7 @@
 
     <script src="~/Scripts/js/jquery.min.js"></script>
     @*<script src="~/Scripts/common.js"></script>*@
-
+    <script src="~/Scripts/js/fancybox/jquery.fancybox.js"></script>
     <script src="~/Scripts/js/angular.min.js"></script>
     <script src="~/Scripts/js/angular-local-storage.js"></script>
     <script src="~/Scripts/vendor/angular-ui-router.js"></script>
@@ -1082,6 +1082,11 @@
                 }, 1000);
             });
 
+        });
+
+        $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
         });
 
 

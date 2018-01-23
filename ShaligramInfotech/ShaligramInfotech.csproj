@@ -196,6 +196,9 @@
     <Content Include="Content\css\toastr-angular.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\icons\close.png" />
+    <Content Include="Content\images\icons\left.png" />
+    <Content Include="Content\images\icons\right.png" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Content\app.css">
@@ -295,6 +298,7 @@
     <Content Include="Images\gstRegistrationForForeigners.jpg" />
     <Content Include="Images\handshake.png" />
     <Content Include="Images\header-logo.jpg" />
+    <Content Include="Content\icons\close.png" />
     <Content Include="Images\idea.jpg" />
     <Content Include="Images\importExportCode.jpg" />
     <Content Include="Images\incomeTaxFiling.jpg" />
@@ -1712,6 +1716,14 @@
     <Content Include="Scripts\js\angular-local-storage.js" />
     <Content Include="Scripts\js\angular.min.js" />
     <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\fancybox\blank.gif" />
+    <Content Include="Scripts\js\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Scripts\js\fancybox\fancybox_loading.gif" />
+    <Content Include="Scripts\js\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Scripts\js\fancybox\fancybox_sprite.png" />
+    <Content Include="Scripts\js\fancybox\jquery.fancybox.css" />
+    <Content Include="Scripts\js\fancybox\jquery.fancybox.js" />
+    <Content Include="Scripts\js\fancybox\jquery.fancybox.pack.js" />
     <Content Include="Scripts\js\jquery.min.js" />
     <Content Include="Scripts\js\Priceformscript.js" />
     <Content Include="Scripts\js\sticky-kit.min.js" />
