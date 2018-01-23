@@ -1717,6 +1717,7 @@
     <Content Include="Scripts\js\sticky-kit.min.js" />
     <Content Include="Scripts\ParticularPortfolioController.js" />
     <Content Include="Scripts\PortfolioController.js" />
+    <Content Include="Scripts\RequestQuoteController.js" />
     <Content Include="Scripts\services.js" />
     <Content Include="Scripts\services.spec.js">
       <DependentUpon>services.js</DependentUpon>
@@ -2215,6 +2216,7 @@
     <Content Include="Views\SCPages\pricecomparisonus.cshtml" />
     <Content Include="Views\SCPages\pricecomparisonaus.cshtml" />
     <Content Include="Views\SCPages\pricecomparisonuk.cshtml" />
+    <Content Include="Views\SCPages\requestquote.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

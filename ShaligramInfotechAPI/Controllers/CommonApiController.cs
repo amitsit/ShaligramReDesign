@@ -163,6 +163,93 @@ namespace ShaligramInfotechAPI.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<HttpResponseMessage> SaveRequestQuote()
+        {
+            try
+            {
+                if (!Request.Content.IsMimeMultipartContent())
+                {
+                    throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+                }
+
+                var root = HttpContext.Current.Server.MapPath("~/RequestQuoteAttachment");
+                Directory.CreateDirectory(root);
+                var provider = new MultipartFormDataStreamProvider(root);
+                var result = await Request.Content.ReadAsMultipartAsync(provider);
+
+
+                var contactId = result.FormData["RequestQuoteId"];
+                if (contactId == null)
+                {
+                    throw new HttpResponseException(HttpStatusCode.BadRequest);
+                }
+
+                RequestQuoteEntity objRequestQuoteEntity = new RequestQuoteEntity();
+                objRequestQuoteEntity.RequestQuoteId = Convert.ToInt32(result.FormData["RequestQuoteId"].ToString());
+                objRequestQuoteEntity.FullName = result.FormData["FullName"].ToString();
+                objRequestQuoteEntity.PhoneNumber = result.FormData["PhoneNumber"].ToString();
+                objRequestQuoteEntity.EmailAddress = result.FormData["EmailAddress"].ToString();
+                objRequestQuoteEntity.City = result.FormData["City"].ToString();
+                objRequestQuoteEntity.Company = result.FormData["Company"].ToString();
+                objRequestQuoteEntity.ProjectTypeId = Convert.ToInt32(result.FormData["ProjectTypeId"]);
+                objRequestQuoteEntity.BudgetId = Convert.ToInt32(result.FormData["BudgetId"]);
+                objRequestQuoteEntity.ProjectDescription = result.FormData["ProjectDescription"].ToString();
+
+                var requestQuoteId = _unitOfWork.SQLStringReturn("EXEC SaveRequestQuotes @FullName,@PhoneNumber,@EmailAddress," +
+                                    "@City,@Company,@ProjectTypeId,@BudgetId,@ProjectDescription", new SqlParameter[]
+                             {
+                             new SqlParameter("@FullName", objRequestQuoteEntity.FullName),
+                             new SqlParameter("@PhoneNumber",objRequestQuoteEntity.PhoneNumber),
+                             new SqlParameter("@EmailAddress",objRequestQuoteEntity.EmailAddress),
+                             new SqlParameter("@City",objRequestQuoteEntity.City),
+                             new SqlParameter("@Company",objRequestQuoteEntity.Company),
+                             new SqlParameter("@ProjectTypeId",objRequestQuoteEntity.ProjectTypeId),
+                             new SqlParameter("@BudgetId",objRequestQuoteEntity.BudgetId),
+                             new SqlParameter("@ProjectDescription",objRequestQuoteEntity.ProjectDescription)
+                             });
+
+                if (Convert.ToInt32(requestQuoteId) > 0)
+                {
+                    HttpFileCollection uploadedFiles = HttpContext.Current.Request.Files;
+                    for (int i = 0; i < uploadedFiles.Count; i++)
+                    {
+                        HttpPostedFile file = uploadedFiles[i];
+                        if (file.ContentLength > 0)
+                        {
+                            string fileExtension = Path.GetExtension(file.FileName);
+                            string fileName = objRequestQuoteEntity.FullName.Replace(" ", "_") + Guid.NewGuid() + fileExtension;
+
+                            file.SaveAs(root + "\\" + fileName);
+
+                            var attachmentId = _unitOfWork.SQLStringReturn("EXEC SaveRequestQuoteAttchments @RequestQuoteId,@Path", new SqlParameter[]
+                            {
+                             new SqlParameter("@RequestQuoteId", requestQuoteId),
+                             new SqlParameter("@Path",fileName)
+                            });
+                        }
+                    }
+
+                    string AdminMail = System.Configuration.ConfigurationManager.AppSettings["ContactUsEmailId"];
+                    string bodyAdminTemplate = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.MapPath("~/EmailTemplate/AdminRequestQuote.html"));
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@FullName]", objRequestQuoteEntity.FullName);
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@Email]", objRequestQuoteEntity.EmailAddress);
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@Mobile]", objRequestQuoteEntity.PhoneNumber);
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@company]", objRequestQuoteEntity.Company);
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@ProjectDescription]", objRequestQuoteEntity.ProjectDescription);
+
+                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Mail Sent Successfully", "", null));
+                    Admintask.Start();
+                }
+
+                return Request.CreateResponse(HttpStatusCode.OK, "success!");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "Error!");
+            }
+        }
+
         //[HttpPost]
         //public HttpResponseMessage SaveInformation(InquiryDetail allDataobj)
         //{
