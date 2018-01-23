@@ -1,6 +1,6 @@
 ﻿
 angular.module('app.controllers').controller('PortfolioController', function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService) {
-
+    $scope.$root.title = 'Shaligram Infotech Portfolio | Company Portal Software Development | Company Portal Software Development Company USA';
     localStorageService.set('TechnologyId', 0);
     $scope.PorfolioList = [];
     $scope.PortfolioDetail = [];

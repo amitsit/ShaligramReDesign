@@ -8,7 +8,7 @@
 angular.module('app.controllers', [])
     // Path: /
     .controller('HomeCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
-        $scope.$root.title = 'Shaligram Infotech';
+        $scope.$root.title = 'Shaligram Infotech Home | Software Development Company | Software Development Company USA';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
@@ -16,7 +16,7 @@ angular.module('app.controllers', [])
 
     // Path: /about
     .controller('SCIndexCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
-        $scope.$root.title = 'Shaligram Infotech';
+        $scope.$root.title = 'Shaligram Infotech Home | Software Development Company | Software Development Company USA';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
@@ -109,7 +109,7 @@ angular.module('app.controllers', [])
      }])
 
      .controller('hadoopDevelopmentCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
-         $scope.$root.title = 'PHP Open Source Project Development | PHP Open Source Project Development Company | PHP Open Source Project Development Company USA';
+         $scope.$root.title = 'Shaligram Infotech Hadoop | Big Data Application Development |  Hadoop For Enterprise';
          $rootScope.TechnologyId = 6;
          localStorageService.set('TechnologyId', 6);
          //.controller('hadoopDevelopmentCntrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
@@ -283,7 +283,7 @@ angular.module('app.controllers', [])
          }])
 
         .controller('SharepointCtrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
-            $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+            $scope.$root.title = 'Sharepoint Application Development Company UK  | Sharepoint Application Development Company USA | Sharepoint Application Development Company';
             $rootScope.TechnologyId = 2;
             localStorageService.set('TechnologyId', 2);
             $scope.$on('$viewContentLoaded', function () {
@@ -292,7 +292,7 @@ angular.module('app.controllers', [])
         }])
 
          .controller('JavaCtrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
-             $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+             $scope.$root.title = 'Shaligram Infotech Java | Java Web Development | Java Web Development Company USA';
              $rootScope.TechnologyId = 3;
              localStorageService.set('TechnologyId', 3);
              $scope.$on('$viewContentLoaded', function () {
@@ -301,7 +301,7 @@ angular.module('app.controllers', [])
          }])
 
         .controller('NodejsCtrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
-            $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+            $scope.$root.title = 'Shaligram Infotech Node Js | Enterprise Application Development | Enterprise Application Development Company USA';
             $rootScope.TechnologyId = 7;
             localStorageService.set('TechnologyId', 7);
             $scope.$on('$viewContentLoaded', function () {
@@ -310,14 +310,31 @@ angular.module('app.controllers', [])
         }])
 
          .controller('CommonPortfolioCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
-             $scope.$root.title = 'Civil Project Management  Software Development | Civil Project Management  Software Development  Company';
+             $scope.$root.title = 'Shaligram Infotech Portfolio | Company Portal Software Development | Company Portal Software Development Company USA';
              $rootScope.TechnologyId = 0;
              localStorageService.set('TechnologyId', 0);
              $scope.$on('$viewContentLoaded', function () {
                  $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
              });
          }])
-
+        .controller('PriceComparisonUSCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+            $scope.$root.title = 'Price Comparison US';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+        }])
+        .controller('PriceComparisonAUSCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+            $scope.$root.title = 'Price Comparison australia';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+        }])
+        .controller('PriceComparisonUKCntrl', ['$scope', '$location', '$window', '$rootScope', 'localStorageService', function ($scope, $location, $window, $rootScope, localStorageService) {
+            $scope.$root.title = 'Price Comparison UK';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+        }])
         // Path: /login
         .controller('LoginCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
             $scope.$root.title = 'AngularJS SPA | Sign In';
@@ -951,37 +968,37 @@ angular.module('app.controllers', [])
             }
         })
       .controller('ApplicationDevelopmentCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-          $scope.$root.title = "Application Development";
+          $scope.$root.title = "Shaligram Infotech Application Development | Application Development Company | Application Development Company USA | Application Development Company UK";
           $scope.$on('$viewContentLoaded', function () {
               $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
           });
       }])
     .controller('WhoWeAreCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Who We Are";
+        $scope.$root.title = "Shaligram Infotech About Comapny | Commercial Software Product Development | Commercial Software Product Development Company";
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
     }])
     .controller('LeadershipCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Leadership";
+        $scope.$root.title = "Shaligram Infotech Leadership | ERP Software Manufacturing Company | ERP Software Manufacturing Company UK";
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
     }])
     .controller('InfrastructureCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Infrastructure";
+        $scope.$root.title = "Shaligram Infotech Infrastructure | Application Management Service Provider | Application Management Service Provider USA";
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
     }])
     .controller('careerCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Career";
+        $scope.$root.title = "Shaligram Infotech Career | Carrer Objective | Carreres | Current Job Opening";
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
     }])
     .controller('DevelopmentProcessCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Development Process";
+        $scope.$root.title = "Shaligram Infotech Development Process | Embedded Software Development | Embedded Software Development Company USA";
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
@@ -999,7 +1016,7 @@ angular.module('app.controllers', [])
     //    });
     //}])
     .controller('BiztalkCtrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Biztalk";
+        $scope.$root.title = "Shaligram Infotech Biztalk | Biztalk Server 2013 R2 | Biztalk Server 2013 R2 Architecture | Busssiness Rule Engine";
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
@@ -1020,7 +1037,7 @@ angular.module('app.controllers', [])
       .controller('CommonImagesController', ['$scope', '$location', '$window', '$rootScope', '$http', function ($scope, $location, $window, $rootScope, $http) {
           $scope.GetFilesList = function (folderPath) {
               $scope.FolderPath = folderPath;
-              $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath)
+              $http.get("ShaligramInfotechAPI/api/CommonApi/GetFiles?folderPath=" + folderPath )
                              .then(function (response) {
                                  $scope.GetList = response.data;
                              });

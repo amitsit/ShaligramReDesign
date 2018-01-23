@@ -191,6 +191,7 @@
     <Content Include="Content\css\header.responsive.min.css" />
     <Content Include="Content\css\portfolio.css" />
     <Content Include="Content\css\portfoliot.css" />
+    <Content Include="Content\css\pricing_style.css" />
     <Content Include="Content\css\responsive.min.css" />
     <Content Include="Content\css\toastr-angular.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
@@ -211,6 +212,10 @@
     <Content Include="Images\arrow-left.png" />
     <Content Include="Images\arrow-right.png" />
     <Content Include="Images\aus-flag.jpg" />
+    <Content Include="Images\australia.jpg" />
+    <Content Include="Images\banner-australia.jpg" />
+    <Content Include="Images\banner-uk.jpg" />
+    <Content Include="Images\banner-us.jpg" />
     <Content Include="Images\big\conference-room- 12.jpg" />
     <Content Include="Images\big\conference-room.jpg" />
     <Content Include="Images\big\development-area.jpg" />
@@ -1159,9 +1164,11 @@
     <Content Include="Images\trademarkRegistration.jpg" />
     <Content Include="Images\trademarkRenewal.jpg" />
     <Content Include="Images\uk-flag.jpg" />
+    <Content Include="Images\uk.jpg" />
     <Content Include="Images\uparr-48-b.png" />
     <Content Include="Images\uparr-48-w.png" />
     <Content Include="Images\us-flag.jpg" />
+    <Content Include="Images\us.jpg" />
     <Content Include="Images\web-design.jpg" />
     <Content Include="Images\webdevelopmentbanner.png" />
     <Content Include="Images\yourstory.png" />
@@ -2074,7 +2081,7 @@
     <Content Include="Images\portfolio\tableau\Thumbs.db" />
     <Content Include="Images\portfolio\Thumbs.db" />
     <Content Include="Images\portfolio\windows\Thumbs.db" />
-    <None Include="Properties\PublishProfiles\ShaligramConsultancy.pubxml" />
+    <None Include="Properties\PublishProfiles\ShaligramInfotech.pubxml" />
     <None Include="Scripts\vendor\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\vendor\jquery-2.0.3.js" />
     <Content Include="Scripts\vendor\jquery-2.0.3.min.js" />
@@ -2140,11 +2147,9 @@
     <Content Include="Views\SCPages\import-export-code.cshtml" />
     <Content Include="Views\SCPages\fssai-registration.cshtml" />
     <Content Include="Views\SCPages\digital-signature.cshtml" />
-    <Content Include="Views\SCPages\trademark-registration.cshtml" />
     <Content Include="Views\SCPages\trademark-rectification.cshtml" />
     <Content Include="Views\SCPages\trademark-objection.cshtml" />
     <Content Include="Views\SCPages\trademark-opposition.cshtml" />
-    <Content Include="Views\SCPages\trademark-renewal.cshtml" />
     <Content Include="Views\SCPages\logo-designing.cshtml" />
     <Content Include="Views\SCPages\copyright-registration.cshtml" />
     <Content Include="Views\SCPages\design-registration.cshtml" />
@@ -2207,6 +2212,9 @@
     <Content Include="Views\SCPages\sharepoint.cshtml" />
     <Content Include="Views\SCPages\GetParticularPortfolioDetail.cshtml" />
     <Content Include="Views\SCPages\portfolio-index.cshtml" />
+    <Content Include="Views\SCPages\pricecomparisonus.cshtml" />
+    <Content Include="Views\SCPages\pricecomparisonaus.cshtml" />
+    <Content Include="Views\SCPages\pricecomparisonuk.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

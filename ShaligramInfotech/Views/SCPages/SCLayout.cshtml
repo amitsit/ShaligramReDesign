@@ -118,7 +118,7 @@
                         <ul class="nav navbar-nav pull-right">
                             <li><a href="http://www.shaligraminfotech.com/contact/request-quotes.php">Request Quote</a></li>
                             <li><a class="phone" href="tel:+1-210-888-8402"><span class="blue"><i class="fa fa-phone"></i>+1-210-888-8402</span></a>
-                            <li><a class="email pr-0" target="_blank" href="mailto:info@shaligraminfotech.com"><span class="blue">info@shaligraminfotech.com</span></a></li>
+                            <li><a class="email pr-0" target="_blank" href="mailto:info@shaligraminfotech.com"><span class="blue"><i class="fa fa-envelope-o"></i> info@shaligraminfotech.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
     </header>
 
     <nav class="navbar navbar-default mainHeader">
-        <div class="container">
+        <div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span></span>
@@ -141,7 +141,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <a class="navbar-brand" href="./"><img height="36" width="271" src="/images/logo_shaligram.png" atl="Shaligram Infotech" /></a>
+                <a class="navbar-brand" href="./"><img height="45" width="271" src="/images/logo_shaligram.png" title="Software Development Company" alt="Shaligram Infotech" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right mainUL">
@@ -670,7 +670,7 @@
         @RenderBody()
         
     </div>
-    <div class="loader img" style="display:none">
+    <div class="loader img"  ng-hide="!layout.loading">
         <p><img src="/Images/Spinner.gif" style="height:100px; width:100px"></p>
     </div>
     <div class="col-sm-12 hidden-xs pt-15 pb-15">
@@ -850,7 +850,7 @@
                     </ul>
 
                 </div>
-                <div>
+                <div  class="col-md-3 col-xs-12">
                     <h6 style="width:100%"></h6>
                 </div>
                 <!--</div>-->
@@ -914,12 +914,12 @@
                     <p><span><i class="fa fa-skype fa-lg"></i>&nbsp;&nbsp;<a href="skype:shaligraminfotech?chat">shaligraminfotech</a></span></p>
 
                 </div>
-                <div>
+                <div class="col-md-3 col-xs-12">
                     <h6 style="width:100%"></h6>
                 </div>
             </div>
             <div class="row footer-copy">
-                <div class="footer-devider"></div> <span class="copyright">© 2017 Shaligram InfoTech Inc.</span>
+                <div class="footer-devider"></div> <span class="copyright">© 2018 Shaligram InfoTech Inc.</span>
             </div>
         </div> <a id="backTop" class="black" style="right: 40px; bottom: 40px; position: fixed; display: block;">Back To Top</a>
         @*</div>*@
@@ -989,18 +989,17 @@
     @*@Scripts.Render("~/js/app")*@
     <script>
 
-        var IsPageRendered = false;
-        var IsAjax = 0;
+        //var IsPageRendered = false;
+        //var IsAjax = 0;
 
-        $(window).load(function () {
-            IsPageRendered = true;
-            if (!IsAjax) {
+        //$(window).load(function () {
+        //    IsPageRendered = true;
+        //    if (!IsAjax) {
 
-                $('.loader').hide();
-            }
-        });
+        //        $('.loader').hide();
+        //    }
+        //});
 
-        $(window).bind('beforeunload', function () { $('.loader').show(); });
 
         //$(window).scroll(function () {
         //    if ($(document).scrollTop() > 450) {
@@ -1037,11 +1036,9 @@
                 });
             }
 
-            $('#navbar .subMenu .subMenuLi a').click(function () {
-
+            $('#navbar .submenuLiMain a').click(function () {
                 $('#navbar .submenuLiMain').children('a').removeClass('menuHighlight');
                 $(this).parents('.submenuLiMain').children('a:eq(0)').addClass('menuHighlight');
-                $(this).parent().parent().parent().parent().css('visibility', 'hidden');
             });
 
             $(".navbar-toggle").click(function () {

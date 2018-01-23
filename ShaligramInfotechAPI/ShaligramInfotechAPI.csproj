@@ -317,11 +317,6 @@
     <Content Include="Images\services\load-test\jmeter.jpg" />
     <Content Include="Images\services\load-test\varshneyinfotechloadrunnertrainingmumbai.jpg" />
     <Content Include="Images\services\magento.jpg" />
-    <Content Include="Images\services\microsoft-technologies\aspdotnet.jpg" />
-    <Content Include="Images\services\microsoft-technologies\aspdotnetmvc.jpg" />
-    <Content Include="Images\services\microsoft-technologies\aspdotnetmvvm.jpg" />
-    <Content Include="Images\services\microsoft-technologies\aspdotnetwcf.jpg" />
-    <Content Include="Images\services\microsoft-technologies\aspdotnetwpf.jpg" />
     <Content Include="Images\services\microsoft-technologies\crystalreport.jpg" />
     <Content Include="Images\services\microsoft-technologies\devexpress.jpg" />
     <Content Include="Images\services\microsoft-technologies\dynamics-crm.jpg" />
@@ -446,7 +441,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\services\Thumbs.db" />
     <EntityDeploy Include="Models\ShaligramInfotechModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ShaligramInfotechModel.Designer.cs</LastGenOutput>
@@ -454,7 +448,7 @@
     <Content Include="Models\ShaligramInfotechModel.edmx.diagram">
       <DependentUpon>ShaligramInfotechModel.edmx</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\ShaligramConsultancyAPI.pubxml" />
+    <None Include="Properties\PublishProfiles\ShaligramInfotechAPI.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -1,24 +1,23 @@
 ﻿'use strict';
 
-// Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
-angular.module('app', ['LocalStorageModule', 'toastr', 'ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers', 'vcRecaptcha'])
-//angular.module('app', ['ngAnimate', 'toastr'])
+    // Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
+    var app = angular.module('app', ['LocalStorageModule', 'toastr', 'ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers', 'vcRecaptcha']);
+    //angular.module('app', ['ngAnimate', 'toastr'])
 
     // Gets executed during the provider registrations and configuration phase. Only providers and constants can be
     // injected here. This is to prevent accidental instantiation of services before they have been fully configured.
-    .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider, localStorageServiceProvider) {
+    app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider, localStorageServiceProvider) {
 
-        // UI States, URL Routing & Mapping. For more info see: https://github.com/angular-ui/ui-router
-        // ------------------------------------------------------------------------------------------------------------
-     //   localStorageServiceProvider
-     //.setStorageType('localStorage');
+    // UI States, URL Routing & Mapping. For more info see: https://github.com/angular-ui/ui-router
+    // ------------------------------------------------------------------------------------------------------------
+    //  localStorageServiceProvider
+    //  .setStorageType('localStorage');
 
         $stateProvider
             .state('home', {
                 url: '/',
                 templateUrl: '/views/SCPages/SCIndex',
                 controller: 'HomeCtrl'
-
             })
             .state('about', {
                 url: '/about',
@@ -572,6 +571,21 @@ angular.module('app', ['LocalStorageModule', 'toastr', 'ui.router', 'app.filters
                 templateUrl: '/views/SCPages/contact-us',
                 controller: 'ContactUsController'
             })
+            .state('pricing-comparison-us', {
+                url: '/pricing-comparison-us',
+                 templateUrl: '/views/SCPages/pricecomparisonus',
+                 controller: 'PriceComparisonUSCntrl'
+            })
+            .state('pricing-comparison-aus', {
+                url: '/pricing-comparison-aus',
+                templateUrl: '/views/SCPages/pricecomparisonaus',
+                controller: 'PriceComparisonAUSCntrl'
+            })
+            .state('pricing-comparison-uk', {
+                url: '/pricing-comparison-uk',
+                templateUrl: '/views/SCPages/pricecomparisonuk',
+                controller: 'PriceComparisonUKCntrl'
+            })
             .state('otherwise', {
                 url: '*path',
                 templateUrl: '/views/404',
@@ -589,7 +603,7 @@ angular.module('app', ['LocalStorageModule', 'toastr', 'ui.router', 'app.filters
 
     // Gets executed after the injector is created and are used to kickstart the application. Only instances and constants
     // can be injected here. This is to prevent further system configuration during application run time.
-    .run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', function ($templateCache, $rootScope, $state, $stateParams, $sce) {
+ app.run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', function ($templateCache, $rootScope, $state, $stateParams, $sce) {
 
         // <ui-view> contains a pre-rendered template for the current view
         // caching it will prevent a round-trip to a server at the first page load
@@ -601,12 +615,20 @@ angular.module('app', ['LocalStorageModule', 'toastr', 'ui.router', 'app.filters
         $rootScope.$stateParams = $stateParams;
         $rootScope.EMIText = "";
         $rootScope.FromRsText = "";
+        $rootScope.layout = {};
+        $rootScope.layout.loading = false;
 
-        $rootScope.$on('$stateChangeSuccess', function (event, toState) {
-
-            // Sets the layout name, which can be used to display different layouts (header, footer etc.)
-            // based on which page the user is located
+        $rootScope.$on('$routeChangeStart', function () {
+            $timeout(function () {
+                $rootScope.layout.loading = true;
+            });
+        });
+        $rootScope.$on('$routeChangeSuccess', function (event, toState) {
             $rootScope.layout = toState.layout;
+                $rootScope.layout.loading = false;
+        });
+        $rootScope.$on('$routeChangeError', function () {
+            $rootScope.layout.loading = false;
         });
 
         //$rootScope.tech_image = function (tech_name, tech_url) {

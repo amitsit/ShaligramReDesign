@@ -15,7 +15,11 @@ namespace ShaligramInfotechAPI.Helper
             int PortNumber = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["PortNumber"]);
             string HostName = System.Configuration.ConfigurationManager.AppSettings["HostName"];
             MailMessage mail = new MailMessage();
-            mail.To.Add(mailTo);
+
+            foreach (var address in mailTo.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                mail.To.Add(address);
+            }
             mail.From = new MailAddress(email);
             mail.Subject = subject;
             mail.Body = bodyTemplate;

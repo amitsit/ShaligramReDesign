@@ -2,7 +2,7 @@
 angular.module('app.controllers')
     .controller('ContactUsController',
         function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService, vcRecaptchaService) {
-
+            $scope.$root.title = 'Shaligram Infotech Contact Us | Ecommerce Portal Development Company USA | Ecommerce Portal Development Company UK';
             //    var valid;
 
             //    /**
