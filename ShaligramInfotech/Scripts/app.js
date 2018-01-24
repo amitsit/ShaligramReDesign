@@ -608,7 +608,7 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
 
 // Gets executed after the injector is created and are used to kickstart the application. Only instances and constants
 // can be injected here. This is to prevent further system configuration during application run time.
-app.run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', function ($templateCache, $rootScope, $state, $stateParams, $sce) {
+app.run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', function ($templateCache, $rootScope, $state, $stateParams, $sce, $timeout) {
 
     // <ui-view> contains a pre-rendered template for the current view
     // caching it will prevent a round-trip to a server at the first page load
