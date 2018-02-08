@@ -566,8 +566,8 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
             templateUrl: '/views/SCPages/pricecomparisonuk',
             controller: 'PriceComparisonUKCntrl'
         })
-        .state('request-quotes', {
-            url: '/request-quotes',
+        .state('requestquote', {
+            url: '/requestquote',
             templateUrl: '/views/SCPages/requestquote',
             controller: 'RequestQuoteController'
         })

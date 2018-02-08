@@ -1,161 +1,151 @@
-﻿<div class="container" ng-controller="ContactUsController">
-    <!-- Contact Form -->
-    <br/><br />
-    <div class="row">
-        <form class="form-horizontal" name="ContactUsForm" novalidate>
-            <div role="tabpanel" class="form-horizontal" id="messages">
-                <div class="alert alert-danger alert-dismissible" role="alert" ng-show="(ContactUsForm.$submitted && (!ContactUsForm.$valid))">
-                    <ul ng-show="validationErrors">
-                        <li ng-repeat="error in validationErrors">{{error}}</li>
-                    </ul>
-                    <ul ng-show="ContactUsForm.$submitted && (!ContactUsForm.$valid)">
-                        <li ng-show="ContactUsForm.FullName.$error.required">Name is required.</li>
-                        <li ng-show="ContactUsForm.EmailAddress.$error.required">Email Address is required.</li>
-                        <li ng-show="ContactUsForm.EmailAddress.$error.email">Please enter valid email address.</li>
-                        <li ng-show="!ContactUsForm.PhoneNumber.$valid">Please enter valid phone number.</li>
-                        @*<li ng-show="ContactUsForm.Company.$error.required">Company is required.</li>*@
-                        <li ng-show="ContactUsForm.Message.$error.required">Message is required.</li>
-                        <li ng-show="googleRecaptchaValidationMessage">Please fill Captcha.</li>
-                    </ul>
+﻿<div ng-controller="ContactUsController">
+
+
+    <section class="section1">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <div class="box">
+                        <img alt="flag india" src="/images/flags/india1.png" title="India">
+                        <h4>India</h4>
+                        <p>Shaligram House, Behind Rajpath Club,<br>Off. S.G. Road, Bodakdev,<br>Ahmedabad-380059, India</p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+91-9727212899">+91-9727212899</a></p>
+                    </div>
                 </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <div class="box">
+                        <img alt="flag uk" src="/images/flags/uk.png" title="UK">
+                        <h4>UK</h4>
+                        <p>100, College Road, Harrow,<br>London, HA1 1BQ,<br>United Kingdom</p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+44 20 3581 6366">+44 20 3581 6366</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <div class="box">
+                        <img alt="flag USA" src="/images/flags/us.png" title="USA">
+                        <h4>USA</h4>
+                        <p>14793 Pensham Drive,<br>Frisco TX 75035, USA</p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+1-210-888-8402">+1-210-888-8402</a><br><strong><i class="fa fa-fax"></i> :</strong> 844-255-9976</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <div class="box">
+                        <img alt="flag australia" src="/images/flags/australia.png" title="Australia">
+                        <h4>Australia</h4>
+                        <p>Level 36, 71 Eagle Street,<br>Brisbane, QLD 4000</p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+61 07 3121 3147">+61 07 3121 3147</a><br><strong><i class="fa fa-phone"></i> :</strong> +61 0422 019 223</p>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-sm-6">
-                <h3>Send Us a Message</h3>
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" ng-model="ContactUs.Name" name="FullName" class="form-control" required />
-                            @*@Html.TextBoxFor(m => m.Name, new { placeholder = "FullName", @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Name)*@
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="number" ng-model="ContactUs.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control" />
-                            @*@Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = "Phone Number", @Class = "form-control", @type = "number", @maxlength = "10" })
-                                @Html.ValidationMessageFor(model => model.PhoneNumber)*@
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" ng-model="ContactUs.EmailAddress" name="EmailAddress" class="form-control" required />
-                            @*@Html.TextBoxFor(m => m.EmailAddress, new { placeholder = "EmailAddress", @Class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.EmailAddress)*@
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>City</label>
-                            <input type="text" ng-model="ContactUs.City" name="City" class="form-control" />
-                            @*@Html.TextBoxFor(m => m.EmailAddress, new { placeholder = "EmailAddress", @Class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.EmailAddress)*@
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
 
 
+    <section class="section3">
+        <img src="/images/map3.jpg" alt="shaligram-map" title="shaligram infotech" class="img-responsive">
+        @*<div id="map-canvas"></div>*@
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFd9dzUQMU1UuwNsSIMTpEyeEth0SDk-4"></script>
+        <script type="text/javascript">
+            function init_map() {
+                var myOptions = {
+                    zoom: 18,
+                    scrollwheel: false,
+                    center: new google.maps.LatLng(23.037801, 72.5056423),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Company</label>
-                            <input type="text" ng-model="ContactUs.Company" name="Company" class="form-control" />
-                            @*@Html.TextBoxFor(m => m.EmailAddress, new { placeholder = "EmailAddress", @Class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.EmailAddress)*@
-                        </div>
-                    </div>
-                </div>
+                };
+                map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea rows="10" cols="100" ng-model="ContactUs.Message" class="form-control" id="message" name="Message" required></textarea>
-                            @*<input type="text" ng-model="Message" class="form-control" placeholder="Message" />*@
-                            @*@Html.TextAreaFor(m => m.Message, new { placeholder = "Message", @Class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Message)*@
-                        </div>
-                    </div>
-                </div>
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(23.037801, 72.5056423)
+                });
+                infowindow = new google.maps.InfoWindow({ content: "<b><b>Shaligram House,</b><br/>Behind Rajpath Club Offside S.G. Highway, Bodakdev, Bodakdev, Ahmedabad, Gujarat 380059" }); google.maps.event.addListener(marker, "click", function () { infowindow.open(map, marker); });
+            }
+            google.maps.event.addDomListener(window, 'load', init_map);
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <div class="input_fields_wrap control-group">
-                                <div class="controls">
-                                    <label>Attach File(s):</label>
-                                    <br>
-                                    <input type="file" upload-files multiple />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                        <div class="controls">
-                            <label>Please fill Captcha</label>
-                            <br>
-                            <div vc-recaptcha
-                                 key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>
-                            <br>
-                        </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="btn_contact mt-10">
-                        <button type="submit" class="btn btn-primary" name='submit' id='submit' ng-click="SaveContactUsDetails(ContactUsForm)">Send Message</button>
-                        <button type="reset" class="btn btn-danger">Reset</button>
-                    </div>
-                </div>
+        </script>
+
+    </section>
+
+
+    <section class="cover-background section2" style="background-image:url('../Images/cont.jpg');">
+        <div class="opacity-full"></div>
+        <div class="container">
+            <div class="title text-center">
+                <h4>Send Us a Message</h4>
             </div>
-            <div class="col-sm-6">
-                <h3>Find Us Here</h3>
-                <div class="col-md-12">
-                    <img src="/images/map.jpeg" alt="shaligram-map" title="shaligram infotech" class="img-responsive" style="margin-top: 15px; Margin-Bottom:15px;" />
+
+            <form class="form-horizontal" name="ContactUsForm" novalidate>
+                @*<div role="tabpanel" class="form-horizontal" id="messages">
+                    <div class="alert alert-danger alert-dismissible" role="alert" ng-show="(ContactUsForm.$submitted && (!ContactUsForm.$valid))">
+                        <ul ng-show="validationErrors">
+                            <li ng-repeat="error in validationErrors">{{error}}</li>
+                        </ul>
+                        <ul ng-show="ContactUsForm.$submitted && (!ContactUsForm.$valid)">
+                            <li ng-show="ContactUsForm.FullName.$error.required">Name is required.</li>
+                            <li ng-show="ContactUsForm.EmailAddress.$error.required">Email Address is required.</li>
+                            <li ng-show="ContactUsForm.EmailAddress.$error.email">Please enter valid email address.</li>
+                            <li ng-show="!ContactUsForm.PhoneNumber.$valid">Please enter valid phone number.</li>
+                            <li ng-show="ContactUsForm.Company.$error.required">Company is required.</li>
+                            <li ng-show="ContactUsForm.Message.$error.required">Message is required.</li>
+                            <li ng-show="googleRecaptchaValidationMessage">Please fill Captcha.</li>
+                        </ul>
+                    </div>
+                </div>*@
+
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-12">
+                        <input placeholder="Full Name" type="text" ng-model="ContactUs.Name" name="FullName"
+                        class="form-control" ng-class="{'required-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && ContactUsForm.FullName.$error.required)}" required />
+
+                        <input placeholder="Phone Number" type="number" ng-model="ContactUs.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control" 
+                             />
+
+                        <input placeholder="Email Address" type="email" ng-model="ContactUs.EmailAddress" name="EmailAddress" 
+                               class="form-control" ng-class="{'required-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && ContactUsForm.EmailAddress.$error.required)}" required />
+
+                        <input placeholder="City" type="text" ng-model="ContactUs.City" name="City" 
+                               class="form-control" />
+
+                        <input placeholder="Company" type="text" ng-model="ContactUs.Company" name="Company" 
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <textarea placeholder="Message" cols="100" ng-model="ContactUs.Message" class="form-control" id="message" name="Message" 
+                                  ng-class="{'required-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && ContactUsForm.Message.$error.required)}" 
+                                  required></textarea>
+                        <p>
+                            <span>Attach File :</span>
+                            <input class="form-control" type="file" upload-files multiple />
+                        </p>
+                        <p>
+                            <span ng-class="{'span-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
+                            <div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>
+                        </p>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <button type="submit" class="btn btn1" name='submit' id='submit' ng-click="SaveContactUsDetails(ContactUsForm)">Send Message</button>
+                        <button type="reset" class="btn btn2">Reset</button>
+                    </div>
                 </div>
-                <div class="col-md-12" style="margin: 20px 0px;">
-                    <div class="col-md-6">
-                        <label>Office (India)</label>
-                        <p>Shaligram House, Behind Rajpath Club, </p>
-                        <p>Off. S.G. Road, Bodakdev, </p>
-                        <p>Ahmedabad-380059, India</p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp; +91-9727212899 </p>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Office (UK)</label>
-                        <p>100, College Road, Harrow, </p>
-                        <p>London, HA1 1BQ,</p>
-                        <p>United Kingdom</p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+44 20 3581 6366</p>
-                    </div>
-                </div>
-                <div class="col-md-12" style="margin: 0px 0px 10px 0px;">
-                    <div class="col-md-6">
-                        <label>Office (USA)</label>
-                        <p>14793 Pensham Drive,</p>
-                        <p>Frisco TX 75035, USA </p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+1-210-888-8402</p>
-                        <p><i class="fa fa-fax"></i> 844-255-9976</p>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Office (Australia)</label>
-                        <p>Level 36, 71 Eagle Street, </p>
-                        <p>Brisbane, QLD 4000 </p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+61 07 3121 3147</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+61 0422 019 223</p>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </section>
 </div>
+<style>
+    .span-error
+    {
+        color:#ff0000 !important;
+    }
+</style>

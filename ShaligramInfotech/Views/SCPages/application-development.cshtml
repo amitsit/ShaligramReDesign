@@ -1,54 +1,61 @@
-﻿<div class="row" ng-controller="ApplicationDevelopmentCtrl">
-    <div class="img_pic"> <img src="~/Images/ApplicationDevelop.jpg" alt="Software Application Development" title="Application Development Company | Application Development Company USA"> </div>
+﻿<div ng-controller="ApplicationDevelopmentCtrl">
+    <div class="img_pic"><img class="img-responsive" src="~/Images/ApplicationDevelop.jpg" alt="Software Application Development" title="Application Development Company | Application Development Company USA"> </div>
 </div>
+
+
+<div class="services">
+
+<section class="section1">
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-            <h2 class="" style="margin-top:5%;float:left;font-weight:bold;  line-height: 1.5;color:#215da9 "> Be the Witness <br><span style="color:#f58634; font-weight: bolder">of Rich Application</span> </h2>
-            <br>
-            <br>
-            <p class="pline">
+        <div class="col-md-4 left">
+            <h2>Be the Witness <span>of Rich Application</span></h2>
+        </div>
+        <div class="col-md-8 right">
+            <p>
                 Demand and acceptance of the customized application development is still very high why because most of such applications are developed based on the specific user defined need. End of it, they get the most user-friendly software that any normal user with no technical knowledge will be able to use it. We offer services like On-site and application development Cloud, Enterprise Application Integration. Organizations prefer the software easy for users of all types. The meeting of the clients' requirements tells that an application is well-developed that would indirectly increase the usage of the developed application. According to us, 2 most important considerations are:
-                <ul>
-                    <li style="list-style-type: disc">Problem Statement by client </li>
-                    <li style="list-style-type: disc">Project Vision and preferences of the client</li>
+                <ul class="list1">
+                    <li>Problem Statement by client </li>
+                    <li>Project Vision and preferences of the client</li>
                 </ul>
             </p>
         </div>
     </div>
 </div>
-<div class="container">
-    <div id="myTabContent" class="tab-content">
-        <div class="col-sm-12 tab-pane fade active in" id="service-one">
-            <h2>Services:</h2>
-            <table class="table table_app">
-                <b><tr>We offer the following services:</tr> </b>
-                <tbody>
-                    <tr>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;Bespoke Application Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;Software Product Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;Client - Server Application Development</td>
-                    </tr>
-                    <tr>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;On-Premise and Cloud Application Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;Web Application Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;CRM Application Development</td>
-                    </tr>
-                    <tr>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;ERP Application Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;Content Management System Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;ECommerce Application Development</td>
-                    </tr>
-                    <tr>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;Support Ticket System Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;Live Chat System Development</td>
-                        <td><span class="fa fa-chevron-circle-right"></span>&nbsp;&nbsp;SAAS Based Application Development</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="app_dev_para"> Mentioned above are some of the services offered by Shaligram Infotech. We start with planning and end with the deployment of solutions according to customer requirements, we also provide maintenance services.</p>
-        </div>
-        <h2>Expertise:</h2> <span>We hold expertise in:</span>
+</section>
+
+
+<section class="section2">
+    <div class="container">
+        <h2>Services:</h2>
+        <h4>We offer the following services:</h4>
+        
+        <ul class="list1">
+            <li>Bespoke Application Development</li>
+            <li>Software Product Development</li>
+            <li>Client - Server Application Development</li>
+            <li>On-Premise and Cloud Application Development</li>
+            <li>Web Application Development</li>
+            <li>CRM Application Development</li>
+            <li>ERP Application Development</li>
+            <li>Content Management System Development</li>
+            <li>ECommerce Application Development</li>
+            <li>Support Ticket System Development</li>
+            <li>Live Chat System Development</li>
+            <li>SAAS Based Application Development</li>
+        </ul>
+
+        <p>Mentioned above are some of the services offered by Shaligram Infotech. We start with planning and end with the deployment of solutions according to customer requirements, we also provide maintenance services.</p>
+    </div>
+</section>
+
+
+<section class="section3">
+    <div class="container">
+
+        <h2>Expertise:</h2>
+        <h4>We hold expertise in:</h4>
+
         <div class="tech-list">
             <h3>Microsoft Technologies:</h3>
             <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/microsoft-technologies')">
@@ -69,7 +76,9 @@
             <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/others')">
             </div>
         </div>
+
     </div>
+</section>
+
+
 </div>
-<br>
-<br>

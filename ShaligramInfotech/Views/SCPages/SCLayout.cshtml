@@ -30,15 +30,16 @@
     <meta name="publisher" content="Shaligram Infotech">
     <meta name="document-type" content="Public">
 
-
-
     <base href="/" />
+
 
     <!-- Temporary Css included files instead of using Render -->
 
     <link rel="stylesheet" href="~/content/app.css" />
     <link rel="stylesheet" href="~/content/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/content/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/content/css/themify-icons.css" />
+    <link rel="stylesheet" href="~/content/css/swiper.min.css" />
     <link rel="stylesheet" href="~/content/css/header.responsive.min.css" />
     <link rel="stylesheet" href="~/content/css/responsive.min.css" />
     <link rel="stylesheet" href="~/Content/css/portfolio.css" />
@@ -50,20 +51,7 @@
     @*@Styles.Render("~/content/css/app")*@
 
     <link href="~/Content/css/toastr-angular.css" rel="stylesheet" />
-    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-toastr@2/dist/angular-toastr.css">*@
-
     <link rel="icon" href="Images/favicon.ico">
-
-    @*<title>Shaligram Infotech</title>
-        <meta name=keyword content="Company incorporation, llp registration, registration of company, company registration in india , private limited company registration.">
-        <meta name=description content="India's largest online platform of lawyers, chartered accountants and company secretaries, specialising in company registration and trademark registration">*@
-
-    @*<link href="css/bootstrap.min.css" rel="stylesheet">*@
-    @*<link href="css/font-awesome.min.css" rel="stylesheet">*@
-    @*<link href="css/owl.carousel.min.css" rel="stylesheet">*@
-    @*<link href="css/bootstrap-select.css" rel="stylesheet">*@
-    @*<link href="css/custom.min.css" rel="stylesheet">*@
-    @*<link href="css/responsive.min.css" rel="stylesheet">*@
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -110,47 +98,52 @@
             }
     </style>
 </head>
+
+
+
 <body class="{{$state.current.name}}">
     <header class="top-nav">
         <div class="container-fluid">
-            <div class="col-sm-12">
-                <div class="w-clearfix top-right-wrapper top-left-click">
-                    <div class="flags_icon">
-                        <ul class="nav navbar-nav pull-left">
-                            <li><img alt="flag india" src="/images/flags/india1.png" title="India"></li>
-                            <li><img alt="flag USA" src="/images/flags/us.png" title="USA"></li>
-                            <li><img alt="flag uk" src="/images/flags/uk.png" title="UK"></li>
-                            <li><img alt="flag australia" src="/images/flags/australia.png" title="Australia"></li>
-                            <li>
-                                <div class="top-text" id="google_translate_element">
-                                    <span class="blue">
-                                        <script type="text/javascript">
-                                            function googleTranslateElementInit() {
-                                                new google.translate.TranslateElement({
-                                                    pageLanguage: 'en',
-                                                    includedLanguages: 'en,es,fr,nl'
-                                                },
-                                                'google_translate_element');
-                                                jQuery(".goog-logo-link").css({ "display": "none" });
-                                                jQuery(".goog-te-gadget").css({ "font-size": "0", "color": "#f58634" });
-                                                jQuery(".skiptranslate").css({ "display": "none" });
-                                            }
-                                        </script>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <ul class="nav navbar-nav pull-right">
-                            <li><a href="/request-quotes" sref="request-quotes">Request Quote</a></li>
-                            <li><a class="phone" href="tel:+1-210-888-8402"><span class="blue"><i class="fa fa-phone"></i>+1-210-888-8402</span></a>
-                            <li><a class="email pr-0" target="_blank" href="mailto:info@shaligraminfotech.com"><span class="blue"><i class="fa fa-envelope-o"></i> info@shaligraminfotech.com</span></a></li>
-                        </ul>
+            <div class="row">
+                <div class="col-sm-6 left">
+                    <ul>
+                        <li><a href="/requestquote" sref="requestquote">Request Quote</a></li>
+                        <li><a class="phone" href="tel:+1-210-888-8402"><span class="blue"><i class="fa fa-phone"></i>+1-210-888-8402</span></a>
+                        <li><a class="email pr-0" target="_blank" href="mailto:info@shaligraminfotech.com"><span class="blue"><i class="fa fa-envelope-o"></i> info@shaligraminfotech.com</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 right">
+                    <div class="lang">
+                        <div class="top-text" id="google_translate_element">
+                            <span class="blue">
+                                <script type="text/javascript">
+                                        function googleTranslateElementInit() {
+                                            new google.translate.TranslateElement({
+                                                pageLanguage: 'en',
+                                                includedLanguages: 'en,es,fr,nl'
+                                            },
+                                            'google_translate_element');
+                                            jQuery(".goog-logo-link").css({ "display": "none" });
+                                            jQuery(".goog-te-gadget").css({ "font-size": "0", "color": "#f58634" });
+                                            jQuery(".skiptranslate").css({ "display": "none" });
+                                        }
+                                </script>
+                            </span>
+                        </div>
                     </div>
+                    <ul>
+                        <li><img alt="flag india" src="/images/flags/india1.png" title="India"></li>
+                        <li><img alt="flag USA" src="/images/flags/us.png" title="USA"></li>
+                        <li><img alt="flag uk" src="/images/flags/uk.png" title="UK"></li>
+                        <li><img alt="flag australia" src="/images/flags/australia.png" title="Australia"></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
+
+
+
 
     <nav class="navbar navbar-default mainHeader">
         <div class="container-fluid">
@@ -277,59 +270,45 @@
                                 </ul>
                         </ul>
                     </li>
+
                     <li ng-class="['submenuLiMain',{'menuHighlight': ($state.current.name === 'portfolio' || $state.current.name == 'portfolio-detail' )}]">
                         <a href="" ui-sref="portfolio">Portfolio</a>
                     </li>
+
                     <li ng-class="['submenuLiMain',{'menuHighlight': $state.current.name === 'contact-us'}]"><a href="" ui-sref="contact-us">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <div id="ui-view" ui-view data-tmpl-url="@Request.RequestContext.RouteData.DataTokens["templateUrl"]">
         @RenderBody()
-    </div>
 
+    </div>
     <div class="loader img" ng-hide="!layout.loading">
         <p><img src="/Images/Spinner.gif" style="height:100px; width:100px"></p>
     </div>
 
-    <div class="s-icon hidden-xs">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-1 col-md-offset-1">
-                    <img src="/images/tech/android_dev.png" alt="Android Application Development" title="Android Application Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/java.png" alt="Java Web Development" title="Java Web Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/nodejs.png" alt="Node JS Web Development" title="Node JS Web Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/CSS3.png" alt="CSS3 Web Development" title="CSS3 Web Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/apple_dev.png" alt="Iphone Application Development" title="Iphone Application Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/html5.png" alt="HTML5 Web Development" title="HTML5 Web Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/js.png" alt="JavaScript Web Development" title="JavaScript Web Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/dotnet.png" alt="ASP.NET Web Development" title="ASP.NET Web Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/angularjs.png" alt="Angular Js Web Development" title="Angular Js Web Development">
-                </div>
-                <div class="col-sm-1">
-                    <img src="/images/tech/mysql.png" alt="Database Management" title="Database Management">
+    <div class="s-icon">
+
+        <div class="container">
+            <div class="swiper-container swiper-container2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/images/tech/android_dev.png" alt="Android Application Development" title="Android Application Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/java.png" alt="Java Web Development" title="Java Web Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/nodejs.png" alt="Node JS Web Development" title="Node JS Web Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/CSS3.png" alt="CSS3 Web Development" title="CSS3 Web Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/apple_dev.png" alt="Iphone Application Development" title="Iphone Application Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/html5.png" alt="HTML5 Web Development" title="HTML5 Web Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/js.png" alt="JavaScript Web Development" title="JavaScript Web Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/dotnet.png" alt="ASP.NET Web Development" title="ASP.NET Web Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/angularjs.png" alt="Angular Js Web Development" title="Angular Js Web Development"></div>
+                    <div class="swiper-slide"><img src="/images/tech/mysql.png" alt="Database Management" title="Database Management"></div>
                 </div>
             </div>
         </div>
     </div>
+
+
     <aside id="sticky-social">
         <ul style="list-style-type: none;">
             <li>
@@ -364,7 +343,7 @@
             <div class="row">
                 <div class="col-md-3 col-xs-12">
                     <h6>Company</h6>
-                    <ul class="footer-nav">
+                    <ul class="list1">
                         <li ng-class="[{'menuHighlight': $state.current.name === 'who-we-are'}]"> <a href="" ui-sref="who-we-are">Who We Are</a> </li>
                         <li ng-class="[{'menuHighlight': $state.current.name === 'leadership'}]"> <a href="" ui-sref="leadership">Leadership</a> </li>
                         <li ng-class="[{'menuHighlight': $state.current.name === 'infrastructure'}]"> <a href="" ui-sref="infrastructure">Infrastructure</a> </li>
@@ -374,7 +353,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <h6>Services</h6>
-                    <ul class="footer-nav">
+                    <ul class="list1">
 
                         <li ng-class="[{'menuHighlight': $state.current.name === 'application-development'}]"> <a href="" ui-sref="application-development">Application Development</a> </li>
                         <li ng-class="[{'menuHighlight': $state.current.name === 'software-product-development'}]"> <a href="" ui-sref="software-product-development">Product Development</a> </li>
@@ -385,7 +364,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <h6>Solutions</h6>
-                    <ul class="footer-nav">
+                    <ul class="list1">
                         <li ng-class="[{'menuHighlight': $state.current.name === 'crm-solution'}]"> <a href="" ui-sref="crm-solution">CRM Solution</a> </li>
                         <li ng-class="[{'menuHighlight': $state.current.name === 'ecommerce-solution'}]"> <a href="" ui-sref="ecommerce-solution">E-Commerce Solution</a> </li>
                         <li ng-class="[{'menuHighlight': $state.current.name === 'hrandjob-portal-solution'}]"> <a href="" ui-sref="hrandjob-portal-solution">HR &amp; Job Portal Solution</a> </li>
@@ -396,7 +375,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <h6>Technologies</h6>
-                    <ul class="footer-nav">
+                    <ul class="list1">
                         <li ng-class="[{'menuHighlight': $state.current.name === 'sharepoint'}]"> <a href="" ui-sref="sharepoint">SharePoint</a> </li>
                         <li ng-class="[{'menuHighlight': $state.current.name === 'java'}]"> <a href="" ui-sref="java">JAVA</a> </li>
                         <li ng-class="[{'menuHighlight': $state.current.name === 'biztalk'}]"> <a href="" ui-sref="biztalk">BizTalk</a> </li>
@@ -404,62 +383,72 @@
                         <li ng-class="[{'menuHighlight': $state.current.name === 'nodejs'}]"> <a href="" ui-sref="nodejs">NodeJs</a> </li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-xs-12">
-                    <h6 style="width:100%"></h6>
+            </div>
+
+            <div class="row address">
+                <div class="footer-devider"></div>
+                <div class="col-md-3 col-xs-12 box">
+                    <h6>Office ( India )</h6>
+                    <ul>
+                        <li class="map">Shaligram House, Behind Rajpath Club, Off. S.G. Road, Bodakdev<br>Ahmedabad-380059, India</li>
+
+                        <li class="phone"><a href="tel:+91-9727212899"> +91-9727212899</a></li>
+
+                        <li class="mail">
+                            <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a>
+                        </li>
+
+                        <li class="skype">
+                            <a href="skype:shaligraminfotech?chat">shaligraminfotech</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 col-xs-12 box">
+                    <h6>Office ( UK )</h6>
+                    <ul>
+                        <li class="map">100, College Road, Harrow, London, HA1 1BQ<br>United Kingdom</li>
+                        <li class="phone"><a href="tel:+44 20 3581 6366">+44 20 3581 6366</a></li>
+                        <li class="mail"><a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></li>
+                        <li class="skype"><a href="skype:shaligraminfotech?chat">shaligraminfotech</a></li>
+                </div>
+                <div class="col-md-3 col-xs-12 box">
+                    <h6>Office ( USA )</h6>
+                    <ul>
+                        <li class="map">14793 Pensham Drive, Frisco TX 75035,<br>USA</li>
+                        <li class="phone"><a href="tel:+1-210-888-8402"> +1-210-888-8402</a></li>
+                        <li class="fax">844-255-9976</li>
+                        <li class="mail"><a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></li>
+                        <li class="skype"><a href="skype:shaligraminfotech?chat">shaligraminfotech</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-xs-12 box">
+                    <h6>Office ( Australia )</h6>
+                    <ul>
+                        <li class="map">Level 36 Riparian Plaza, 71 Eagle Street, Brisbane, QLD 4000</li>
+                        <li class="phone">
+                            <a href="tel:+61 07 3121 3147"> +61 07 3121 3147</a><br><a href="tel:+61 0422 019 223">+61 0422 019 223</a>
+                        </li>
+                        <li class="mail">
+                            <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a>
+                        </li>
+                        <li class="skype">
+                            <a href="skype:shaligraminfotech?chat">shaligraminfotech</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row footer-copy">
-                <div class="footer-devider"></div>
-                <div class="col-md-3 col-xs-12">
-                    <h6>Office (India)</h6>
-                    <p>Shaligram House, Behind Rajpath Club, </p>
-                    <p>Off. S.G. Road, Bodakdev</p>
-                    <p>Ahmedabad-380059, India</p>
-                    <p><span><i class="fa fa-phone"></i>&nbsp;&nbsp;<a href="tel:+91-9727212899"> +91-9727212899 </a></span></p>
-                    <p><span><i class="fa fa-envelope-o fa-lg"></i>&nbsp;<a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></span></p>
-                    <p class="mt-btm-10"><span><i class="fa fa-skype fa-lg"></i>&nbsp;&nbsp;<a href="skype:shaligraminfotech?chat">shaligraminfotech</a></span></p>
-
-                </div>
-                <div class="col-md-3 col-xs-12">
-                    <h6>
-                        Office (UK)
-                    </h6>
-                    <p>100, College Road, Harrow, London, </p>
-                    <p>HA1 1BQ</p>
-                    <p>United Kingdom</p>
-                    <p><span><i class="fa fa-phone"></i>&nbsp;&nbsp;<a href="tel:+44 20 3581 6366">+44 20 3581 6366</a></span></p>
-                    <p><span><i class="fa fa-envelope-o fa-lg"></i>&nbsp;<a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></span></p>
-                    <p><span><i class="fa fa-skype fa-lg"></i>&nbsp;&nbsp;<a href="skype:shaligraminfotech?chat">shaligraminfotech</a></span></p>
-                </div>
-                <div class="col-md-3 col-xs-12">
-                    <h6>Office (USA)</h6>
-                    <p>14793 Pensham Drive, Frisco</p>
-                    <p>TX 75035, USA</p>
-                    <p><span><i class="fa fa-phone"></i>&nbsp;&nbsp;<a href="tel:+1-210-888-8402"> +1-210-888-8402</a></span></p>
-                    <p><i class="fa fa-fax"></i> 844-255-9976</p>
-                    <p><span><i class="fa fa-envelope-o fa-lg"></i>&nbsp;<a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></span></p>
-                    <p><span><i class="fa fa-skype fa-lg"></i>&nbsp;&nbsp;<a href="skype:shaligraminfotech?chat">shaligraminfotech</a></span></p>
-                </div>
-                <div class="col-md-3 col-xs-12">
-                    <h6> Office (Australia)</h6>
-                    <p>Level 36 Riparian Plaza, 71 Eagle Street,</p>
-                    <p>Brisbane, QLD 4000</p>
-                    <p><span><i class="fa fa-phone"></i>&nbsp;&nbsp;<a href="tel:+61 07 3121 3147"> +61 07 3121 3147</a></span></p>
-                    <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+61 0422 019 223">+61 0422 019 223</a></span></p>
-                    <p><span><i class="fa fa-envelope-o fa-lg"></i>&nbsp;<a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></span></p>
-                    <p><span><i class="fa fa-skype fa-lg"></i>&nbsp;&nbsp;<a href="skype:shaligraminfotech?chat">shaligraminfotech</a></span></p>
-
-                </div>
-                <div class="col-md-3 col-xs-12">
-                    <h6 style="width:100%"></h6>
-                </div>
+        <div class="footer-copy">
+            <div class="container">
+                © 2018 Shaligram InfoTech Inc.
             </div>
-            <div class="row footer-copy">
-                <div class="footer-devider"></div> <span class="copyright">© 2018 Shaligram InfoTech Inc.</span>
-            </div>
+        </div>
+
+
+
+
         </div> <a id="backTop" class="black" style="right: 40px; bottom: 40px; position: fixed; display: block;">Back To Top</a>
         <div id="nonsticky-social" style="display:none;">
             <label class="addhead">Connect With Us</label>
@@ -515,6 +504,7 @@
     <script src="~/Scripts/js/Priceformscript.js"></script>
     <script src="~/Scripts/js/sticky-kit.min.js"></script>
     <script src="~/Scripts/js/bootstrap-select.js"></script>
+    <script src="~/Scripts/js/swiper.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -530,6 +520,7 @@
             $(".navbar-toggle").click(function () {
                 $(this).toggleClass("open");
             });
+
 
             $(window).scroll(function () {
                 if ($(this).scrollTop()) {
@@ -550,6 +541,41 @@
             openEffect: "none",
             closeEffect: "none"
         });
+
+        var swiper1 = new Swiper('.swiper-container1', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: { delay: 1000 }
+        });
+
+        var swiper2 = new Swiper('.swiper-container2', {
+          slidesPerView: 6,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: { delay: 1000, stopOnLastSlide: false, },
+          breakpoints: {
+            375: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            550: {
+              slidesPerView: 3,
+              spaceBetween: 10
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 20
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 30
+            }
+          }
+        });
+
+
+
 
         (function () {
             setInterval(

@@ -1,14 +1,21 @@
-﻿<div ng-controller="PortfolioController">
-    <div ng-repeat="pl in PorfolioList" class="isotope-element isotope-element-3">
-        <div class="project-field">
-            <div class="logo-img">
-                <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl)">
-                    <img title="{{pl.Title}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.Title}}" />
-                </a>
-            </div>
-            <div class="detail-wrapper">
-                <h4><span ng-bind="pl.Title"></span> </h4>
-            </div>
-        </div>
+﻿<div ng-controller="PortfolioController" class="portfolio-grid">
+    <div ng-repeat="pl in PorfolioList" class="isotope-element isotope-element-3 grid-item">
+        <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl, pl.SEOTitleTag)">
+            <figure>
+                <div class="portfolio-img"><img title="{{pl.FrontImageTooltip}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.FrontImageTooltip}}" /></div>
+                <figcaption>
+                    <div class="portfolio-hover-main text-center">
+                        <div class="portfolio-hover-box">
+                            <div class="portfolio-hover-content">
+                                <span ng-bind="pl.Title"></span>
+                            </div>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </a>
     </div>
 </div>
+
+
+
