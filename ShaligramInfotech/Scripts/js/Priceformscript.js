@@ -10,14 +10,10 @@ $(document).ready(function () {
 
     if ($(window).width() < 767) {
         $("#navbar .nav li").click(function () {
-            $(this).children(".subMenu").slideToggle();
+            //$(this).children(".subMenu").slideToggle();
             //$("#navbar .nav li .fa").toggleClass("fa-angle-down fa-angle-up");
         });
     }
-
-    $(".navbar-toggle").click(function () {
-        $(this).toggleClass("open");
-    });
 
     $('#mediaSlider').carousel({
         interval: false

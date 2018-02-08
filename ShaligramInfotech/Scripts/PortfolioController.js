@@ -1,12 +1,15 @@
 ﻿
 angular.module('app.controllers').controller('PortfolioController', function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService, $timeout) {
-    $scope.$root.title = 'Shaligram Infotech Portfolio | Company Portal Software Development | Company Portal Software Development Company USA';
+    if (!$scope.$root.needToShowTitle == true) {
+        $scope.$root.title = 'Shaligram Infotech Portfolio | Company Portal Software Development | Company Portal Software Development Company USA';
+    }
+
+    $scope.$root.needToShowTitle = false;
     localStorageService.set('TechnologyId', 0);
     $scope.PorfolioList = [];
     $scope.PortfolioDetail = [];
     $scope.TechnologyList = [];
     $scope.TechnologyId = 0;
-    
 
     if ($rootScope.TechnologyId != undefined && $rootScope.TechnologyId != "" && $rootScope.TechnologyId != null) {
         $scope.TechnologyId = $rootScope.TechnologyId;
@@ -30,7 +33,7 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
             $timeout(function () {
                 $rootScope.layout.loading = false;
             }, 2000);
-            
+
         });
         getPorfolioList.error(function () {
             $rootScope.layout.loading = false;
@@ -45,17 +48,20 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
         var alltechnologylist = $http.get(configurationService.basePath + 'api/PortfolioApi/GetAllTechnologies');
         alltechnologylist.success(function (data) {
             $scope.TechnologyList = data;
-            $rootScope.layout.loading = false;
         });
         alltechnologylist.error(function () {
             $rootScope.layout.loading = false;
         });
     }
 
-    $scope.RedirectToProtfolioDetail = function (TitleSeoUrl) {
+    $scope.RedirectToProtfolioDetail = function (TitleSeoUrl, SEOTitleTag) {
         TitleSeoUrl = TitleSeoUrl.trim();
-        $state.go('portfolio-detail', { title: TitleSeoUrl });
 
+        if (SEOTitleTag != "" && SEOTitleTag != null) {
+            $scope.$root.title = SEOTitleTag;
+        }
+
+        $state.go('portfolio-detail', { title: TitleSeoUrl });
     }
 
 });

@@ -12,10 +12,9 @@
             <div ng-repeat="pl in PorfolioList" class="isotope-element isotope-element-3">
                 <div class="project-field">
                     <div class="logo-img">
-                        <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl)">
-                            <img title="{{pl.Title}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.Title}}" />
+                        <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl, pl.SEOTitleTag)">
+                            <img title="{{pl.FrontImageTooltip}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.FrontImageTooltip}}" />
                         </a>
-
                     </div>
                     <div class="detail-wrapper">
                         <h4><span ng-bind="pl.Title"></span> </h4>

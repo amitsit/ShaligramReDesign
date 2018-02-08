@@ -380,6 +380,7 @@ ul.feature li {
 	line-height:27px;
 	font-style:italic;
 }
+
 .logo-portfolio {
 	border:solid 1px #ccc;
 	border-radius:10px;
@@ -389,6 +390,7 @@ ul.feature li {
 	margin-bottom:19px;
 	padding:20px;
 }
+
 .pt-60 {
 	padding-top:60px;
 }

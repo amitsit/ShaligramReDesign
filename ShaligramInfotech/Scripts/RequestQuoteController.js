@@ -2,6 +2,8 @@
     .controller('RequestQuoteController',
         function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService, vcRecaptchaService) {
             $scope.$root.title = 'Shaligram Infotech Contact Us | Ecommerce Portal Development Company USA | Ecommerce Portal Development Company UK';
+            $scope.$root.metakeyword = 'Ecommerce Portal Development  Company, Ecommerce Portal Development Company USA, Ecommerce Portal Development Company UK';
+            $scope.$root.metadescription = 'Shaligram Infotech is leading Ecommerce Portal Development Company USA . We are offering services like Ecommerce shopping cart development, custom erp development, retail erp software development, data migration services etc';
 
             $scope.RequestQuote = new Object();
 

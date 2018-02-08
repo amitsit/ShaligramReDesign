@@ -10,5 +10,6 @@ namespace ShaligramInfotechAPI.Entities
         public int ImageId { get; set; }
         public int PortfolioId { get; set; }
         public string ImageURL { get; set; }
+        public string SEOTitleTag { get; set; }
     }
 }

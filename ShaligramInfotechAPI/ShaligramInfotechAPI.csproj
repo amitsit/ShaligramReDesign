@@ -240,11 +240,13 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PortfolioApiController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Entities\ChallengeFacedModel.cs" />
     <Compile Include="Entities\ContactUsEntity.cs" />
     <Compile Include="Entities\InquiryModel.cs" />
     <Compile Include="Entities\PortfolioFeatureEntity.cs" />
     <Compile Include="Entities\PortfolioImageEntity.cs" />
     <Compile Include="Entities\PortfolioListFrontModel.cs" />
+    <Compile Include="Entities\PortfolioLogo.cs" />
     <Compile Include="Entities\PortfolioObjectiveEntity.cs" />
     <Compile Include="Entities\PortfolioResultEntity.cs" />
     <Compile Include="Entities\PortfolioSolutionEntity.cs" />

@@ -1,6 +1,4 @@
-﻿
-
-<style>
+﻿<style>
     .mySlides {
         display: none;
     }
@@ -25,7 +23,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <ol class="breadcrumb">
-                    <li><a href="./" ui-sref="home" >Home</a></li>
+                    <li><a href="./" ui-sref="home">Home</a></li>
                     <li><a href="/portfolio" ui-sref="portfolio">Portfolio</a></li>
                     <li class="active">{{PortfolioDetail.Title}}</li>
                 </ol>
@@ -34,42 +32,26 @@
     </div>
     <div class="main">
         <div class="portfolio_content">
-            <div class="head_img">
-                <a href="#" title="{{PortfolioDetail.Title}}"><img ng-src="/PortfolioImages/BannerImages/{{PortfolioDetail.BannerImageURL}}" alt="{{PortfolioDetail.Title}}" /></a>
+            <div class="head_img" ng-if="PortfolioDetail.BannerImageURL">
+                <a href="#" title="{{PortfolioDetail.Title}}">
+                    <img ng-src="/PortfolioImages/BannerImages/{{PortfolioDetail.BannerImageURL}}" alt="{{PortfolioDetail.BannerImageTooltip}}" title="{{PortfolioDetail.BannerImageTooltip}}" />
+                </a>
             </div>
-            <div class="container">
+
+            <div class="container" ng-if="!PortfolioDetail.objPortfolioLogo.length > 0">
                 <div class="portfolio_dec">
                     <div class="col-sm-12">
                         <div class="slider_flex">
 
-
-                            @*<div id="portfolio_slider" class="flexslider">
-                                <ul class="slides port_slid">
-                                    <li>
-                                        <a href="" class="popup-link fancybox" rel="ligthbox" data-fancybox-group="gallery">
-                                            <img ng-src="/PortfolioImages/OtherImages/{{image.ImageURL}}" style="width:100%;cursor:zoom-in" />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div id="sub_slider" class="flexslider">
-                                <ul class="slides">
-                                    <li>
-                                        <img />
-                                    </li>
-                                </ul>
-                            </div>*@
-
                             <div ng-if="PortfolioDetail.objPortfolioImageEntity.length>0">
                                 <div class="col-sm-1" style="margin-top: 42px;">
-                                    <div class="w3-right w3-hover-text-khaki" ng-click="plusDivs(1)"><img src="/Images/arrow-left.png" /></div>
+                                    <div class="w3-right w3-hover-text-khaki leftArrow" ng-click="plusDivs(1)"><img src="/Images/arrow-left.png" /></div>
                                 </div>
                                 <div class="col-sm-4">
                                     <ul class="slides port_slid">
                                         <li ng-repeat="image in PortfolioDetail.objPortfolioImageEntity track by $index" class="flex-active-slide">
                                             <a class="popup-link fancybox" href="/PortfolioImages/OtherImages/{{image.ImageURL}}" rel="ligthbox" data-fancybox-group="gallery">
-                                                <img ng-src="/PortfolioImages/OtherImages/{{image.ImageURL}}" alt="Image" class="mySlides" style="cursor:zoom-in" />
+                                                <img ng-src="/PortfolioImages/OtherImages/{{image.ImageURL}}" alt="{{image.SEOTitleTag}}" title="{{image.SEOTitleTag}}" alt="Image" class="mySlides" style="cursor:zoom-in" />
                                             </a>
                                         </li>
                                         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" ng-click="currentDiv(1)"></span>
@@ -77,12 +59,12 @@
                                         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" ng-click="currentDiv(3)"></span>
                                     </ul>
                                 </div>
-                                <div class="col-sm-1" style=" margin-top: 42px;">
-                                    <div class="w3-left w3-hover-text-khaki" ng-click="plusDivs(-1)"><img src="/Images/arrow-right.png" /></div>
+                                <div class="col-sm-1" style="margin-top: 42px;">
+                                    <div class="w3-left w3-hover-text-khaki rightArrow" ng-click="plusDivs(-1)"><img src="/Images/arrow-right.png" /></div>
                                 </div>
                             </div>
 
-                            <div ng-if="PortfolioDetail.objPortfolioObjectiveEntity.length>0">
+                            <div ng-if="PortfolioDetail.objPortfolioObjectiveEntity.length > 0">
                                 <div class="col-sm-6">
                                     <h3>Objective</h3>
 
@@ -93,33 +75,10 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
-                    <div ng-if="PortfolioDetail.objPortfolioSolutionEntity.length>0">
-                        <div class="col-sm-12">
-                            <h3>Solution</h3>
-                            <ul class="feature">
-                                <li ng-repeat="solution in PortfolioDetail.objPortfolioSolutionEntity track by $index">
-                                    <span ng-bind="solution.SolutionText"></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div ng-if="PortfolioDetail.objPortfolioResultEntity.length>0">
-                        <div class="col-sm-12">
-                            <h3>Result Obtained</h3>
-                            <ul class="feature">
-                                <li ng-repeat="result in PortfolioDetail.objPortfolioResultEntity track by $index">
-                                    <span ng-bind="result.ResultText"></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div ng-if="PortfolioDetail.objPortfolioFeatureEntity.length>0">
+                    <div ng-if="PortfolioDetail.objPortfolioFeatureEntity.length > 0">
                         <div class="col-sm-12">
                             <h3>Main Features</h3>
                             <ul class="feature">
@@ -130,7 +89,32 @@
                         </div>
                     </div>
 
-                    <div ng-if="PortfolioDetail.objPortfolioTechnologyEntity.length>0">
+                    <div ng-if="PortfolioDetail.objPortfolioSolutionEntity.length > 0">
+                        <div class="col-sm-12">
+                            <h3>Solution</h3>
+                            <ul class="feature">
+                                <li ng-repeat="solution in PortfolioDetail.objPortfolioSolutionEntity track by $index">
+                                    <span ng-bind="solution.SolutionText"></span>
+                                </li>
+                                <li ng-if="PortfolioDetail.Title == 'My Class Campus'">
+                                    For more details: <a href="http://myclasscampus.com/" target="_balnk"> <u style="color: #F58634;"><i>click here</i></u></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div ng-if="PortfolioDetail.objPortfolioResultEntity.length > 0">
+                        <div class="col-sm-12">
+                            <h3>Result Obtained</h3>
+                            <ul class="feature">
+                                <li ng-repeat="result in PortfolioDetail.objPortfolioResultEntity track by $index">
+                                    <span ng-bind="result.ResultText"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div ng-if="PortfolioDetail.objPortfolioTechnologyEntity.length > 0">
                         <div class="col-sm-12">
                             <h3>Technology</h3>
                             <ul class="feature">
@@ -141,22 +125,47 @@
                         </div>
                     </div>
 
+                    <div ng-if="PortfolioDetail.objChallengeFaced.length > 0">
+                        <div class="col-sm-12">
+                            <h3>Challenges Faced</h3>
+                            <ul class="feature">
+                                <li ng-repeat="challenge in PortfolioDetail.objChallengeFaced track by $index">
+                                    <span ng-bind="challenge.ChallengeFaced"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-         
+
+            <div class="clearfix"></div>
+            <br />
+
+            <div class="container pb-60 pt-60 banner-portfolio" ng-if="PortfolioDetail.objPortfolioLogo.length > 0">
+                <div class="row">
+                    <div class="col-sm-4" ng-repeat="image in PortfolioDetail.objPortfolioLogo track by $index">
+                        <div class="logo-portfolio">
+                            <a class="popup-link fancybox design-image" href="/PortfolioImages/OtherImages/{{image.ImageURL}}" rel="ligthbox" data-fancybox-group="gallery">
+                                <img ng-src="/PortfolioImages/OtherImages/{{image.ImageURL}}" alt="{{image.SEOTitleTag}}" title="{{image.SEOTitleTag}}" style="cursor:zoom-in" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="related_post">
                 <h4>Related Post</h4>
                 <div class="port_content">
                     <div id="isotope-container" class="isotope">
-
-                        <div ng-controller="PortfolioController">
+                        <div ng-if="PortfolioDetail" ng-controller="PortfolioController">
                             <div ng-repeat="pl in PorfolioList track by $index" class="isotope-element isotope-element-3">
                                 <div class="project-field">
                                     <div class="logo-img">
                                         <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl)">
-                                            <img title="{{pl.Title}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.Title}}" />
+                                            <img title="{{pl.FrontImageTooltip}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.FrontImageTooltip}}" />
                                         </a>
 
                                     </div>
@@ -166,147 +175,9 @@
                                 </div>
                             </div>
                         </div>
-
-                        @*<?php
-
-                        include("php/sharepoint.net.php");
-
-                        ?>*@
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-@*<div class="main">
-        <div class="portfolio_content">
-            <div class="head_img">
-                <a href="#" title=@Model.Title><img src="@Url.Content(ImagePathExtension.PortfolioImagePath(Model.BannerImageURL))" alt="@Model.Title" /></a>
-            </div>
-            <div class="container">
-                <div class="portfolio_dec">
-                    <div class="col-sm-12">
-                        <div class="slider_flex ">
-                            @if (Model.tblPortfolioImages.Count > 0)
-                            {
-                            <div class="col-sm-1" style="margin-top: 42px;">
-
-                                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)"><img src="@Url.Content(ImagePathExtension.GetImagePath("arrow-left.png"))"></div>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <ul class="slides port_slid">
-
-                                    @foreach (var Data in Model.tblPortfolioImages)
-                                        {
-
-                                    <li class="flex-active-slide">
-                                        <a href="@Url.Content(ImagePathExtension.PortfolioOtherImagePath(Data.ImageURL))" class="popup-link fancybox" rel="ligthbox" data-fancybox-group="gallery">
-                                            <img src="@Url.Content(ImagePathExtension.PortfolioOtherImagePath(Data.ImageURL))" alt="Image" class="mySlides" style="cursor:zoom-in" />
-                                        </a>
-
-                                    </li>
-
-                                        }
-
-                                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-                                </ul>
-
-                            </div>
-                            <div class="col-sm-1" style=" margin-top: 42px;">
-                                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)"><img src="@Url.Content(ImagePathExtension.GetImagePath("arrow-right.png"))"></div>
-                            </div>
-                            }
-
-                            @if (Model.tblPortfolioObjectives.Count > 0)
-                            {
-                            <div class="col-sm-6">
-                                <h3>Objective</h3>
-
-                                <ul class="feature">
-                                    @foreach (var Data in Model.tblPortfolioObjectives)
-                                        {
-                                    <li>
-                                        @Data.ObjectiveText
-                                    </li>
-                                        }
-
-                                </ul>
-                            </div>
-                            }
-
-                        </div>
-                    </div>
-
-
-                    @if (Model.tblPortfolioSolutions.Count > 0)
-                    {
-                        <div class="col-sm-12">
-                            <h3>Solution</h3>
-                            <ul class="feature">
-                                @foreach (var Data in Model.tblPortfolioSolutions)
-                                {
-                                <li>
-                                    @Data.SolutionText
-                                </li>
-                                }
-
-                            </ul>
-                        </div>
-                    }
-
-                    @if (Model.tblPortfolioResults.Count > 0)
-                    {
-                        <div class="col-sm-12">
-                            <h3>Result Obtained</h3>
-                            <ul class="feature">
-                                @foreach (var Data in Model.tblPortfolioResults)
-                                {
-                                <li>
-                                    @Data.ResultText
-                                </li>
-                                }
-                            </ul>
-                        </div>
-                    }
-                    @if (Model.tblPortfolioFeatures.Count > 0)
-                    {
-                        <div class="col-sm-12">
-                            <h3>Main Features</h3>
-                            <ul class="feature">
-                                @foreach (var Data in Model.tblPortfolioFeatures)
-                                {
-                                    <li class="col-sm-6">
-                                        @Data.FeatureText
-                                    </li>
-                                }
-
-
-                            </ul>
-                        </div>
-                    }
-                    @if (Model.tblPortfolioTechnologies.Count > 0)
-                    {
-                        <div class="col-sm-12">
-                            <h3>Technology</h3>
-                            <ul class="feature">
-                                @foreach (var Data in Model.tblPortfolioTechnologies)
-                                {
-                                    <li class="col-sm-6">
-                                        @Data.TechnologyText
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                    }
-
-
-                </div>
-            </div>
-        </div>
-    </div>*@
-

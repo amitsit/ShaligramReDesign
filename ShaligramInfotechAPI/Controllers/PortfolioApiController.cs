@@ -44,57 +44,67 @@ namespace ShaligramInfotechAPI.Controllers
             if (Title != null && Title != "")
             {
                 objPortfolioListFrontModel = _unitOfWork.SQLQuery<PortfolioListFrontModel>("EXEC [GetParticularPortfolioDetail] @title", new SqlParameter[]
-                         {
-                             new SqlParameter("@title",Title)
-                         }).SingleOrDefault();
+                {
+                    new SqlParameter("@title",Title)
+                }).SingleOrDefault();
 
-                //SqlParameter[] param = new SqlParameter[]
-                //{
-                //    new SqlParameter("@title",Title)
-                //};
                 if (objPortfolioListFrontModel != null)
                 {
                     var feature = _unitOfWork.SQLQuery<PortfolioFeatureEntity>("EXEC GetParticularPortfolioFeatureDetail @title", new SqlParameter[]
-                         {
-                             new SqlParameter("@title",Title)
-                         }).ToList();
+                    {
+                        new SqlParameter("@title",Title)
+                    }).ToList();
 
                     objPortfolioListFrontModel.objPortfolioFeatureEntity = feature;
 
                     var imagedata = _unitOfWork.SQLQuery<PortfolioImageEntity>("EXEC GetParticularPortfolioImageDetail @title", new SqlParameter[]
-                         {
-                             new SqlParameter("@title",Title)
-                         }).ToList();
+                    {
+                        new SqlParameter("@title",Title)
+                    }).ToList();
 
                     objPortfolioListFrontModel.objPortfolioImageEntity = imagedata;
 
                     var objectives = _unitOfWork.SQLQuery<PortfolioObjectiveEntity>("EXEC GetParticularPortfolioObjectiveDetail @title", new SqlParameter[]
-                         {
-                             new SqlParameter("@title",Title)
-                         }).ToList();
+                    {
+                        new SqlParameter("@title",Title)
+                    }).ToList();
 
                     objPortfolioListFrontModel.objPortfolioObjectiveEntity = objectives;
 
                     var resultdata = _unitOfWork.SQLQuery<PortfolioResultEntity>("EXEC GetParticularPortfolioResultDetail @title", new SqlParameter[]
-                         {
-                             new SqlParameter("@title",Title)
-                         }).ToList();
+                    {
+                        new SqlParameter("@title",Title)
+                    }).ToList();
 
                     objPortfolioListFrontModel.objPortfolioResultEntity = resultdata;
 
                     var solutions = _unitOfWork.SQLQuery<PortfolioSolutionEntity>("EXEC GetParticularPortfolioSolutionDetail @title", new SqlParameter[]
-                         {
-                             new SqlParameter("@title",Title)
-                         }).ToList();
+                    {
+                        new SqlParameter("@title",Title)
+                    }).ToList();
 
                     objPortfolioListFrontModel.objPortfolioSolutionEntity = solutions;
 
                     var technology = _unitOfWork.SQLQuery<PortfolioTechnologyEntity>("EXEC GetParticularPortfolioTechnologyDetail @title", new SqlParameter[]
-                         {
-                             new SqlParameter("@title",Title)
-                         }).ToList();
+                    {
+                        new SqlParameter("@title",Title)
+                    }).ToList();
 
                     objPortfolioListFrontModel.objPortfolioTechnologyEntity = technology;
+
+                    var challengeFaced = _unitOfWork.SQLQuery<ChallengeFacedModel>("EXEC GetChallengeFacedDetail @title", new SqlParameter[]
+                    {
+                            new SqlParameter("@title",Title)
+                    }).ToList();
+                    
+                    objPortfolioListFrontModel.objChallengeFaced = challengeFaced;
+
+                    var portfolioLogo = _unitOfWork.SQLQuery<PortfolioLogo>("EXEC GetParticularPortfolioLogoImageDetail @title", new SqlParameter[]
+                    {
+                            new SqlParameter("@title",Title)
+                    }).ToList();
+
+                    objPortfolioListFrontModel.objPortfolioLogo = portfolioLogo;
                 }
             }
 

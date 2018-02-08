@@ -41,6 +41,22 @@ namespace App.ShaligramInfotech.Routing
                             filePath = "~/views/SCPages/GetParticularPortfolioDetail";
                             //requestContext.HttpContext.Request.AppRelativeCurrentExecutionFilePath = "~/views/SCPages/portfolio/GetParticularPortfolioDetail";
                         }
+                        else if (filePath.Equals("~/portfolio", StringComparison.OrdinalIgnoreCase))
+                        {
+                            filePath = "~/views/SCPages/portfolio-index";
+                        }
+                        else if (filePath.Equals("~/pricing-comparison-uk", StringComparison.OrdinalIgnoreCase))
+                        {
+                            filePath = "~/views/SCPages/pricecomparisonuk";
+                        }
+                        else if (filePath.Equals("~/pricing-comparison-aus", StringComparison.OrdinalIgnoreCase))
+                        {
+                            filePath = "~/views/SCPages/pricecomparisonaus";
+                        }
+                        else if (filePath.Equals("~/pricing-comparison-us", StringComparison.OrdinalIgnoreCase))
+                        {
+                            filePath = "~/views/SCPages/pricecomparisonus";
+                        }
                         else
                         {
                             filePath = filePath.Insert(2, "views/SCPages/");

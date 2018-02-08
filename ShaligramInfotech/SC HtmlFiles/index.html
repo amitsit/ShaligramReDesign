@@ -655,8 +655,10 @@
 				$("#navbar .nav li .fa").toggleClass("fa-angle-down fa-angle-up");
 			});
 			
-			$(".navbar-toggle").click(function(){
-				$(this).toggleClass("open");
+			$(".navbar-toggle").click(function () {
+			    setTimeout(function () {
+			        $(this).toggleClass("open");
+			    }, 300);
 			});
 			
 			$('#mediaSlider').carousel({

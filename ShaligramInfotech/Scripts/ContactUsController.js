@@ -3,28 +3,8 @@ angular.module('app.controllers')
     .controller('ContactUsController',
         function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService, vcRecaptchaService) {
             $scope.$root.title = 'Shaligram Infotech Contact Us | Ecommerce Portal Development Company USA | Ecommerce Portal Development Company UK';
-            //    var valid;
-
-            //    /**
-            //     * SERVER SIDE VALIDATION
-            //     *
-            //     * You need to implement your server side validation here.
-            //     * Send the reCaptcha response to the server and use some of the server side APIs to validate it
-            //     * See https://developers.google.com/recaptcha/docs/verify
-            //     */
-            //    console.log('sending the captcha response to the server', $scope.response);
-
-            //    if (valid) {
-            //        console.log('Success');
-            //    } else {
-            //        console.log('Failed validation');
-
-            //        // In case of a failed validation you need to reload the captcha
-            //        // because each response can be checked just once
-            //        vcRecaptchaService.reload($scope.widgetId);
-            //    }
-            //};
-
+            $scope.$root.metakeyword = 'Ecommerce Portal Development  Company, Ecommerce Portal Development Company USA, Ecommerce Portal Development Company UK';
+            $scope.$root.metadescription = 'Shaligram Infotech is leading Ecommerce Portal Development Company USA . We are offering services like Ecommerce shopping cart development, custom erp development, retail erp software development, data migration services etc';
 
             $scope.ContactUs = new Object();
 
