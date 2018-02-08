@@ -16,6 +16,10 @@ angular.module('app.controllers')
                 });
             });
 
+            $scope.resetForm = function (form) {
+                $scope.ContactUs = {};
+            }
+
             $scope.SaveContactUsDetails = function (form) {
                 $scope.googleRecaptchaValidationMessage = false;
                 var googleResponse = $('textarea[name="g-recaptcha-response"]').val();

@@ -48,29 +48,6 @@
 
     <section class="section3">
         <img src="/images/map3.jpg" alt="shaligram-map" title="shaligram infotech" class="img-responsive">
-        @*<div id="map-canvas"></div>*@
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFd9dzUQMU1UuwNsSIMTpEyeEth0SDk-4"></script>
-        <script type="text/javascript">
-            function init_map() {
-                var myOptions = {
-                    zoom: 18,
-                    scrollwheel: false,
-                    center: new google.maps.LatLng(23.037801, 72.5056423),
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-
-                };
-                map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
-
-                marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(23.037801, 72.5056423)
-                });
-                infowindow = new google.maps.InfoWindow({ content: "<b><b>Shaligram House,</b><br/>Behind Rajpath Club Offside S.G. Highway, Bodakdev, Bodakdev, Ahmedabad, Gujarat 380059" }); google.maps.event.addListener(marker, "click", function () { infowindow.open(map, marker); });
-            }
-            google.maps.event.addDomListener(window, 'load', init_map);
-
-        </script>
-
     </section>
 
 
@@ -82,26 +59,6 @@
             </div>
 
             <form class="form-horizontal" name="ContactUsForm" novalidate>
-                @*<div role="tabpanel" class="form-horizontal" id="messages">
-                    <div class="alert alert-danger alert-dismissible" role="alert" ng-show="(ContactUsForm.$submitted && (!ContactUsForm.$valid))">
-                        <ul ng-show="validationErrors">
-                            <li ng-repeat="error in validationErrors">{{error}}</li>
-                        </ul>
-                        <ul ng-show="ContactUsForm.$submitted && (!ContactUsForm.$valid)">
-                            <li ng-show="ContactUsForm.FullName.$error.required">Name is required.</li>
-                            <li ng-show="ContactUsForm.EmailAddress.$error.required">Email Address is required.</li>
-                            <li ng-show="ContactUsForm.EmailAddress.$error.email">Please enter valid email address.</li>
-                            <li ng-show="!ContactUsForm.PhoneNumber.$valid">Please enter valid phone number.</li>
-                            <li ng-show="ContactUsForm.Company.$error.required">Company is required.</li>
-                            <li ng-show="ContactUsForm.Message.$error.required">Message is required.</li>
-                            <li ng-show="googleRecaptchaValidationMessage">Please fill Captcha.</li>
-                        </ul>
-                    </div>
-                </div>*@
-
-
-
-
                 <div class="row">
 
                     <div class="col-md-6 col-sm-12">
@@ -136,7 +93,7 @@
                     </div>
                     <div class="col-sm-12 text-center">
                         <button type="submit" class="btn btn1" name='submit' id='submit' ng-click="SaveContactUsDetails(ContactUsForm)">Send Message</button>
-                        <button type="reset" class="btn btn2">Reset</button>
+                        <button type="button" class="btn btn2" ng-click="resetForm(ContactUsForm)">Reset</button>
                     </div>
                 </div>
             </form>

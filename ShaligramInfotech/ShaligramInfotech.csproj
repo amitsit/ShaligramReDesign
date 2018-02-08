@@ -184,6 +184,7 @@
     <Content Include="banners\trademarkRectification.jpg" />
     <Content Include="banners\trademarkRegistration.jpg" />
     <Content Include="banners\trademarkRenewal.jpg" />
+    <Content Include="Content\css\bootstrap-select.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\custom.min.css" />
     <Content Include="Content\css\font-awesome.min.css" />
@@ -193,6 +194,8 @@
     <Content Include="Content\css\portfoliot.css" />
     <Content Include="Content\css\pricing_style.css" />
     <Content Include="Content\css\responsive.min.css" />
+    <Content Include="Content\css\swiper.min.css" />
+    <Content Include="Content\css\themify-icons.css" />
     <Content Include="Content\css\toastr-angular.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -259,6 +262,7 @@
     <Content Include="Images\chronicle.png" />
     <Content Include="Images\closePrivateLimitedCompany.jpg" />
     <Content Include="Images\conference-room.jpg" />
+    <Content Include="Images\cont.jpg" />
     <Content Include="Images\copyrightRegistration.jpg" />
     <Content Include="Images\del-attach.png" />
     <Content Include="Images\designRegistration.jpg" />
@@ -282,6 +286,7 @@
     <Content Include="Images\dotnet.jpg" />
     <Content Include="Images\esiRegistration.jpg" />
     <Content Include="Images\esiReturn.jpg" />
+    <Content Include="Images\eye.svg" />
     <Content Include="Images\fassaiRegistration.jpg" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\flags\australia.png" />
@@ -299,6 +304,7 @@
     <Content Include="Images\handshake.png" />
     <Content Include="Images\header-logo.jpg" />
     <Content Include="Content\icons\close.png" />
+    <Content Include="Images\icon-move-black.png" />
     <Content Include="Images\idea.jpg" />
     <Content Include="Images\importExportCode.jpg" />
     <Content Include="Images\incomeTaxFiling.jpg" />
@@ -344,8 +350,12 @@
     <Content Include="Images\Management\KAMLESHBHAI.jpg" />
     <Content Include="Images\Management\Ramesh Antala.jpg" />
     <Content Include="Images\Management\Ramesh Marand.jpg" />
+    <Content Include="Images\map.jpeg" />
+    <Content Include="Images\map1.jpg" />
+    <Content Include="Images\map3.jpg" />
     <Content Include="Images\meeting-room1.jpg" />
     <Content Include="Images\meeting-room2.jpg" />
+    <Content Include="Images\mission.svg" />
     <Content Include="Images\msmeRegistration.jpg" />
     <Content Include="Images\ndtv.png" />
     <Content Include="Images\nidhiCompany.jpg" />
@@ -1842,6 +1852,7 @@
     </Content>
     <Content Include="Scripts\js\angular-local-storage.js" />
     <Content Include="Scripts\js\angular.min.js" />
+    <Content Include="Scripts\js\bootstrap-select.js" />
     <Content Include="Scripts\js\bootstrap.min.js" />
     <Content Include="Scripts\js\fancybox\blank.gif" />
     <Content Include="Scripts\js\fancybox\fancybox_loading%402x.gif" />
@@ -1854,6 +1865,7 @@
     <Content Include="Scripts\js\jquery.min.js" />
     <Content Include="Scripts\js\Priceformscript.js" />
     <Content Include="Scripts\js\sticky-kit.min.js" />
+    <Content Include="Scripts\js\swiper.min.js" />
     <Content Include="Scripts\ParticularPortfolioController.js" />
     <Content Include="Scripts\PortfolioController.js" />
     <Content Include="Scripts\RequestQuoteController.js" />

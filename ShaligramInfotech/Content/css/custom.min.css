@@ -1230,7 +1230,7 @@ section{ padding: 50px 0; }
 .contact-us .section1 .box h4{ text-transform: uppercase; color: #232323; font-weight: 600; font-size: 15px;}
 
 .contact-us .section2 .title{ margin-bottom: 50px; color: #fff;}
-.contact-us .section2 form .form-control{ background: none; border: 1px solid #363636; padding: 12px 20px; font-size: 14px; line-height: normal; border-radius: 0; margin: 0 0 20px 0;    max-width: 100%; resize: none; height: auto; color: #363636}
+.contact-us .section2 form .form-control{ background: none; border: 1px solid #363636; padding: 12px 20px; font-size: 14px; line-height: normal; border-radius: 0; margin: 0 0 20px 0;    max-width: 100%; resize: none; height: auto; color: #fff}
 .contact-us .section2 form p span{ display: block; color: #fff; text-transform: uppercase; font-weight: 500; letter-spacing: 1px; margin-bottom: 10px;}
 .contact-us .section2 form textarea{ min-height: 72px; }
 .contact-us .section2 form .form-control::-webkit-input-placeholder,
