@@ -326,6 +326,9 @@
     <Content Include="Images\services\microsoft-technologies\infragistics.jpg" />
     <Content Include="Images\services\microsoft-technologies\microsoft-aspdotnet.jpg" />
     <Content Include="Images\services\microsoft-technologies\microsoft-aspdotnetmvc.jpg" />
+    <Content Include="Images\services\microsoft-technologies\microsoft-aspdotnetmvvm.jpg" />
+    <Content Include="Images\services\microsoft-technologies\microsoft-aspdotnetwcf.jpg" />
+    <Content Include="Images\services\microsoft-technologies\microsoft-aspdotnetwpf.jpg" />
     <Content Include="Images\services\microsoft-technologies\microsoft-biztalk.jpg" />
     <Content Include="Images\services\microsoft-technologies\microsoftsharepoint.jpg" />
     <Content Include="Images\services\microsoft-technologies\MicrosoftSQLServer.jpg" />

@@ -1021,7 +1021,7 @@ angular.module('app.controllers', [])
     }])
 
     .controller('careerCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Shaligram Infotech Career | Carrer Objective | Career | Current Job Opening";
+        $scope.$root.title = "Shaligram Infotech Career | Career Objective | Career | Current Job Opening";
         $scope.$root.metakeyword = 'Career Objective,Careers,Current Job Opening Senior Android Developer,Current Job Opening Senior Business Development Executive,Current Job Opening Junior Web Designer';
         $scope.$root.metadescription = 'In Shaligram Infotech  Current Job Opening is Junior Business Development Executive, Junior Web Designer, Senior Business Development Executive, Senior Java Developer, Senior Android Developer, Fresher Business Development Executive';
 

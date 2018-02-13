@@ -1,76 +1,80 @@
-﻿<div class="container" ng-controller="RequestQuoteController">
-    <br /><br />
-    <div class="row">
-        <form class="form-horizontal" name="RequestQuoteForm" novalidate>
-            <div role="tabpanel" class="form-horizontal" id="messages">
-                <div class="alert alert-danger alert-dismissible" role="alert" ng-show="(RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid))">
-                    <ul ng-show="validationErrors">
-                        <li ng-repeat="error in validationErrors">{{error}}</li>
-                    </ul>
-                    <ul ng-show="RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid)">
-                        <li ng-show="RequestQuoteForm.FullName.$error.required">Full Name is required.</li>
-                        <li ng-show="RequestQuoteForm.EmailAddress.$error.required">Email Address is required.</li>
-                        <li ng-show="RequestQuoteForm.EmailAddress.$error.email">Please enter valid email address.</li>
-                        <li ng-show="!RequestQuoteForm.PhoneNumber.$valid">Please enter valid phone number.</li>
-                        <li ng-show="RequestQuoteForm.City.$error.required">City is required.</li>
-                        <li ng-show="RequestQuoteForm.ProjectTypeId.$error.required">Project Type is required.</li>
-                        <li ng-show="RequestQuoteForm.BudgetId.$error.required">Budget is required.</li>
-                        <li ng-show="RequestQuoteForm.ProjectDescription.$error.required">Project Description is required.</li>
-                        <li ng-show="googleRecaptchaValidationMessage">Please fill Captcha.</li>
-                    </ul>
+﻿<div ng-controller="RequestQuoteController">
+
+    <div class="form-section">
+        <section class="section1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                        <div class="box">
+                            <img alt="flag india" src="/images/flags/india1.png" title="India">
+                            <h4>India</h4>
+                            <p>Shaligram House, Behind Rajpath Club,<br>Off. S.G. Road, Bodakdev,<br>Ahmedabad-380059, India</p>
+                            <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+91-9727212899">+91-9727212899</a><br><strong><i class="fa fa-skype"></i> : </strong><a href="skype:shaligraminfotech?chat"> shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong><a href="mailto:info@shaligraminfotech.com"> info@shaligraminfotech.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                        <div class="box">
+                            <img alt="flag uk" src="/images/flags/uk.png" title="UK">
+                            <h4>UK</h4>
+                            <p>100, College Road, Harrow,<br>London, HA1 1BQ,<br>United Kingdom</p>
+                            <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+44 20 3581 6366">+44 20 3581 6366</a><br><strong><i class="fa fa-skype"></i> : </strong> <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong><a href="mailto:info@shaligraminfotech.com"> info@shaligraminfotech.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                        <div class="box">
+                            <img alt="flag USA" src="/images/flags/us.png" title="USA">
+                            <h4>USA</h4>
+                            <p>14793 Pensham Drive,<br>Frisco TX 75035, USA</p>
+                            <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+1-210-888-8402">+1-210-888-8402</a><br><strong><i class="fa fa-fax"></i> :</strong> 844-255-9976<br><strong><i class="fa fa-skype"></i> : </strong> <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong><a href="mailto:info@shaligraminfotech.com"> info@shaligraminfotech.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                        <div class="box">
+                            <img alt="flag australia" src="/images/flags/australia.png" title="Australia">
+                            <h4>Australia</h4>
+                            <p>Level 36, 71 Eagle Street,<br>Brisbane, QLD 4000</p>
+                            <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+61 07 3121 3147">+61 07 3121 3147</a><br><strong><i class="fa fa-phone"></i> :</strong> +61 0422 019 223<br><strong><i class="fa fa-skype"></i> : </strong> <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong><a href="mailto:info@shaligraminfotech.com"> info@shaligraminfotech.com</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <h3>Request Quote</h3>
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" ng-model="RequestQuote.FullName" name="FullName" class="form-control" required />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="number" ng-model="RequestQuote.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control" />
-                        </div>
-                    </div>
+        </section>
+
+        <section class="section3">
+            <img src="/images/map3.jpg" alt="shaligram-map" title="shaligram infotech" class="img-responsive">
+        </section>
+
+        <section class="cover-background section2" style="background-image:url('../Images/cont.jpg');">
+            <div class="opacity-full"></div>
+            <div class="container">
+                <div class="title">
+                    <h4>Request Quote</h4>
                 </div>
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" ng-model="RequestQuote.EmailAddress" name="EmailAddress" class="form-control" required />
-                        </div>
-                    </div>
-                </div>
+                <form class="form-horizontal" name="RequestQuoteForm" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input placeholder="Full Name" type="text" ng-model="RequestQuote.FullName" name="FullName" class="form-control"
+                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.FullName.$error.required)}" required />
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>City</label>
-                            <input type="text" ng-model="RequestQuote.City" name="City" class="form-control" required />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Company</label>
-                            <input type="text" ng-model="RequestQuote.Company" name="Company" class="form-control" />
-                        </div>
-                    </div>
-                </div>
+                            <input placeholder="Phone Number" type="number" ng-model="RequestQuote.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control"
+                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && !RequestQuoteForm.PhoneNumber.$valid)}" />
+                            
+                            <input placeholder="Email Address" type="email" ng-model="RequestQuote.EmailAddress" name="EmailAddress"
+                             class="form-control" ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && (RequestQuoteForm.EmailAddress.$error.required || RequestQuoteForm.EmailAddress.$error.email))}" required />
+                            
+                            <input placeholder="City" type="text" ng-model="RequestQuote.City" name="City" class="form-control"
+                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.City.$error.required)}" required />
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Project Type</label>
-                            <select class="form-control" id="ProjectTypeId" ng-model="RequestQuote.ProjectTypeId" name="ProjectTypeId"  required>
-                                <option value="">- select -</option>
+                            <input placeholder="Company" type="text" ng-model="RequestQuote.Company" name="Company" class="form-control" />
+
+                            <select class="form-control" id="ProjectTypeId" ng-model="RequestQuote.ProjectTypeId" name="ProjectTypeId" 
+                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.ProjectTypeId.$error.required)}" required>
+                                <option value="">Select Project Type</option>
                                 <option value="1">Mobile App Development</option>
                                 <option value="2">Web Development</option>
                                 <option value="3">SaaS</option>
@@ -82,101 +86,37 @@
                                 <option value="9">Other</option>
                             </select>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Budget</label>
-                            <select class="form-control" id="BudgetId" ng-model="RequestQuote.BudgetId" name="BudgetId"  required>
-                                <option value="">- select -</option>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="BudgetId" ng-model="RequestQuote.BudgetId" name="BudgetId" 
+                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.BudgetId.$error.required)}" required>
+                                <option value="">Select your budget</option>
                                 <option value="1">Less than 10K USD</option>
                                 <option value="2">10K USD - 20K USD</option>
                                 <option value="3">20K - 50K USD</option>
                                 <option value="4">50K - 100K USD</option>
                                 <option value="5">100K and more</option>
                             </select>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>Project Description:</label>
-                            <textarea rows="10" cols="100" ng-model="RequestQuote.ProjectDescription" class="form-control" id="ProjectDescription" name="ProjectDescription" required></textarea>
+                            <textarea placeholder="Message" ng-model="RequestQuote.ProjectDescription" class="form-control" id="ProjectDescription" name="ProjectDescription" 
+                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.ProjectDescription.$error.required)}" required>
+                            </textarea>
+                            <p>
+                                <span>Attach File:</span>
+                                <input class="form-control" type="file" upload-files />
+                            </p>
+                            <p>
+                                <span ng-class="{'span-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
+                                <div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>
+                            </p>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn1" name='submit' id='submit' ng-click="SaveRequestQuoteDetails(RequestQuoteForm)">Send Message</button>
+                            <button type="button" class="btn btn2" ng-click="resetForm()">Reset</button>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-sm-12">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <div class="input_fields_wrap control-group">
-                                <div class="controls">
-                                    <label>Attach File:</label>
-                                    <br>
-                                    <input type="file" upload-files/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="controls">
-                        <label>Please fill Captcha</label>
-                        <br>
-                        <div vc-recaptcha
-                             key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>
-                        <br>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="btn_contact mt-10">
-                        <button type="submit" class="btn btn-primary" name='submit' id='submit' ng-click="SaveRequestQuoteDetails(RequestQuoteForm)">Send Message</button>
-                        <button type="reset" class="btn btn-danger">Reset</button>
-                    </div>
-                </div>
+                </form>
             </div>
-            <div class="col-sm-6">
-                <h3>Find Us Here</h3>
-                <div class="col-md-12">
-                    <img src="/images/map.jpeg" alt="shaligram-map" title="shaligram infotech" class="img-responsive" style="margin-top: 15px; Margin-Bottom:15px;" />
-                </div>
-                <div class="col-md-12" style="margin: 20px 0px;">
-                    <div class="col-md-6">
-                        <label>Office (India)</label>
-                        <p>Shaligram House, Behind Rajpath Club, </p>
-                        <p>Off. S.G. Road, Bodakdev, </p>
-                        <p>Ahmedabad-380059, India</p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp; +91-9727212899 </p>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Office (UK)</label>
-                        <p>100, College Road, Harrow, </p>
-                        <p>London, HA1 1BQ,</p>
-                        <p>United Kingdom</p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+44 20 3581 6366</p>
-                    </div>
-                </div>
-                <div class="col-md-12" style="margin: 0px 0px 10px 0px;">
-                    <div class="col-md-6">
-                        <label>Office (USA)</label>
-                        <p>14793 Pensham Drive,</p>
-                        <p>Frisco TX 75035, USA </p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+1-210-888-8402</p>
-                        <p><i class="fa fa-fax"></i> 844-255-9976</p>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Office (Australia)</label>
-                        <p>Level 36, 71 Eagle Street, </p>
-                        <p>Brisbane, QLD 4000 </p>
-                        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+61 07 3121 3147</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+61 0422 019 223</p>
-                    </div>
-                </div>
-            </div>
-        </form>
+        </section>
     </div>
 </div>

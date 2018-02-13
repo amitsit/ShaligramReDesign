@@ -61,29 +61,7 @@ namespace ShaligramInfotechAPI.Controllers
         [HttpPost]
         public async Task<HttpResponseMessage> SaveContactInformation()
         {
-            //var list = _unitOfWork.SQLNonQuery("EXEC SaveContactInformation @Name,@PhoneNumber,@EmailAddress,@City,@Company,@Message", new SqlParameter[]
-            //             {
-            //                 new SqlParameter("@Name",objContactUsEntity.Name),
-            //                 new SqlParameter("@PhoneNumber",objContactUsEntity.PhoneNumber),
-            //                 new SqlParameter("@EmailAddress",objContactUsEntity.EmailAddress),
-            //                 new SqlParameter("@City",objContactUsEntity.City),
-            //                 new SqlParameter("@Company",objContactUsEntity.Company),
-            //                 new SqlParameter("@Message",objContactUsEntity.Message),
-            //             });
-
-            //string AdminMail = "mansi.p@shaligraminfotech.com";
-            //string bodyAdminTemplate = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.MapPath("~/EmailTemplate/AdminContactUs.html"));
-            //bodyAdminTemplate = bodyAdminTemplate.Replace("[@Name]", objContactUsEntity.Name);
-            //bodyAdminTemplate = bodyAdminTemplate.Replace("[@Email]", objContactUsEntity.EmailAddress);
-            //bodyAdminTemplate = bodyAdminTemplate.Replace("[@Mobile]", objContactUsEntity.PhoneNumber);
-            //bodyAdminTemplate = bodyAdminTemplate.Replace("[@company]", objContactUsEntity.Company);
-            //bodyAdminTemplate = bodyAdminTemplate.Replace("[@Message]", objContactUsEntity.Message);
-
-            //Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Mail Sent Successfully", "", null));
-            //Admintask.Start();
-
-            //return Request.CreateResponse(HttpStatusCode.OK, list);
-
+           
             try
             {
                 if (!Request.Content.IsMimeMultipartContent())
@@ -250,96 +228,6 @@ namespace ShaligramInfotechAPI.Controllers
             }
         }
 
-        //[HttpPost]
-        //public HttpResponseMessage SaveInformation(InquiryDetail allDataobj)
-        //{
-        //    ShaligramConsultancyEntities objEntities = new ShaligramConsultancyEntities();
-        //    InquiryDetail objinqiry = new InquiryDetail();
-        //    objinqiry.Name = allDataobj.Name;
-        //    objinqiry.Email = allDataobj.Email;
-        //    objinqiry.Phone = allDataobj.Phone;
-        //    objinqiry.EMI = allDataobj.EMI;
-        //    objinqiry.Rupees = allDataobj.Rupees;
-        //    objinqiry.InquiryFor = allDataobj.InquiryFor;
-        //    objinqiry.CreatedDate = DateTime.Now;
-        //    objEntities.InquiryDetails.Add(objinqiry);
-        //    objEntities.SaveChanges();
-
-
-        //    //Image Path 
-        //    var imagepath = System.Configuration.ConfigurationManager.AppSettings["tempLogo"];
-        //    //owner mail
-        //    var mappedPath = HttpContext.Current.Server.MapPath("~/EmailTemplate/EmailTemplate.html");
-
-        //    string bodyTemplate = System.IO.File.ReadAllText(mappedPath);
-        //    //string ToEmail = "richa.t@shaligraminfotech.com,amit.p@shaligraminfotech.com";
-        //    bodyTemplate = bodyTemplate.Replace("[@Name]", allDataobj.Name);
-        //    bodyTemplate = bodyTemplate.Replace("[@Email]", allDataobj.Email);
-        //    bodyTemplate = bodyTemplate.Replace("[@Phone]", allDataobj.Phone);
-        //    bodyTemplate = bodyTemplate.Replace("[@EnquiryFor]", allDataobj.InquiryFor);
-        //    bodyTemplate = bodyTemplate.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Enquiry For - " + allDataobj.InquiryFor, bodyTemplate, true);
-
-        //    //thank u email
-        //    var mappedPathThankU = HttpContext.Current.Server.MapPath("~/EmailTemplate/ThankuEmail.html");
-        //    string bodyTemplateThankYou = System.IO.File.ReadAllText(mappedPathThankU);
-
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Name]", allDataobj.Name);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@EnquiryFor]", allDataobj.InquiryFor);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Email]", allDataobj.Email);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Phone]", allDataobj.Phone);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail(allDataobj.Email, "Thank You For Your Inquiry With Shaligram Consultancy.", bodyTemplateThankYou, true);
-
-
-
-        //    return Request.CreateResponse(HttpStatusCode.OK, true);
-
-        //}
-
-        //[HttpPost]
-        //public HttpResponseMessage SaveContactUSInformation(ContactUsEnquiry allDataobj)
-        //{
-        //    ShaligramConsultancyEntities objEntities = new ShaligramConsultancyEntities();
-        //    if (allDataobj != null)
-        //    {
-        //        objEntities.ContactUsEnquiries.Add(allDataobj);
-        //        objEntities.SaveChanges();
-        //    }
-
-
-
-        //    //Image Path 
-        //    var imagepath = System.Configuration.ConfigurationManager.AppSettings["tempLogo"];
-        //    //owner mail
-        //    var mappedPath = HttpContext.Current.Server.MapPath("~/EmailTemplate/contactUsEmail.html");
-
-        //    string bodyTemplate = System.IO.File.ReadAllText(mappedPath);
-        //    //string ToEmail = "richa.t@shaligraminfotech.com,amit.p@shaligraminfotech.com";
-        //    bodyTemplate = bodyTemplate.Replace("[@Name]", allDataobj.Name);
-        //    bodyTemplate = bodyTemplate.Replace("[@Email]", allDataobj.Email);
-        //    bodyTemplate = bodyTemplate.Replace("[@Phone]", allDataobj.Phone);
-        //    bodyTemplate = bodyTemplate.Replace("[@City]", allDataobj.City);
-        //    bodyTemplate = bodyTemplate.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail("", "[Shaligram Consultancy] Receive New Contact Us Request", bodyTemplate, true);
-
-        //    //thank u email
-        //    var mappedPathThankU = HttpContext.Current.Server.MapPath("~/EmailTemplate/contactUsThankuEmail.html");
-        //    string bodyTemplateThankYou = System.IO.File.ReadAllText(mappedPathThankU);
-
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Name]", allDataobj.Name);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@City]", allDataobj.City);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Email]", allDataobj.Email);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Phone]", allDataobj.Phone);
-        //    bodyTemplateThankYou = bodyTemplateThankYou.Replace("[@Path]", imagepath);
-        //    EmailHelper.SendAsyncEmail(allDataobj.Email, "Thank You For Your Contact Request With Shaligram Consultancy.", bodyTemplateThankYou, true);
-
-
-
-        //    return Request.CreateResponse(HttpStatusCode.OK, true);
-
-        //}
-
         [HttpGet]
         public HttpResponseMessage GetFiles(string folderPath)
         {
@@ -354,18 +242,5 @@ namespace ShaligramInfotechAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.OK, fileList);
             }
         }
-
-        //[HttpGet]
-        //public HttpResponseMessage GetCityList()
-        //{
-
-        //    ShaligramConsultancyEntities objEntities = new ShaligramConsultancyEntities();
-        //    List<CityList> objListcity = objEntities.CityLists.ToList();
-
-        //    return Request.CreateResponse(HttpStatusCode.OK, objListcity);
-
-        //}
-
-
     }
 }

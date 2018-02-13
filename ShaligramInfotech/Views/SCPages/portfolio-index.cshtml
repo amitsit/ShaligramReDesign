@@ -3,9 +3,15 @@
 
         <div id="isotope-options" class="port_menu">
             <ul id="filters" class="option-set clearfix p_menu" data-option-key="filter">
-                <li><a href="" ng-click="GetPortfolioListForFront(0)">All</a></li>
+                <li><a href="" ng-click="GetPortfolioListForFront(0)"
+                       ng-class="{'activePortfolio': (TechnologyId === 0)}">All</a></li>
+
                 <li ng-repeat="techlist in TechnologyList">
-                    <a href="" ng-click="GetPortfolioListForFront(techlist.TechnologyId)"><span ng-bind="techlist.TechnologyName"></span></a>
+
+                    <a href="" ng-click="GetPortfolioListForFront(techlist.TechnologyId)"
+                       ng-class="{'activePortfolio': (TechnologyId == techlist.TechnologyId)}">
+
+                    <span ng-bind="techlist.TechnologyName"></span></a>
                 </li>
             </ul>
 

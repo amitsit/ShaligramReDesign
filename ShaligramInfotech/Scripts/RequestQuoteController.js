@@ -15,6 +15,17 @@
                 });
             });
 
+            $scope.resetForm = function () {
+                $scope.RequestQuote.FullName = null;
+                $scope.RequestQuote.PhoneNumber = null;
+                $scope.RequestQuote.EmailAddress = null;
+                $scope.RequestQuote.City = null;
+                $scope.RequestQuote.Company = null;
+                $scope.RequestQuote.ProjectTypeId = null;
+                $scope.RequestQuote.BudgetId = null;
+                $scope.RequestQuote.ProjectDescription = null;
+            }
+
             $scope.SaveRequestQuoteDetails = function (form) {
                 $scope.googleRecaptchaValidationMessage = false;
                 var googleResponse = $('textarea[name="g-recaptcha-response"]').val();
@@ -28,7 +39,7 @@
                             $scope.requestQuoteData = {
                                 RequestQuoteId: $scope.RequestQuote.RequestQuoteId,
                                 FullName: $scope.RequestQuote.FullName,
-                                PhoneNumber: $scope.RequestQuote.PhoneNumber.toString(),
+                                PhoneNumber: $scope.RequestQuote.PhoneNumber,
                                 EmailAddress: $scope.RequestQuote.EmailAddress,
                                 City: $scope.RequestQuote.City,
                                 Company: $scope.RequestQuote.Company,
@@ -46,10 +57,10 @@
                                     var formData = new FormData();
                                     formData.append("RequestQuoteId", data.model.RequestQuoteId);
                                     formData.append("FullName", data.model.FullName);
-                                    formData.append("PhoneNumber", data.model.PhoneNumber);
+                                    formData.append("PhoneNumber", data.model.PhoneNumber == undefined ? '' : data.model.PhoneNumber);
                                     formData.append("EmailAddress", data.model.EmailAddress);
                                     formData.append("City", data.model.City);
-                                    formData.append("Company", data.model.Company);
+                                    formData.append("Company", data.model.Company == undefined ? '' : data.model.Company);
                                     formData.append("ProjectTypeId", data.model.ProjectTypeId);
                                     formData.append("BudgetId", data.model.BudgetId);
                                     formData.append("ProjectDescription", data.model.ProjectDescription);

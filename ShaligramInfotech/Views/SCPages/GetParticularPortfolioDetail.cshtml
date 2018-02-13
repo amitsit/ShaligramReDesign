@@ -21,16 +21,7 @@
 
 
 <div ng-controller="ParticularPortfolioController" class="portfoliodetail">
-
-    <div class="section-mn">
-        <div ng-if="PortfolioDetail.BannerImageURL">
-            <a href="#" title="{{PortfolioDetail.Title}}">
-                <img ng-src="/PortfolioImages/BannerImages/{{PortfolioDetail.BannerImageURL}}" alt="{{PortfolioDetail.BannerImageTooltip}}" title="{{PortfolioDetail.BannerImageTooltip}}" />
-            </a>
-        </div>
-    </div>
-
-
+    
     <div class="breadcrumb">
         <div class="container">
             <ul>
@@ -41,6 +32,13 @@
         </div>
     </div>
 
+    <div class="section-mn">
+        <div ng-if="PortfolioDetail.BannerImageURL">
+            <a href="#" title="{{PortfolioDetail.Title}}">
+                <img ng-src="/PortfolioImages/BannerImages/{{PortfolioDetail.BannerImageURL}}" alt="{{PortfolioDetail.BannerImageTooltip}}" title="{{PortfolioDetail.BannerImageTooltip}}" />
+            </a>
+        </div>
+    </div>
 
     <div ng-if="!PortfolioDetail.objPortfolioLogo.length > 0">
         <section clss="slide" ng-if="PortfolioDetail.objPortfolioImageEntity.length>0 || PortfolioDetail.objPortfolioObjectiveEntity.length > 0 ">
@@ -70,7 +68,7 @@
                         <div class="title">
                             <h4 class="text-black text-left">Objective</h4>
                         </div>
-                        <ul class="list2">
+                        <ul class="list1">
                             <li ng-repeat="objective in PortfolioDetail.objPortfolioObjectiveEntity track by $index">
                                 <span ng-bind="objective.ObjectiveText"></span>
                             </li>
@@ -87,7 +85,7 @@
             <div class="title">
                 <h4 class="text-black text-left">Main Features</h4>
             </div>
-            <ul class="list2">
+            <ul class="list1">
                 <li ng-repeat="feature in PortfolioDetail.objPortfolioFeatureEntity track by $index">
                     <span ng-bind="feature.FeatureText"></span>
                 </li>
@@ -100,7 +98,7 @@
             <div class="title">
                 <h4 class="text-black text-left">Solution</h4>
             </div>
-            <ul class="list2">
+            <ul class="list1">
                 <li ng-repeat="solution in PortfolioDetail.objPortfolioSolutionEntity track by $index">
                     <span ng-bind="solution.SolutionText"></span>
                 </li>
@@ -116,7 +114,7 @@
             <div class="title">
                 <h4 class="text-black">Result Obtained</h4>
             </div>
-            <ul class="list2">
+            <ul class="list1">
                 <li ng-repeat="result in PortfolioDetail.objPortfolioResultEntity track by $index">
                     <span ng-bind="result.ResultText"></span>
                 </li>
@@ -129,7 +127,7 @@
             <div class="title">
                 <h4 class="text-black">Technology</h4>
             </div>
-            <ul class="list2">
+            <ul class="list1">
                 <li ng-repeat="technology in PortfolioDetail.objPortfolioTechnologyEntity track by $index">
                     <span ng-bind="technology.TechnologyText"></span>
                 </li>
@@ -142,7 +140,7 @@
             <div class="title">
                 <h4 class="text-black">Challenges Faced</h4>
             </div>
-            <ul class="list2">
+            <ul class="list1">
                 <li ng-repeat="challenge in PortfolioDetail.objChallengeFaced track by $index">
                     <span ng-bind="challenge.ChallengeFaced"></span>
                 </li>

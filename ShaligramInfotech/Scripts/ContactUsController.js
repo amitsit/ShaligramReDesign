@@ -16,15 +16,20 @@ angular.module('app.controllers')
                 });
             });
 
-            $scope.resetForm = function (form) {
-                $scope.ContactUs = {};
+            $scope.resetForm = function () {
+                $scope.ContactUs.Name = null;
+                $scope.ContactUs.PhoneNumber = null;
+                $scope.ContactUs.EmailAddress = null;
+                $scope.ContactUs.City = null;
+                $scope.ContactUs.Company = null;
+                $scope.ContactUs.Message = null;
             }
 
             $scope.SaveContactUsDetails = function (form) {
                 $scope.googleRecaptchaValidationMessage = false;
                 var googleResponse = $('textarea[name="g-recaptcha-response"]').val();
                 if (form.$valid && googleResponse != "") {
-                    $http.post(configurationService.basePath + 'api/CommonApi/Validate?encodedResponse=' + googleResponse)
+                    $http.get(configurationService.basePath + 'api/CommonApi/Validate?encodedResponse=' + googleResponse)
                     .success(function (data, status, headers, config) {
                         if (data == true) {
                             $scope.ContactUs.ContactUsId = 0;
@@ -32,7 +37,7 @@ angular.module('app.controllers')
                             $scope.contactUsData = {
                                 ContactUsId: $scope.ContactUs.ContactUsId,
                                 Name: $scope.ContactUs.Name,
-                                PhoneNumber: $scope.ContactUs.PhoneNumber.toString(),
+                                PhoneNumber: $scope.ContactUs.PhoneNumber,
                                 EmailAddress: $scope.ContactUs.EmailAddress,
                                 City: $scope.ContactUs.City,
                                 Company: $scope.ContactUs.Company,
@@ -48,10 +53,10 @@ angular.module('app.controllers')
                                     var formData = new FormData();
                                     formData.append("ContactUsId", data.model.ContactUsId);
                                     formData.append("Name", data.model.Name);
-                                    formData.append("PhoneNumber", data.model.PhoneNumber);
+                                    formData.append("PhoneNumber", data.model.PhoneNumber == undefined ? '' : data.model.PhoneNumber);
                                     formData.append("EmailAddress", data.model.EmailAddress);
-                                    formData.append("City", data.model.City);
-                                    formData.append("Company", data.model.Company);
+                                    formData.append("City", data.model.City == undefined ? '' : data.model.City);
+                                    formData.append("Company", data.model.Company == undefined ? '' : data.model.Company);
                                     formData.append("Message", data.model.Message);
 
                                     for (var i = 0; i < data.files.length; i++) {

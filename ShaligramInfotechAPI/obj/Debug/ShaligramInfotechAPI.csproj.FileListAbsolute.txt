@@ -353,6 +353,5 @@ E:\Projects\ShaligramInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Security.G
 E:\Projects\ShaligramInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Security.Twitter.xml
 E:\Projects\ShaligramInfotech\ShaligramInfotechAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Projects\ShaligramInfotech\ShaligramInfotechAPI\bin\System.Web.Http.Owin.xml
-E:\Projects\ShaligramInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.csprojResolveAssemblyReference.cache
 E:\Projects\ShaligramInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.dll
 E:\Projects\ShaligramInfotech\ShaligramInfotechAPI\obj\Debug\ShaligramInfotechAPI.pdb

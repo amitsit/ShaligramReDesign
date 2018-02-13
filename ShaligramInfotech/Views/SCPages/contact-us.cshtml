@@ -1,6 +1,6 @@
 ﻿<div ng-controller="ContactUsController">
 
-
+<div class="form-section">
     <section class="section1">
         <div class="container">
             <div class="row">
@@ -10,7 +10,7 @@
                         <img alt="flag india" src="/images/flags/india1.png" title="India">
                         <h4>India</h4>
                         <p>Shaligram House, Behind Rajpath Club,<br>Off. S.G. Road, Bodakdev,<br>Ahmedabad-380059, India</p>
-                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+91-9727212899">+91-9727212899</a></p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+91-9727212899">+91-9727212899</a><br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
                     </div>
                 </div>
 
@@ -19,7 +19,7 @@
                         <img alt="flag uk" src="/images/flags/uk.png" title="UK">
                         <h4>UK</h4>
                         <p>100, College Road, Harrow,<br>London, HA1 1BQ,<br>United Kingdom</p>
-                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+44 20 3581 6366">+44 20 3581 6366</a></p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+44 20 3581 6366">+44 20 3581 6366</a><br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
                     </div>
                 </div>
 
@@ -28,7 +28,7 @@
                         <img alt="flag USA" src="/images/flags/us.png" title="USA">
                         <h4>USA</h4>
                         <p>14793 Pensham Drive,<br>Frisco TX 75035, USA</p>
-                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+1-210-888-8402">+1-210-888-8402</a><br><strong><i class="fa fa-fax"></i> :</strong> 844-255-9976</p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+1-210-888-8402">+1-210-888-8402</a><br><strong><i class="fa fa-fax"></i> :</strong> 844-255-9976<br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@
                         <img alt="flag australia" src="/images/flags/australia.png" title="Australia">
                         <h4>Australia</h4>
                         <p>Level 36, 71 Eagle Street,<br>Brisbane, QLD 4000</p>
-                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+61 07 3121 3147">+61 07 3121 3147</a><br><strong><i class="fa fa-phone"></i> :</strong> +61 0422 019 223</p>
+                        <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+61 07 3121 3147">+61 07 3121 3147</a><br><strong><i class="fa fa-phone"></i> :</strong> +61 0422 019 223<br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
                     </div>
                 </div>
 
@@ -60,16 +60,15 @@
 
             <form class="form-horizontal" name="ContactUsForm" novalidate>
                 <div class="row">
-
                     <div class="col-md-6 col-sm-12">
                         <input placeholder="Full Name" type="text" ng-model="ContactUs.Name" name="FullName"
                         class="form-control" ng-class="{'required-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && ContactUsForm.FullName.$error.required)}" required />
 
-                        <input placeholder="Phone Number" type="number" ng-model="ContactUs.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control" 
-                             />
+                        <input placeholder="Phone Number" type="number" ng-model="ContactUs.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control"
+                               ng-class="{'required-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && !ContactUsForm.PhoneNumber.$valid)}" />
 
                         <input placeholder="Email Address" type="email" ng-model="ContactUs.EmailAddress" name="EmailAddress" 
-                               class="form-control" ng-class="{'required-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && ContactUsForm.EmailAddress.$error.required)}" required />
+                               class="form-control" ng-class="{'required-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && (ContactUsForm.EmailAddress.$error.required || ContactUsForm.EmailAddress.$error.email))}" required />
 
                         <input placeholder="City" type="text" ng-model="ContactUs.City" name="City" 
                                class="form-control" />
@@ -93,16 +92,11 @@
                     </div>
                     <div class="col-sm-12 text-center">
                         <button type="submit" class="btn btn1" name='submit' id='submit' ng-click="SaveContactUsDetails(ContactUsForm)">Send Message</button>
-                        <button type="button" class="btn btn2" ng-click="resetForm(ContactUsForm)">Reset</button>
+                        <button type="button" class="btn btn2" ng-click="resetForm()">Reset</button>
                     </div>
                 </div>
             </form>
         </div>
     </section>
+
 </div>
-<style>
-    .span-error
-    {
-        color:#ff0000 !important;
-    }
-</style>

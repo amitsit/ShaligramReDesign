@@ -5,77 +5,73 @@
 
 <div class="services">
 
-<section class="section1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 left">
-                <h2>One Web <span>For All Devices</span></h2>
-            </div>
-            <div class="col-md-8 right">
-                <p>Demand for "responsive design" technology is an industry trend globally, thanks to the exponent increase in mobile internet users. We at Shaligram Infotech offer a large portfolio of responsive solution designs creating great browsing experience to our mobile clients and users. Our service included Advanced location integration,  Database driven web applications,  Social networking integration.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="section2">
-    <div class="container">
-        <h2>Services:</h2>
-        <h4>We offer the following services:</h4>
-        <ul class="list1">
-            <li itemscope itemtype="http://schema.org/Service">Responsive website layouts</li>
-            <li itemscope itemtype="http://schema.org/Service">Personalized website features</li>
-            <li itemscope itemtype="http://schema.org/Service">Data-rich applications</li>
-            <li itemscope itemtype="http://schema.org/Service">Unique artworks and graphics</li>
-            <li itemscope itemtype="http://schema.org/Service">Database driven web applications</li>
-            <li itemscope itemtype="http://schema.org/Service">Scalable applications</li>
-            <li itemscope itemtype="http://schema.org/Service">Advanced location integration</li>
-            <li itemscope itemtype="http://schema.org/Service">Social networking integration</li>
-            <li itemscope itemtype="http://schema.org/Service">Lightweight and robust</li>
-            <li itemscope itemtype="http://schema.org/Service">Software UI</li>
-            <li itemscope itemtype="http://schema.org/Service">API integrations</li>
-            <li itemscope itemtype="http://schema.org/Service">Mobile responsive</li>
-        </ul>
-    </div>
-</section>
-
-
-<section class="section3">
-    <div class="container">
-    <h2>Expertise:</h2>
-        <h4>We hold expertise in:</h4>
-
-        <div class="tech-list">
-            <h3>Microsoft Technologies:</h3>
-            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/web-ms')">
+    <section class="section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 left">
+                    <h2>One Web <span>For All Devices</span></h2>
+                </div>
+                <div class="col-md-8 right">
+                    <p>Demand for "responsive design" technology is an industry trend globally, thanks to the exponent increase in mobile internet users. We at Shaligram Infotech offer a large portfolio of responsive solution designs creating great browsing experience to our mobile clients and users. Our service included Advanced location integration,  Database driven web applications,  Social networking integration.</p>
+                </div>
             </div>
         </div>
-        <div class="tech-list">
-            <h3>Open Source Technologies:</h3>
-            <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/Opensource')">
+    </section>
+
+
+    <section class="section2">
+        <div class="container">
+
+
+            <div class="title">
+                <h4>Services:</h4>
+            </div>
+            <p>We offer the following services:</p>
+            <ul class="list1 column-count">
+                <li itemscope itemtype="http://schema.org/Service">Responsive website layouts</li>
+                <li itemscope itemtype="http://schema.org/Service">Personalized website features</li>
+                <li itemscope itemtype="http://schema.org/Service">Data-rich applications</li>
+                <li itemscope itemtype="http://schema.org/Service">Unique artworks and graphics</li>
+                <li itemscope itemtype="http://schema.org/Service">Database driven web applications</li>
+                <li itemscope itemtype="http://schema.org/Service">Scalable applications</li>
+                <li itemscope itemtype="http://schema.org/Service">Advanced location integration</li>
+                <li itemscope itemtype="http://schema.org/Service">Social networking integration</li>
+                <li itemscope itemtype="http://schema.org/Service">Lightweight and robust</li>
+                <li itemscope itemtype="http://schema.org/Service">Software UI</li>
+                <li itemscope itemtype="http://schema.org/Service">API integrations</li>
+                <li itemscope itemtype="http://schema.org/Service">Mobile responsive</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="section3">
+        <div class="container">
+            <div class="title">
+                <h4>Expertise:</h4>
+            </div>
+            <p>We hold expertise in:</p>
+
+            <div class="tech-list">
+                <h3>Microsoft Technologies:</h3>
+                <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/microsoft-technologies')">
+                </div>
+            </div>
+            <div class="tech-list">
+                <h3>Open Source Technologies:</h3>
+                <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/Opensource')">
+                </div>
+            </div>
+            <div class="tech-list">
+                <h3>Mobile Technologies:</h3>
+                <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/mobile')">
+                </div>
+            </div>
+            <div class="tech-list">
+                <h3>Other Technologies:</h3>
+                <div static-include="Views/SCPages/GetImages.html" ng-controller="CommonImagesController" ng-init="GetFilesList('/Images/services/others')">
+                </div>
             </div>
         </div>
-        @*<div class="tech-list">
-            <h3>Microsoft Technologies:</h3>
-            <?php
-
-            $techname ="services/web-ms/";
-            $techurl = "../images/services/web-ms/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
-        </div>
-        <div class="tech-list">
-            <h3>Open Source Technologies:</h3>
-            <?php
-
-            $techname ="services/Opensource/";
-            $techurl = "../images/services/Opensource/";
-            tech_image($techname,$techurl,$dir_img_path);
-            ?>
-        </div>*@
-
-</div>
-</section>
-
+    </section>
 </div>

@@ -17,39 +17,15 @@
 	float:left;
 	font-size:13px;
 }
-.price_comp  .animated.fadeInDown {
-    animation-name: fadeInDown;
-}
-.price_comp  .animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-.per-hour-table {
-	font-size:13px;
-}
-.price_comp .blue-cell {
-	background-color:#215da9;
-	color:#fff;
-}
-.price_comp .orange-cell{
-	background-color:#f58634;
-	color:#fff;
-}
-.price_comp  .bold-cell{
-	font-weight:400;
-}
+
+
 .uk-permanent-text {
     color: #575656;
     font-size: 20px;
     font-weight: 400;
     margin-top: 60px;
 }
-.comparison-table  thead > tr > th , .price_comp .table-bordered > thead > tr > th, .price_comp .table-bordered > tbody > tr > th, .price_comp .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .price_comp .table-bordered > tbody > tr > td, .price_comp .table-bordered > tfoot > tr > td{
-	 border:1px solid #605f5f;
- }
-.price_comp .table-bordered > thead > tr ,.price_comp .table-bordered > thead > tr > th {
-	 border:1px solid #605f5f;
-}
+
 .price_comp .vertical-cell {
     position: relative;
 }
@@ -72,21 +48,12 @@
  .price_comp  .overoll_comp {
 	padding:20px 0 0 0;
 }
-.comparison-table .colored-border-cell td {
-    border-bottom: 1px solid #fff !important;
-    border-left: 1px solid #fff !important;
-    border-right: 1px solid #fff !important;
-}
-.comparison-table tr.colored-border-cell {
-	border:1px solid #fff !important;
-}
-.comparison-table  thead  > tr 	> th.noborder {
-    border-top:1px solid transparent !important;
-	border-left:1px solid transparent !important;
-	background-color:#fff;
-}
-.comparison-table  .orange-cell {
-	font-size:20px;
+
+
+
+.price_comp  .mt-5{
+	margin-top:5px;
+	float:left;
 }
 
 
@@ -94,73 +61,12 @@
 	margin-top:5px;
 	float:left;
 }
+
 .banner_pricing_comp {
-	width:100%;
-	float:left;
 	padding-bottom:20px;
 }
-.table-responsive {
-    overflow-x: visible;
-}
-.price_comp  .no-background {
-	background-color:#fff;
-}
-.per-hour-table   thead tr {
-	background-color:inherit;
-	color:#333;
-}
 
-.price_comp  .mt-5{
-	margin-top:5px;
-	float:left;
-}
-.price_comp .table-bordered  tbody{
-	 border:1px solid #605f5f;
-}
-.banner_pricing_comp {
-	width:100%;
-	float:left;
-	padding-bottom:20px;
-}
-.price_comp  .table-responsive  {
-	overflow-x:visible !important;
-}
-.tbl-emp {
-	background-color:#215da9 ;
-	border-color:#fff !important;
-	color:#fff;
-	width:50%;
-	float:left;
-}
-.tbl-offshore  {
-	background-color:#f58634;
-	border: 1px solid #fff !important;
-	color:#fff;
-	width:50%;
-	float:left;
 
-}
-
-.tbl-offshore  thead tr {
-	background-color:#f58634;
-}
-.tbl-offshore tr   td ,.tbl-emp  tr td , .tbl-offshore  thead tr th, .tbl-emp  thead tr th  {
-	padding:15px !important;
-}
-.tbl-offshore  tr:last-child td{
-	border-bottom:1px solid #f58634;
-}
-
-.tbl-emp  > caption + thead > tr:first-child > th, .tbl-emp  > colgroup + thead > tr:first-child > th, .tbl-emp   > thead:first-child > tr:first-child > th, .tbl-emp   > caption + thead > tr:first-child > td, .tbl-emp  > colgroup + thead > tr:first-child > td, .tbl-offshore   > thead:first-child > tr:first-child > td,.tbl-offshore  > caption + thead > tr:first-child > th, .tbl-emp  > colgroup + thead > tr:first-child > th, .tbl-offshore   > thead:first-child > tr:first-child > th, .tbl-offshore  > caption + thead > tr:first-child > td, .tbl-offshore > colgroup + thead > tr:first-child > td, .tbl-offshore   > thead:first-child > tr:first-child > td {
-	border-top:1px solid #fff;
-}
- .tbl-emp > thead > tr > th, .tbl-offshore > thead > tr > th{
-	 border-bottom:1px solid #fff;
- }
-.tbl-emp  thead tr th  h4, .tbl-offshore  thead tr th  h4{
-	color:#fff;
-	font-weight:600;
-}
 @media (max-width:1200px){
 	.vertical-text {
 		display: block !important;
@@ -169,33 +75,7 @@
 		transform: rotate(270deg);
 		transform-origin: center top 0;
 	}
-	.tbl-offshore  tr:first-child  td,.tbl-emp   tr:first-child  td{
-		height:168px;
-	}
-	.tbl-offshore  tr:nth-child(2)  td,.tbl-emp   tr:nth-child(2)   td{
-		height:150px;
-	}
-	.tbl-offshore  tr:nth-child(3)  td,.tbl-emp   tr:nth-child(3)   td {
-		height:155px;
-	}
-	.tbl-offshore  tr:nth-child(4)  td,.tbl-emp   tr:nth-child(4)   td{
-		height:192px;
-	}
-	.tbl-offshore  tr:nth-child(5)  td,.tbl-emp   tr:nth-child(5)   td{
-		height:192px;
-	}
-	.tbl-offshore  tr:nth-child(7)  td,.tbl-emp   tr:nth-child(7)   td{
-		height:124px;
-	}
-	.tbl-offshore  tr:nth-child(9)  td,.tbl-emp   tr:nth-child(9)   td{
-		height:175px;
-	}
-	.tbl-offshore  tr:nth-child(10)  td,.tbl-emp   tr:nth-child(10)   td{
-		height:236px;
-	}
-	.tbl-offshore  tr:nth-child(11)  td,.tbl-emp   tr:nth-child(11)   td{
-		height:185px;
-	}
+	
 	
 }
 

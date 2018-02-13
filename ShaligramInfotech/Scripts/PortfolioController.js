@@ -4,27 +4,37 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
         $scope.$root.title = 'Shaligram Infotech Portfolio | Company Portal Software Development | Company Portal Software Development Company USA';
     }
 
+    $scope.$root.metakeyword = '';
+    $scope.$root.metadescription = '';
+
+
     $scope.$root.needToShowTitle = false;
-    localStorageService.set('TechnologyId', 0);
+    
     $scope.PorfolioList = [];
     $scope.PortfolioDetail = [];
     $scope.TechnologyList = [];
     $scope.TechnologyId = 0;
+    $rootScope.layout.loading = true;
 
     if ($rootScope.TechnologyId != undefined && $rootScope.TechnologyId != "" && $rootScope.TechnologyId != null) {
         $scope.TechnologyId = $rootScope.TechnologyId;
     }
     else {
         $scope.TechnologyId = localStorageService.get('TechnologyId');
+        $rootScope.TechnologyId = $scope.TechnologyId;
     }
 
     $scope.GetPortfolioListForFront = function (technologyID) {
         localStorageService.set('TechnologyId', technologyID);
+        $scope.TechnologyId = technologyID;
+        $rootScope.TechnologyId = technologyID;
+
         $rootScope.layout.loading = true;
 
         if (technologyID == null || technologyID == undefined) {
             technologyID = 0;
         }
+
         var getPorfolioList = $http.get(configurationService.basePath + 'api/PortfolioApi/GetPortfolioListForFront?technologyId=' + technologyID);
         getPorfolioList.success(function (data) {
             $scope.PorfolioList = [];

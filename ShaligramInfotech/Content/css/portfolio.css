@@ -20,37 +20,7 @@ img {
 	width: 100%;
 	margin:0 -15px;
 }
-.port_menu {
-	width:100%;
-	float:left;
-}
-ul.p_menu {
-	list-style-type:none;
-	width:100%;
-	float:left;
-	padding-left:0;
-}
-ul.p_menu li{
-	display:inline;
-	border-right: 1px solid #dddddd;
-    float: left;
-    list-style: outside none none;
-    margin-right: 14px;
-    padding-right: 20px;
-}
-ul.p_menu li:last-child {
-	border-right:none;
-}
-ul.p_menu li a{
-	color: #666666;
-    font-size: 15px;
-    text-decoration: none;
-	font-family:Arial;
-}
-ul.p_menu li a:hover, ul.p_menu li a:active, ul.p_menu li a:focus {
-	color:#0062a0;
-	text-decoration:none;
-}
+
 .port_content {
 	padding:0 0 0 0;
 	float:left;

@@ -1236,6 +1236,7 @@
     <Content Include="PortfolioImages\BannerImages\logoCreation.jpg" />
     <Content Include="PortfolioImages\BannerImages\Logosbe2dbb28-f070-4cc7-bb4a-b3fea1662dae.jpg" />
     <Content Include="PortfolioImages\BannerImages\Mobile_Application_Testingc36f2287-9630-4c8a-9069-398766ef554c.jpg" />
+    <Content Include="PortfolioImages\BannerImages\My-Class-Campus.jpg" />
     <Content Include="PortfolioImages\BannerImages\MyPortFolio2975bb77-528b-4e2c-b77d-1e1e119d8520.jpg" />
     <Content Include="PortfolioImages\BannerImages\MyPortFolio3124b864-b914-4468-895a-f1504b110252.jpg" />
     <Content Include="PortfolioImages\BannerImages\MyPortFolio38e712a3-d26b-4c1d-8fb7-dc9322a0b2e0.gif" />
@@ -2196,7 +2197,6 @@
     <Content Include="Content\bootstrap\bootstrap.less" />
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
-    <Content Include="Images\Thumbs.db" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />

@@ -5,6 +5,8 @@ angular.module('app.controllers').controller('ParticularPortfolioController', fu
 
     $scope.$root.needToShowTitle = true;
 
+    $rootScope.layout.loading = true;
+
     GetParticularPortfolioDetail($scope.Title);
 
     function GetParticularPortfolioDetail(title) {
