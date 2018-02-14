@@ -373,5 +373,6 @@ ul.feature li {
 		width:100%;
 		float:left;
 	}
+	.isotope-element{ float: none; margin: 20px auto; padding: 0px; }
 	
 }

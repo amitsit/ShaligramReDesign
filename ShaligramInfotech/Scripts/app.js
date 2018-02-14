@@ -542,7 +542,7 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
             controller: 'ParticularPortfolioController'
         })
         .state('portfolio', {
-            url: '/portfolio',
+            url: '/portfolio/:isRoot',
             templateUrl: '/views/SCPages/portfolio-index',
             controller: 'PortfolioController'
         })

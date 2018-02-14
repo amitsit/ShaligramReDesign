@@ -1,5 +1,5 @@
 ﻿
-angular.module('app.controllers').controller('PortfolioController', function ($scope, $location, $window, $http, configurationService, $state, $rootScope, localStorageService, $timeout) {
+angular.module('app.controllers').controller('PortfolioController', function ($scope, $location, $window, $http, configurationService, $state, $stateParams, $rootScope, localStorageService, $timeout) {
     if (!$scope.$root.needToShowTitle == true) {
         $scope.$root.title = 'Shaligram Infotech Portfolio | Company Portal Software Development | Company Portal Software Development Company USA';
     }
@@ -16,14 +16,21 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
     $scope.TechnologyId = 0;
     $rootScope.layout.loading = true;
 
-    if ($rootScope.TechnologyId != undefined && $rootScope.TechnologyId != "" && $rootScope.TechnologyId != null) {
-        $scope.TechnologyId = $rootScope.TechnologyId;
-    }
-    else {
-        $scope.TechnologyId = localStorageService.get('TechnologyId');
-        $rootScope.TechnologyId = $scope.TechnologyId;
-    }
+    $scope.isRoot = $stateParams.isRoot;
 
+    if (!$scope.isRoot) {
+        if ($rootScope.TechnologyId != undefined && $rootScope.TechnologyId != "" && $rootScope.TechnologyId != null) {
+            $scope.TechnologyId = $rootScope.TechnologyId;
+        }
+        else {
+            $scope.TechnologyId = localStorageService.get('TechnologyId');
+            $rootScope.TechnologyId = $scope.TechnologyId;
+        }
+    }
+    else
+    {
+        $scope.TechnologyId = 0;
+    }
     $scope.GetPortfolioListForFront = function (technologyID) {
         localStorageService.set('TechnologyId', technologyID);
         $scope.TechnologyId = technologyID;

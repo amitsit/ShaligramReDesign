@@ -11,14 +11,8 @@ angular.module('app.services').service('configurationService', function () {
 
     var configService = {};
 
-    //configService.basePath = "http://192.168.1.221/TIHRWebAPI/";
-    configService.basePath = "http://localhost:8096/ShaligramInfotechAPI/";
-    //http://localhost:8081/TIHRWebAPI
-
-    //configService.pageSize = 10;
-
-    //configService.lengthMenu = [10, 20, 50, 100, 200];
-
+   configService.basePath = "http://localhost:8096/ShaligramInfotechAPI/";
+    //configService.basePath = "http://27.109.4.86:1069/ShaligramInfotechAPI/";
     return configService;
 
 });

@@ -324,7 +324,7 @@ section { padding: 50px 0; }
 .portfolio-detail .leftArrow { left: 0; }
 .portfolio-detail .rightArrow { right: 0; }
 .portfolio-detail .leftArrow img, .portfolio-detail .rightArrow img { width: 50px; }
-.form-section .section1 .row { display: flex; flex-wrap: nowrap; }
+
 .form-section .section1 .box {    /*border: 1px solid #e4e4e4; padding: 50px; height: 100%;*/ color: #6f6f6f; }
 .form-section .section1 .box img { width: 50px; margin-bottom: 20px; }
 .form-section .section1 .box i { color: #232323; }
@@ -427,7 +427,7 @@ footer .footer-copy { background-color: #141414; padding: 20px 0; color: #6f6f6f
 #map { width: 100%; height: 400px; background-color: grey; }
 .menuHighlight, .menuHighlight > a { color: orange !important; }
 .loader { float: left; width: 100%; height: 100%; position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 99999; background: rgba(0, 0, 0, 0.4); }
-.loader img { float: left; width: 100px; position: absolute; top: 50%; left: 50%; margin: -50px 0 0 -50px; }
+.loader img { float: left; width: 100px; position: absolute; top: 50%; left: 50%; margin: -35px 0 0 -35px; }
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0; }
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus { outline: none !important; }
 .color-orange { color: orange !important; }

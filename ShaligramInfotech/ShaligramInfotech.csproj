@@ -1102,6 +1102,7 @@
     <Content Include="Images\Solutions\vtire\Products.png" />
     <Content Include="Images\Solutions\vtire\Projects.png" />
     <Content Include="Images\Spinner.gif" />
+    <Content Include="Images\Spinner.svg" />
     <Content Include="Images\tanRegistration.jpg" />
     <Content Include="Images\tdsReturn.jpg" />
     <Content Include="Images\Technology\ajax.jpg" />
@@ -1346,6 +1347,7 @@
     <Content Include="PortfolioImages\FrontPageImages\logoShaligram.jpg" />
     <Content Include="PortfolioImages\FrontPageImages\meeting.jpg" />
     <Content Include="PortfolioImages\FrontPageImages\Mobile_Application_Testingbb0952d2-92d4-43f1-80e4-25895231b1c1.jpg" />
+    <Content Include="PortfolioImages\FrontPageImages\myclasscampus.jpg" />
     <Content Include="PortfolioImages\FrontPageImages\My_Class_Campus15bc8ab2-08f3-4571-812b-793c15d7dc57.png" />
     <Content Include="PortfolioImages\FrontPageImages\Navigation792f6d1f-2609-4daa-befd-5721b6d272ac.jpg" />
     <Content Include="PortfolioImages\FrontPageImages\Newse3fddcec-0c89-4197-82fb-0ae751e4171c.jpg" />
