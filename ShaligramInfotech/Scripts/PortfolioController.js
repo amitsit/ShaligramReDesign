@@ -7,9 +7,8 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
     $scope.$root.metakeyword = '';
     $scope.$root.metadescription = '';
 
-
     $scope.$root.needToShowTitle = false;
-    
+
     $scope.PorfolioList = [];
     $scope.PortfolioDetail = [];
     $scope.TechnologyList = [];
@@ -27,10 +26,10 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
             $rootScope.TechnologyId = $scope.TechnologyId;
         }
     }
-    else
-    {
+    else {
         $scope.TechnologyId = 0;
     }
+
     $scope.GetPortfolioListForFront = function (technologyID) {
         localStorageService.set('TechnologyId', technologyID);
         $scope.TechnologyId = technologyID;
@@ -49,7 +48,7 @@ angular.module('app.controllers').controller('PortfolioController', function ($s
 
             $timeout(function () {
                 $rootScope.layout.loading = false;
-            }, 2000);
+            }, 1500);
 
         });
         getPorfolioList.error(function () {

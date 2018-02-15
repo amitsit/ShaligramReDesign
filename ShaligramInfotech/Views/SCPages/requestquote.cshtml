@@ -1,6 +1,76 @@
 ﻿<div ng-controller="RequestQuoteController">
 
     <div class="form-section">
+        <section class="cover-background section2" style="background-image:url('../Images/cont.jpg');">
+            <div class="opacity-full"></div>
+            <div class="container">
+                <div class="title">
+                    <h4>Request Quote</h4>
+                </div>
+
+                <form class="form-horizontal" name="RequestQuoteForm" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input placeholder="Full Name" type="text" ng-model="RequestQuote.FullName" name="FullName" class="form-control"
+                                   ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.FullName.$error.required)}" required />
+
+                            <input placeholder="Phone Number" type="number" ng-model="RequestQuote.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control"
+                                   ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && !RequestQuoteForm.PhoneNumber.$valid)}" />
+
+                            <input placeholder="Email Address" type="email" ng-model="RequestQuote.EmailAddress" name="EmailAddress"
+                                   class="form-control" ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && (RequestQuoteForm.EmailAddress.$error.required || RequestQuoteForm.EmailAddress.$error.email))}" required />
+
+                            <input placeholder="City" type="text" ng-model="RequestQuote.City" name="City" class="form-control"
+                                   ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.City.$error.required)}" required />
+
+                            <input placeholder="Company" type="text" ng-model="RequestQuote.Company" name="Company" class="form-control" />
+
+                            <select class="form-control" id="ProjectTypeId" ng-model="RequestQuote.ProjectTypeId" name="ProjectTypeId"
+                                    ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.ProjectTypeId.$error.required)}" required>
+                                <option value="">Select Project Type</option>
+                                <option value="1">Mobile App Development</option>
+                                <option value="2">Web Development</option>
+                                <option value="3">SaaS</option>
+                                <option value="4">Cloud App</option>
+                                <option value="5">CRM</option>
+                                <option value="6">ERP</option>
+                                <option value="7">eCommerce</option>
+                                <option value="8">Social Networking</option>
+                                <option value="9">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <select class="form-control" id="BudgetId" ng-model="RequestQuote.BudgetId" name="BudgetId"
+                                    ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.BudgetId.$error.required)}" required>
+                                <option value="">Select your budget</option>
+                                <option value="1">Less than 10K USD</option>
+                                <option value="2">10K USD - 20K USD</option>
+                                <option value="3">20K - 50K USD</option>
+                                <option value="4">50K - 100K USD</option>
+                                <option value="5">100K and more</option>
+                            </select>
+
+                            <textarea placeholder="Message" ng-model="RequestQuote.ProjectDescription" class="form-control" id="ProjectDescription" name="ProjectDescription"
+                                      ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.ProjectDescription.$error.required)}" required></textarea>
+                            <p>
+                                <span>Attach File:</span>
+                                <input class="form-control" type="file" upload-files />
+                            </p>
+                            <p>
+                                <span ng-class="{'span-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
+                                <div vc-recaptcha key="'6Ld6REYUAAAAAIK11VtasE3g-BL89ZX68JrdSPi-'"></div>
+                            </p>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn1" name='submit' id='submit' ng-click="SaveRequestQuoteDetails(RequestQuoteForm)">Send Message</button>
+                            <button type="button" class="btn btn2" ng-click="resetForm()">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
         <section class="section1">
             <div class="container">
                 <div class="row">
@@ -48,75 +118,6 @@
             <img src="/images/map3.jpg" alt="shaligram-map" title="shaligram infotech" class="img-responsive">
         </section>
 
-        <section class="cover-background section2" style="background-image:url('../Images/cont.jpg');">
-            <div class="opacity-full"></div>
-            <div class="container">
-                <div class="title">
-                    <h4>Request Quote</h4>
-                </div>
-
-                <form class="form-horizontal" name="RequestQuoteForm" novalidate>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <input placeholder="Full Name" type="text" ng-model="RequestQuote.FullName" name="FullName" class="form-control"
-                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.FullName.$error.required)}" required />
-
-                            <input placeholder="Phone Number" type="number" ng-model="RequestQuote.PhoneNumber" ng-maxlength="10" name="PhoneNumber" class="form-control"
-                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && !RequestQuoteForm.PhoneNumber.$valid)}" />
-                            
-                            <input placeholder="Email Address" type="email" ng-model="RequestQuote.EmailAddress" name="EmailAddress"
-                             class="form-control" ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && (RequestQuoteForm.EmailAddress.$error.required || RequestQuoteForm.EmailAddress.$error.email))}" required />
-                            
-                            <input placeholder="City" type="text" ng-model="RequestQuote.City" name="City" class="form-control"
-                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.City.$error.required)}" required />
-
-                            <input placeholder="Company" type="text" ng-model="RequestQuote.Company" name="Company" class="form-control" />
-
-                            <select class="form-control" id="ProjectTypeId" ng-model="RequestQuote.ProjectTypeId" name="ProjectTypeId" 
-                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.ProjectTypeId.$error.required)}" required>
-                                <option value="">Select Project Type</option>
-                                <option value="1">Mobile App Development</option>
-                                <option value="2">Web Development</option>
-                                <option value="3">SaaS</option>
-                                <option value="4">Cloud App</option>
-                                <option value="5">CRM</option>
-                                <option value="6">ERP</option>
-                                <option value="7">eCommerce</option>
-                                <option value="8">Social Networking</option>
-                                <option value="9">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <select class="form-control" id="BudgetId" ng-model="RequestQuote.BudgetId" name="BudgetId" 
-                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.BudgetId.$error.required)}" required>
-                                <option value="">Select your budget</option>
-                                <option value="1">Less than 10K USD</option>
-                                <option value="2">10K USD - 20K USD</option>
-                                <option value="3">20K - 50K USD</option>
-                                <option value="4">50K - 100K USD</option>
-                                <option value="5">100K and more</option>
-                            </select>
-
-                            <textarea placeholder="Message" ng-model="RequestQuote.ProjectDescription" class="form-control" id="ProjectDescription" name="ProjectDescription" 
-                            ng-class="{'required-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && RequestQuoteForm.ProjectDescription.$error.required)}" required>
-                            </textarea>
-                            <p>
-                                <span>Attach File:</span>
-                                <input class="form-control" type="file" upload-files />
-                            </p>
-                            <p>
-                                <span ng-class="{'span-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
-                                <div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>
-                            </p>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <button type="submit" class="btn btn1" name='submit' id='submit' ng-click="SaveRequestQuoteDetails(RequestQuoteForm)">Send Message</button>
-                            <button type="button" class="btn btn2" ng-click="resetForm()">Reset</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
+        
     </div>
 </div>

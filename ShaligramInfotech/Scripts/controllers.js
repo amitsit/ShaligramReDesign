@@ -1011,7 +1011,7 @@ angular.module('app.controllers', [])
           });
       }])
     .controller('WhoWeAreCntrl', ['$scope', '$location', '$window', '$rootScope', function ($scope, $location, $window, $rootScope) {
-        $scope.$root.title = "Shaligram Infotech About Comapny | Commercial Software Product Development | Commercial Software Product Development Company";
+        $scope.$root.title = "Shaligram Infotech About Company | Commercial Software Product Development | Commercial Software Product Development Company";
         $scope.$root.metakeyword = 'Commercial Software Product Development, Commercial Software Product Development Company, Commercial Software Product Development Company USA';
         $scope.$root.metadescription = 'Shaligram InfoTech is Commercial Software Product Development Company in USA. Our continuous improvement processes are focused on optimizing skills of our people on the latest tools, technologies, frameworks and wide range of platforms';
 
