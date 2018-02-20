@@ -136,10 +136,21 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25); }
 .subMenu.threeColumn { min-width:780px; right:0; margin:0 auto; }
 
 .subMenu.fourColumn { left:0; right:0; width:1030px; margin:0 auto; }
-#navbar li:hover .subMenu { visibility:visible; opacity:1; z-index:9; transform:translateY(0%); transition-delay:0s, 0s, 0.3s; }
+
+
 .subMenu > li {}
 
+/*** changed by atul **/
 
+/*#navbar li:hover .subMenu { visibility:visible; opacity:1; z-index:9; transform:translateY(0%); transition-delay:0s, 0s, 0.3s; }*/
+.showmenu { visibility:visible; opacity:1; z-index:9; transform:translateY(0%); transition-delay:0s, 0s, 0.3s; }
+.contact-us .section1{
+	padding : 20px;
+}
+/*.form-section .section1 .box p:first-child { margin-bottom: 20px; }*/
+/*.form-section .section1 .box img { width: 50px; margin-bottom: 20px; }/*
+
+/********** till here ***/
 
 .activePortfolio {
 	border-bottom: 1px solid #232323;
@@ -326,11 +337,11 @@ section { padding: 50px 0; }
 .portfolio-detail .leftArrow img, .portfolio-detail .rightArrow img { width: 50px; }
 
 .form-section .section1 .box {    /*border: 1px solid #e4e4e4; padding: 50px; height: 100%;*/ color: #6f6f6f; }
-.form-section .section1 .box img { width: 50px; margin-bottom: 20px; }
+
 .form-section .section1 .box i { color: #232323; }
 .form-section .section1 .box a { color: #6f6f6f; }
 .form-section .section1 .box a:hover { color: #f58634; }
-.form-section .section1 .box p:first-child { margin-bottom: 20px; }
+
 .form-section .section1 .box p:last-child { margin-bottom: 0px; }
 .form-section .section1 .box h4 { text-transform: uppercase; color: #232323; font-weight: 600; font-size: 15px; }
 .form-section .section2 .title { margin-bottom: 50px; color: #fff; }

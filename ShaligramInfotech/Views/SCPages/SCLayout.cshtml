@@ -102,6 +102,9 @@
 
 
 <body class="{{$state.current.name}}">
+    <div ng-controller="PortfolioController" style="display:none;">
+        <span portfolio-ready></span>
+    </div>
     <header class="top-nav">
         <div class="container-fluid">
             <div class="row">
@@ -135,7 +138,7 @@
                         <li><img alt="flag india" src="/images/flags/india1.png" title="India"></li>
                         <li><img alt="flag USA" src="/images/flags/us.png" title="USA"></li>
                         <li><img alt="flag uk" src="/images/flags/uk.png" title="UK"></li>
-                        <li><img alt="flag australia" src="/images/flags/australia.png" title="Australia"></li>
+                        <li><a href="http://www.shaligraminfotech.com.au/"><img alt="flag australia" src="/images/flags/australia.png" title="Australia"></a></li>
                     </ul>
                 </div>
             </div>
@@ -485,6 +488,7 @@
             </div>
         </div>
     </div>
+  
 
     <script src="~/Scripts/js/jquery.min.js"></script>
     @*<script src="~/Scripts/common.js"></script>*@
@@ -536,6 +540,21 @@
                     $("#navbar .nav li .fa").toggleClass("fa-angle-down fa-angle-up");
                     e.preventDefault();
                 });
+
+                $('.submenuLiMain a').hover(function () {
+                    $('.subMenu').css("display", "none");
+                    $('#navbar li:hover .subMenu').css("display", "block");
+                    $('#navbar li:hover .subMenu').addClass('showmenu');
+                });
+
+
+                $('.subMenu').mouseleave(function () {
+                    $('.subMenu').css("display", "none");
+                });
+
+                $('.subMenu ul li a').on("click", function () {
+                    $('.subMenu').css("display", "none");
+                });
             }
 
             $(window).scroll(function () {
@@ -564,6 +583,8 @@
             $('.navbar-collapse').collapse('hide');
             $('.navbar-toggle').removeClass('open');
         });
+
+      
 
         $(".fancybox").fancybox({
             openEffect: "none",
@@ -626,5 +647,6 @@
     </script>
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

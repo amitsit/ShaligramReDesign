@@ -18,6 +18,7 @@ namespace ShaligramInfotechAPI.Entities
         public string SEOTitleTag { get; set; }
         public string MetaKeyword { get; set; }
         public string MetaDescription { get; set; }
+        public bool RequirePageCreation { get; set; }
 
         public List<PortfolioFeatureEntity> objPortfolioFeatureEntity { get; set; }
         public List<PortfolioImageEntity> objPortfolioImageEntity { get; set; }

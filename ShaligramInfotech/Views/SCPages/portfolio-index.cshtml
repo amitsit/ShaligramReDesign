@@ -16,7 +16,7 @@
             </ul>
 
             <div class="portfolio-grid">
-                <div ng-repeat="pl in PorfolioList" class="isotope-element isotope-element-3 grid-item">
+                <div ng-repeat="pl in PorfolioList | unique : 'TitleSeoUrl'" class="isotope-element isotope-element-3 grid-item">
                     <a ng-click="RedirectToProtfolioDetail(pl.TitleSeoUrl, pl.SEOTitleTag)">
                         <figure>
                             <div class="portfolio-img"><img title="{{pl.FrontImageTooltip}}" ng-src="/PortfolioImages/FrontPageImages/{{pl.FrontPageImageURL}}" alt="{{pl.FrontImageTooltip}}" /></div>

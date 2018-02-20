@@ -6,6 +6,10 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Data.SqlClient;
 using ShaligramInfotechAPI.Entities;
+using System.Collections.Specialized;
+using System.Threading.Tasks;
+using System.Web;
+using System.IO;
 
 namespace ShaligramInfotechAPI.Controllers
 {
@@ -96,7 +100,7 @@ namespace ShaligramInfotechAPI.Controllers
                     {
                             new SqlParameter("@title",Title)
                     }).ToList();
-                    
+
                     objPortfolioListFrontModel.objChallengeFaced = challengeFaced;
 
                     var portfolioLogo = _unitOfWork.SQLQuery<PortfolioLogo>("EXEC GetParticularPortfolioLogoImageDetail @title", new SqlParameter[]
@@ -110,5 +114,29 @@ namespace ShaligramInfotechAPI.Controllers
 
             return Request.CreateResponse(HttpStatusCode.OK, objPortfolioListFrontModel);
         }
+
+        //[HttpPost]
+        //public HttpResponseMessage saveHtmlFile()
+        //{
+        //    try
+        //    {
+        //        string filename = Convert.ToString(HttpContext.Current.Request.Form["filename"]);
+        //        string htmldata = Convert.ToString(HttpContext.Current.Request.Form["htmldata"]);
+
+        //        var root = HttpContext.Current.Server.MapPath("~/PortfolioPages").Replace("API","");
+        //        Directory.CreateDirectory(root);
+
+        //        using (StreamWriter _testData = new StreamWriter(root + "/" + filename + ".html", false))
+        //        {
+        //            _testData.WriteLine(htmldata); // Write the file.
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //    }
+
+        //    return Request.CreateResponse(HttpStatusCode.OK, "Html file created");
+        //}
     }
 }

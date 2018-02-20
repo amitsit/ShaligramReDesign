@@ -1,5 +1,5 @@
 @media (min-width:768px) {
-	#navbar li:hover .subMenu { display:block !important; }
+	/*#navbar li:hover .subMenu { display:block !important; }*/
 }
 @media (max-width:1199px) {
 	.mainHeader .navbar-nav { width:100%; text-align:center; margin:0; }
