@@ -53,4 +53,14 @@ angular.module('app.directives', [])
             })
         }
     }
+})
+.directive('blogReady', function () {
+    return {
+        restrict: 'A',
+        link: function ($scope, elem, attrs) {
+            elem.ready(function () {
+                $scope.GetAllBlogPost();
+            })
+        }
+    }
 });

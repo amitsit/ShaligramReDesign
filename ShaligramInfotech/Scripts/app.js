@@ -1,18 +1,7 @@
 ﻿'use strict';
 
-// Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
 var app = angular.module('app', ['LocalStorageModule', 'toastr', 'ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers', 'vcRecaptcha']);
-//angular.module('app', ['ngAnimate', 'toastr'])
-
-// Gets executed during the provider registrations and configuration phase. Only providers and constants can be
-// injected here. This is to prevent accidental instantiation of services before they have been fully configured.
-app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider, localStorageServiceProvider) {
-
-    // UI States, URL Routing & Mapping. For more info see: https://github.com/angular-ui/ui-router
-    // ------------------------------------------------------------------------------------------------------------
-    //  localStorageServiceProvider
-    //  .setStorageType('localStorage');
-
+app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider, localStorageServiceProvider, $params) {
     $stateProvider
         .state('home', {
             url: '/',
@@ -542,39 +531,18 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
             controller: 'ParticularPortfolioController'
         })
         .state('portfolio', {
-            url: '/portfolio/:isRoot',
+            url: '/portfolio',
             templateUrl: '/views/SCPages/portfolio-index',
-            controller: 'PortfolioController'
-        })
-        .state('blog-detail', {
-            url: '/blog/:title',
-            //templateUrl: '/views/SCPages/GetParticularBlogDetails',
-            templateUrl: function (stateParams) {
-                if (stateParams.title != "" && stateParams.title != undefined)
-                {
-                    var title = '';
-                    var title = parseInt(stateParams.title) || '';
-                    if (!angular.isNumber(title))
-                    {
-                        return "/views/SCPages/GetParticularBlogDetails";
-                    }
-                    else
-                    {
-                        $state.go('blog', { blogCategory: title });
-                    }
-                }
-                else
-                {
-                    $state.go('blog', { blogCategory: stateParams.title });
-                }
+            controller: 'PortfolioController',
+            params: {
+                isRoot: true
             }
-            ,controller: 'ParticularBlogPostController'
         })
         .state('blog', {
-            url: '/blog/:blogCategory',
+            url: '/blog/:parameter',
             templateUrl: '/views/SCPages/BlogPost',
             controller: 'BlogPostController'
-        })        
+        })
         .state('contact-us', {
             url: '/contact-us',
             templateUrl: '/views/SCPages/contact-us',

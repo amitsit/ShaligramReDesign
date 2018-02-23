@@ -57,6 +57,25 @@ namespace ShaligramInfotechAPI.Controllers
             }
         }
 
+        [HttpGet]
+        public HttpResponseMessage GetAllBlogPostByTitle(string title)
+        {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[] {
+                new SqlParameter("@Title",title),
+                };
+
+
+                var list = _unitOfWork.SQLQuery<BlogPostEntity>("EXEC getBlogPostByTitle @Title", param).ToList();
+                return Request.CreateResponse(HttpStatusCode.OK, list);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
 
 
     }

@@ -14,9 +14,69 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using ShaligramInfotechAPI.Helper;
 using Newtonsoft.Json;
+using System.ComponentModel;
+using System.Reflection;
 
 namespace ShaligramInfotechAPI.Controllers
 {
+    public enum ProjectTypeEnum
+    {
+        [DescriptionAttribute("Mobile App Development")]
+        Mobile_App_Development = 1,
+        [DescriptionAttribute("Web Development")]
+        Web_Development = 2,
+        [DescriptionAttribute("SaaS")]
+        SaaS = 3,
+        [DescriptionAttribute("Cloud App")]
+        Cloud_App = 4,
+        [DescriptionAttribute("CRM")]
+        CRM = 5,
+        [DescriptionAttribute("ERP")]
+        ERP = 6,
+        [DescriptionAttribute("eCommerce")]
+        eCommerce = 7,
+        [DescriptionAttribute("Social Networking")]
+        Social_Networking = 8,
+        [DescriptionAttribute("Other")]
+        Other = 9
+    };
+
+    public enum BudgetEnum
+    {
+        [DescriptionAttribute("Less than 10K USD")]
+        LesstenSD = 1,
+
+        [DescriptionAttribute("10K USD to 20K USD")]
+        tenktotwentykUSD = 2,
+
+        [DescriptionAttribute("20K USD to 50K USD")]
+        twentyktofiftykUSD = 3,
+
+        [DescriptionAttribute("50K USD to 100K USD")]
+        fiftyktohundredkUSD = 4,
+
+        [DescriptionAttribute("100K USD and more")]
+        hundredkandmore = 5
+    };
+
+    public static class EnumDescription
+    {
+        public static string ToDescription(this Enum en)
+        {
+            Type type = en.GetType();
+            MemberInfo[] memInfo = type.GetMember(en.ToString());
+
+            if (memInfo != null && memInfo.Length > 0)
+            {
+                object[] attrs = memInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
+
+                if (attrs != null && attrs.Length > 0)
+                    return ((DescriptionAttribute)attrs[0]).Description;
+            }
+            return en.ToString();
+        }
+    }
+
     public class CommonApiController : ApiController
     {
         private readonly UnitOfWork _unitOfWork = null;
@@ -132,7 +192,7 @@ namespace ShaligramInfotechAPI.Controllers
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@company]", objContactUsEntity.Company);
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@Message]", objContactUsEntity.Message);
 
-                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Mail Sent Successfully", "", null));
+                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Contact Details of " + objContactUsEntity.Name, "", null));
                     Admintask.Start();
                 }
 
@@ -143,6 +203,9 @@ namespace ShaligramInfotechAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "Error!");
             }
         }
+
+
+
 
         [HttpPost]
         public async Task<HttpResponseMessage> SaveRequestQuote()
@@ -211,15 +274,20 @@ namespace ShaligramInfotechAPI.Controllers
                         }
                     }
 
+                    ProjectTypeEnum prjtype = (ProjectTypeEnum)Enum.Parse(typeof(ProjectTypeEnum), Convert.ToString(objRequestQuoteEntity.ProjectTypeId));
+                    BudgetEnum budgettype = (BudgetEnum)Enum.Parse(typeof(BudgetEnum), Convert.ToString(objRequestQuoteEntity.BudgetId));
+
                     string AdminMail = System.Configuration.ConfigurationManager.AppSettings["ContactUsEmailId"];
                     string bodyAdminTemplate = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.MapPath("~/EmailTemplate/AdminRequestQuote.html"));
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@FullName]", objRequestQuoteEntity.FullName);
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@Email]", objRequestQuoteEntity.EmailAddress);
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@Mobile]", objRequestQuoteEntity.PhoneNumber);
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@company]", objRequestQuoteEntity.Company);
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@ProjectType]", EnumDescription.ToDescription(prjtype));
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@Budget]", EnumDescription.ToDescription(budgettype));
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@ProjectDescription]", objRequestQuoteEntity.ProjectDescription);
 
-                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Mail Sent Successfully", "", null));
+                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Request Enquiry from " + objRequestQuoteEntity.FullName, "", null));
                     Admintask.Start();
                 }
 

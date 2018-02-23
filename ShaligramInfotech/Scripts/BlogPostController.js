@@ -1,16 +1,39 @@
 ﻿angular.module('app.controllers').controller('BlogPostController', function ($scope, $sce, $location, $window, $http, configurationService, $state, $stateParams, $rootScope, localStorageService, $timeout) {
-    $scope.$root.title = 'Shaligram Infotech Blog | Company Portal Software Development | Company Portal Software Development Company USA';
-    $scope.$root.metakeyword = 'Software Development  Life cycle, Software Development Models,  Software Development Services, Software Development Company, Software Development Company USA, Software Development Company UK';
-    $scope.$root.metadescription = 'Shaligram Infotech present Software Development  Life cycle for business solutions. Our software development models included business intelligence software, retail erp software and healthcare software . We offer software development services in India,USA,UK and Australia.';
 
     $scope.BlogPostList = [];
     $scope.RecentBlogPostList = [];
     $scope.CategoryList = [];
     $scope.limit = 5;
 
-    $scope.blogCategory = $stateParams.blogCategory;
+    $scope.parameter = $stateParams.parameter;
+    $scope.IsDetailPage = 0;
 
-    $scope.GetBlogPost = function (categoryId, pagesize) {
+    if ($scope.parameter != "" && $scope.parameter != undefined) {
+        var title = '';
+        var title = parseInt($scope.parameter) || '';
+        if (!angular.isNumber(title)) {
+            // details 
+            $scope.IsDetailPage = 1;
+        }
+        else {
+            // list page
+            $scope.IsDetailPage = 0;
+
+            $scope.$root.title = 'Shaligram Infotech Blog | Company Portal Software Development | Company Portal Software Development Company USA';
+            $scope.$root.metakeyword = 'Software Development  Life cycle, Software Development Models,  Software Development Services, Software Development Company, Software Development Company USA, Software Development Company UK';
+            $scope.$root.metadescription = 'Shaligram Infotech present Software Development  Life cycle for business solutions. Our software development models included business intelligence software, retail erp software and healthcare software . We offer software development services in India,USA,UK and Australia.';
+        }
+    }
+    else {
+        // list page
+        $scope.IsDetailPage = 0;
+        $scope.$root.title = 'Shaligram Infotech Blog | Company Portal Software Development | Company Portal Software Development Company USA';
+        $scope.$root.metakeyword = 'Software Development  Life cycle, Software Development Models,  Software Development Services, Software Development Company, Software Development Company USA, Software Development Company UK';
+        $scope.$root.metadescription = 'Shaligram Infotech present Software Development  Life cycle for business solutions. Our software development models included business intelligence software, retail erp software and healthcare software . We offer software development services in India,USA,UK and Australia.';
+    }
+
+
+    $scope.GetBlogPostByCategory = function (categoryId, pagesize) {
         var blogPostList = JSON.parse(localStorage.getItem("BlogPostList"));
         if (blogPostList != null) {
             $scope.BlogPostList = blogPostList;
@@ -23,8 +46,7 @@
 
             $rootScope.layout.loading = false;
         }
-        else
-        {
+        else {
             $rootScope.layout.loading = true;
 
             if (categoryId == undefined) {
@@ -40,9 +62,40 @@
                 $scope.BlogPostList = [];
                 $scope.BlogPostList = data;
 
-                if (categoryId == null || categoryId == undefined) {
-                    localStorage.setItem("BlogPostList", JSON.stringify($scope.BlogPostList));
-                }
+                $timeout(function () {
+                    $rootScope.layout.loading = false;
+                }, 1500);
+            });
+            getBlogPostList.error(function () {
+                $rootScope.layout.loading = false;
+            });
+        }
+    }
+
+    $scope.GetBlogPostByTitle = function (title) {
+        var blogPostList = JSON.parse(localStorage.getItem("BlogPostList"));
+        if (blogPostList != null) {
+            $scope.BlogPostList = blogPostList;
+
+            if (title != null && title != undefined && title != "") {
+                $scope.BlogPostList = $scope.BlogPostList.filter(function (d) {
+                    return d.PostURL === title
+                });
+            }
+
+            $rootScope.layout.loading = false;
+        }
+        else {
+            $rootScope.layout.loading = true;
+
+            if (title == undefined) {
+                title = ''
+            }
+
+            var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByTitle?title=' + title);
+            getBlogPostList.success(function (data) {
+                $scope.BlogPostList = [];
+                $scope.BlogPostList = data;
 
                 $timeout(function () {
                     $rootScope.layout.loading = false;
@@ -52,10 +105,20 @@
                 $rootScope.layout.loading = false;
             });
         }
+        if ($scope.BlogPostList.length > 0) {
+            $scope.$root.title = $scope.BlogPostList[0].PostTitle;
+            $scope.$root.metakeyword = $scope.BlogPostList[0].MetaKeywords;
+            $scope.$root.metadescription = $scope.BlogPostList[0].MetaDesc;
+        }
+    }
 
-        localStorageService.set('BlogPostCategoryId', categoryId);
-        $scope.CategoryId = categoryId;
-        $rootScope.CategoryId = categoryId;
+    $scope.GetAllBlogPost = function () {
+        var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByCategory?CategoryId=null&pagesize=null');
+        getBlogPostList.success(function (data) {
+            localStorage.setItem("BlogPostList", JSON.stringify(data));
+        });
+        getBlogPostList.error(function () {
+        });
     }
 
     $scope.toTrustedHTML = function (html) {
@@ -64,8 +127,7 @@
 
     $scope.loadMore = function () {
         $scope.limit = $scope.limit + 5;
-        localStorage.setItem("BlogPostList", null);
-        $scope.GetBlogPost($scope.blogCategory, $scope.limit)
+        $scope.GetBlogPostByCategory($scope.parameter, $scope.limit)
     }
 
     function GetAllCategories() {
@@ -108,7 +170,13 @@
 
     GetAllCategories();
     GetRecentBlogPost();
-    $scope.GetBlogPost($scope.blogCategory, $scope.limit);
+
+    if ($scope.IsDetailPage == 0) {
+        $scope.GetBlogPostByCategory($scope.parameter, $scope.limit);
+    }
+    else {
+        $scope.GetBlogPostByTitle($scope.parameter);
+    }
 
     $scope.RedirectToBlogDetail = function (PostURL) {
         PostURL = PostURL.trim();
@@ -116,6 +184,6 @@
             $scope.$root.blogtitle = PostURL;
         }
 
-        $state.go('blog-detail', { title: PostURL });
+        $state.go('blog', { parameter: PostURL });
     }
 });
