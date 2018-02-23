@@ -236,10 +236,13 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Common\EmailHelper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogPostApiController.cs" />
     <Compile Include="Controllers\CommonApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PortfolioApiController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Entities\BlogPostCategoryEntity.cs" />
+    <Compile Include="Entities\BlogPostEntity.cs" />
     <Compile Include="Entities\ChallengeFacedModel.cs" />
     <Compile Include="Entities\ContactUsEntity.cs" />
     <Compile Include="Entities\InquiryModel.cs" />

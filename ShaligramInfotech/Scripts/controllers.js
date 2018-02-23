@@ -12,6 +12,12 @@ angular.module('app.controllers', [])
         $scope.$root.metakeyword = 'Software Development Company, Software Development Company USA , Software Development Company UK, Software Web Portal Development Company UK, Software Web Portal Development Company, Responsive Website Development Company';
         $scope.$root.metadescription = 'Shaligram InfoTech is leading Software Development Company USA. We are offering services like application development, product development, web portal development, responsive web development services.';
 
+        localStorage.setItem("RecentBlogPostList", null);
+        localStorage.setItem("BlogPostList", null);
+        localStorage.setItem("BlogPostCategoryId", null);
+        localStorage.setItem("BlogPostCategories", null);
+        
+        
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });

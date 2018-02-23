@@ -101,7 +101,7 @@
 
 
 
-<body class="{{$state.current.name}}">
+<body class="{{$state.current.name}}" ng-cloak>
     <div ng-controller="PortfolioController" style="display:none;">
         <span portfolio-ready></span>
     </div>
@@ -291,14 +291,12 @@
     </nav>
     <div id="ui-view" ui-view data-tmpl-url="@Request.RequestContext.RouteData.DataTokens["templateUrl"]">
         @RenderBody()
-
     </div>
     <div class="loader img" ng-hide="!layout.loading">
         <p><img src="/Images/Spinner.svg"></p>
     </div>
 
     <div class="s-icon">
-
         <div class="container">
             <div class="swiper-container swiper-container2">
                 <div class="swiper-wrapper">
@@ -316,7 +314,6 @@
             </div>
         </div>
     </div>
-
 
     <aside id="sticky-social">
         <ul style="list-style-type: none;">
@@ -340,7 +337,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://www.shaligraminfotech.com/blog/" style="background-color: #f87f14; display: table-cell;" class="entypo-blogger hvr-bounce-in" target="_blank">
+                <a href="" ui-sref="blog({blogCategory: null})"  style="background-color: #f87f14; display: table-cell;" class="entypo-blogger hvr-bounce-in">
                     <img src="~/Images/blogger_icon.png" />
                 </a>
             </li>
@@ -488,7 +485,7 @@
             </div>
         </div>
     </div>
-  
+
 
     <script src="~/Scripts/js/jquery.min.js"></script>
     @*<script src="~/Scripts/common.js"></script>*@
@@ -510,6 +507,8 @@
     <script src="~/Scripts/PortfolioController.js"></script>
     <script src="~/Scripts/RequestQuoteController.js"></script>
     <script src="~/Scripts/ParticularPortfolioController.js"></script>
+    <script src="~/Scripts/BlogPostController.js"></script>
+    <script src="~/Scripts/ParticularBlogPostController.js"></script>
     <script src="~/Scripts/js/bootstrap.min.js"></script>
     <script src="~/Scripts/js/Priceformscript.js"></script>
     <script src="~/Scripts/js/sticky-kit.min.js"></script>
@@ -584,7 +583,7 @@
             $('.navbar-toggle').removeClass('open');
         });
 
-      
+
 
         $(".fancybox").fancybox({
             openEffect: "none",

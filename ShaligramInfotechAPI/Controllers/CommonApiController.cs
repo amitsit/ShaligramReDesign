@@ -65,7 +65,6 @@ namespace ShaligramInfotechAPI.Controllers
         [HttpPost]
         public async Task<HttpResponseMessage> SaveContactInformation()
         {
-           
             try
             {
                 if (!Request.Content.IsMimeMultipartContent())

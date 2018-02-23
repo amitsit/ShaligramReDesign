@@ -546,6 +546,35 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
             templateUrl: '/views/SCPages/portfolio-index',
             controller: 'PortfolioController'
         })
+        .state('blog-detail', {
+            url: '/blog/:title',
+            //templateUrl: '/views/SCPages/GetParticularBlogDetails',
+            templateUrl: function (stateParams) {
+                if (stateParams.title != "" && stateParams.title != undefined)
+                {
+                    var title = '';
+                    var title = parseInt(stateParams.title) || '';
+                    if (!angular.isNumber(title))
+                    {
+                        return "/views/SCPages/GetParticularBlogDetails";
+                    }
+                    else
+                    {
+                        $state.go('blog', { blogCategory: title });
+                    }
+                }
+                else
+                {
+                    $state.go('blog', { blogCategory: stateParams.title });
+                }
+            }
+            ,controller: 'ParticularBlogPostController'
+        })
+        .state('blog', {
+            url: '/blog/:blogCategory',
+            templateUrl: '/views/SCPages/BlogPost',
+            controller: 'BlogPostController'
+        })        
         .state('contact-us', {
             url: '/contact-us',
             templateUrl: '/views/SCPages/contact-us',

@@ -43,6 +43,10 @@ namespace App.ShaligramInfotech.Routing
                         {
                             filePath = "~/views/SCPages/portfolio-index";
                         }
+                        else if (filePath.StartsWith("~/blog", StringComparison.OrdinalIgnoreCase))
+                        {
+                            filePath = "~/views/SCPages/BlogPost";
+                        }
                         else if (filePath.Equals("~/pricing-comparison-uk", StringComparison.OrdinalIgnoreCase))
                         {
                             filePath = "~/views/SCPages/pricecomparisonuk";
