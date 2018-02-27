@@ -81,14 +81,6 @@ angular.module('app.controllers')
                     else {
                         alert("Please fill captcha");
                     }
-
-                    //var saveContactUs = $http.post(configurationService.basePath + 'api/CommonApi/SaveContactInformation', objContactUsEntity);
-                    //saveContactUs.success(function (data) {
-                    //    //$scope.PorfolioList = [];
-                    //    //$scope.PorfolioList = data;
-                    //});
-                    //saveContactUs.error(function () { });
-
                 })
                 .error(function (data, status, header, config) {
                     alert("Something went wrong. Please try again!");
