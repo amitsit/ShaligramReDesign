@@ -3,6 +3,7 @@
     $scope.BlogPostList = [];
     $scope.RecentBlogPostList = [];
     $scope.CategoryList = [];
+    $scope.CategoryId = null;
     $scope.limit = 5;
 
     $scope.parameter = $stateParams.parameter;
@@ -38,7 +39,10 @@
         if (blogPostList != null) {
             $scope.BlogPostList = blogPostList;
 
+            $scope.CategoryId = 0;
+
             if (categoryId != null && categoryId != undefined && categoryId != "") {
+                $scope.CategoryId = categoryId;
                 $scope.BlogPostList = $scope.BlogPostList.filter(function (d) {
                     return d.CategoryId === parseInt(categoryId)
                 });
@@ -76,7 +80,7 @@
         var blogPostList = JSON.parse(localStorage.getItem("BlogPostList"));
         if (blogPostList != null) {
             $scope.BlogPostList = blogPostList;
-
+            $scope.CategoryId = 0;
             if (title != null && title != undefined && title != "") {
                 $scope.BlogPostList = $scope.BlogPostList.filter(function (d) {
                     return d.PostURL === title
@@ -106,19 +110,13 @@
             });
         }
         if ($scope.BlogPostList.length > 0) {
-            $scope.$root.title = $scope.BlogPostList[0].PostTitle;
+            $scope.$root.title = $scope.BlogPostList[0].PostPageTitle;
             $scope.$root.metakeyword = $scope.BlogPostList[0].MetaKeywords;
             $scope.$root.metadescription = $scope.BlogPostList[0].MetaDesc;
         }
     }
 
     $scope.GetAllBlogPost = function () {
-        //localStorage.setItem("RecentBlogPostList", null);
-        //localStorage.setItem("BlogPostList", null);
-        //localStorage.setItem("BlogPostCategoryId", null);
-        //localStorage.setItem("BlogPostCategories", null);
-
-
         var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByCategory?CategoryId=null&pagesize=null');
         getBlogPostList.success(function (data) {
             localStorage.setItem("BlogPostList", JSON.stringify(data));

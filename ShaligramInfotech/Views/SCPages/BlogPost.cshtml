@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-sm-5">
                             <div class="blog_banner">
-                                    <img ng-src="/BlogImages/{{bloglist.PostImagePath}}" alt="{{bloglist.PostTitle}}">
+                                <img ng-src="/BlogImages/{{bloglist.PostImagePath}}" alt="{{bloglist.PostTitle}}">
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@
                 <!-- Details Page -->
                 <div ng-if="IsDetailPage == 1" class="detail-view">
                     <div class="blog_banner">
-                            <img ng-src="/BlogImages/{{bloglist.PostImagePath}}" alt="{{bloglist.PostTitle}}">
+                        <img ng-src="/BlogImages/{{bloglist.PostImagePath}}" alt="{{bloglist.PostTitle}}">
                     </div>
                     <div class="blog-text">
                         <h2>
@@ -75,7 +75,12 @@
                 <h2 class="blog-label"><span>Blog categories</span></h2>
                 <div class="blog-content">
                     <ul>
-                        <li ng-repeat="list in CategoryList"><a ui-sref="blog({parameter: list.CategoryId})">{{list.CategoryName}}</a></li>
+                        <li ng-repeat="list in CategoryList">
+                            <a ui-sref="blog({parameter: list.CategoryId})"
+                               ng-class="{'menuHighlight': (CategoryId == list.CategoryId )}">
+                                {{list.CategoryName}}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -84,7 +89,12 @@
                 <h2 class="post-label"><span>Recent Posts</span></h2>
                 <div class="post-content">
                     <ul class="p-0">
-                        <li ng-repeat="list in RecentBlogPostList"><a ui-sref="blog({parameter: list.PostURL})">{{list.PostTitle}}</a></li>
+                        <li ng-repeat="list in RecentBlogPostList">
+                            <a ui-sref="blog({parameter: list.PostURL})"
+                               ng-class="{'menuHighlight': (parameter == list.PostURL )}">
+                                {{list.PostTitle}}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

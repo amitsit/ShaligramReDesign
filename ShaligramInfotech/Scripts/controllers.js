@@ -14,7 +14,6 @@ angular.module('app.controllers', [])
 
         localStorage.setItem("RecentBlogPostList", null);
         localStorage.setItem("BlogPostList", null);
-        localStorage.setItem("BlogPostCategoryId", null);
         localStorage.setItem("BlogPostCategories", null);
         
         
