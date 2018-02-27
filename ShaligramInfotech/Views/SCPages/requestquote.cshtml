@@ -7,7 +7,6 @@
                     <div class="title text-center">
                         <h4>Request Quote</h4>
                     </div>
-                    <br /><br />
                     <form name="RequestQuoteForm" novalidate>
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
@@ -38,11 +37,6 @@
                                     <option value="8">Social Networking</option>
                                     <option value="9">Other</option>
                                 </select>
-                                <p>
-                                    <span ng-class="{'span-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
-                                    <div vc-recaptcha key="'6Ld6REYUAAAAAIK11VtasE3g-BL89ZX68JrdSPi-'"></div>
-                                    @*<div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>*@
-                                </p>
                             </div>
                             <div class="col-md-6 col-sm-12">
                                 <select class="form-control" id="BudgetId" ng-model="RequestQuote.BudgetId" name="BudgetId"
@@ -61,7 +55,11 @@
                                     <span>Attach File:</span>
                                     <input class="form-control" type="file" upload-files />
                                 </p>
-                               
+                               <p>
+                                    <span ng-class="{'span-error' : (RequestQuoteForm.$submitted && (!RequestQuoteForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
+                                    <div vc-recaptcha key="'6Ld6REYUAAAAAIK11VtasE3g-BL89ZX68JrdSPi-'"></div>
+                                    @*<div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>*@
+                                </p>
 
                             </div>
 

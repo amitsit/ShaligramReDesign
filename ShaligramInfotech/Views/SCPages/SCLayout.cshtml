@@ -135,19 +135,15 @@
                         </div>
                     </div>
                     <ul>
-                        <li><img alt="flag india" src="/images/flags/india1.png" title="India"></li>
-                        <li><img alt="flag USA" src="/images/flags/us.png" title="USA"></li>
-                        <li><img alt="flag uk" src="/images/flags/uk.png" title="UK"></li>
+                        <li><a href="http://www.shaligraminfotech.com/"><img alt="flag india" src="/images/flags/india1.png" title="India"></a></li>
+                        <li><a href="http://www.shaligraminfotech.com/"><img alt="flag USA" src="/images/flags/us.png" title="USA"></a></li>
+                        <li><a href="http://www.shaligraminfotech.com/"><img alt="flag uk" src="/images/flags/uk.png" title="UK"></a></li>
                         <li><a href="http://www.shaligraminfotech.com.au/"><img alt="flag australia" src="/images/flags/australia.png" title="Australia"></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-
-
-
-
     <nav class="navbar navbar-default mainHeader">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -225,7 +221,7 @@
                         </ul>
                     </li>
                     <li id="domainExpertise" ng-class="['submenuLiMain',{'menuHighlight': $state.current.name === 'domain-expertise'}]">
-                        <a href="" ui-sref="domain-expertise" title="Healthcare Software Development Company | Software Development Company">Domain Expertise</a>
+                        <a href="" ui-sref="domain-expertise" title="Shaligram Infotech Domain Expertise | Software Development Company">Domain Expertise</a>
                     </li>
                     <li class="submenuLiMain">
                         <a href="#" ng-class="{'menuHighlight': (
@@ -318,26 +314,26 @@
     <aside id="sticky-social">
         <ul style="list-style-type: none;">
             <li>
-                <a href="https://www.facebook.com/shaligraminfotech" class="entypo-facebook hvr-bounce-in" target="_blank">
+                <a href="https://www.facebook.com/shaligraminfotech" class="entypo-facebook hvr-bounce-in" title="visit Shaligram Infotech facebook page" target="_blank">
 
                 </a>
             </li>
             <li>
-                <a href="https://twitter.com/shaligram_it" class="entypo-twitter hvr-bounce-in" target="_blank">
+                <a href="https://twitter.com/shaligram_it" class="entypo-twitter hvr-bounce-in" title="visit Shaligram Infotech twitter page" target="_blank">
 
                 </a>
             </li>
             <li>
-                <a href="https://plus.google.com/112697871928332078572/about" class="entypo-gplus hvr-bounce-in" target="_blank">
+                <a href="https://plus.google.com/112697871928332078572/about" title="visit Shaligram Infotech google plus page" class="entypo-gplus hvr-bounce-in" target="_blank">
 
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/company/shaligram-infotech" class="entypo-linkedin hvr-bounce-in" target="_blank">
+                <a href="https://www.linkedin.com/company/shaligram-infotech" title="visit Shaligram Infotech linkedin page" class="entypo-linkedin hvr-bounce-in" target="_blank">
                 </a>
             </li>
             <li>
-                <a href="" ui-sref="blog({parameter: null})" style="background-color: #f87f14; display: table-cell;" class="entypo-blogger hvr-bounce-in">
+                <a href="" ui-sref="blog({parameter: null})" title="visit Shaligram Infotech Blogs" style="background-color: #f87f14; display: table-cell;" class="entypo-blogger hvr-bounce-in">
                     <img src="~/Images/blogger_icon.png" />
                 </a>
             </li>
@@ -346,7 +342,7 @@
 
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row footermenu">
                 <div class="col-md-3 col-xs-12">
                     <h6>Company</h6>
                     <ul class="list1">
@@ -587,7 +583,7 @@
             closeEffect: "none"
         });
 
-        
+
         $(document).ready(function () {
             var swiper = new Swiper('.swiper-container2', {
                 slidesPerView: 6,
@@ -615,6 +611,10 @@
             });
         });
 
+
+        $(".footermenu ul li a").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 500);
+        });
 
 
         (function () {

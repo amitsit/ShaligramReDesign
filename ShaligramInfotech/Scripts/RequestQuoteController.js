@@ -24,6 +24,7 @@
                 $scope.RequestQuote.ProjectTypeId = null;
                 $scope.RequestQuote.BudgetId = null;
                 $scope.RequestQuote.ProjectDescription = null;
+                angular.element("input[type='file']").val(null);
             }
 
             $scope.SaveRequestQuoteDetails = function (form) {

@@ -107,15 +107,14 @@ namespace ShaligramInfotechAPI.Controllers
         {
             if (string.IsNullOrEmpty(encodedResponse)) return false;
             // for local
-            //var secret = "6LdSvz8UAAAAAAfUnqC4KtCxgAZx6XWVUl1ZDIno";
+            var secret = "6LdSvz8UAAAAAAfUnqC4KtCxgAZx6XWVUl1ZDIno";
 
             //for company
-            var secret = "6Ld6REYUAAAAAOiBvyukVgozNigfy-kZwdL-N2bz";
+            //var secret = "6Ld6REYUAAAAAOiBvyukVgozNigfy-kZwdL-N2bz";
             if (string.IsNullOrEmpty(secret)) return false;
 
             var client = new System.Net.WebClient();
-
-
+            
             var googleReply = client.DownloadString(
                 $"https://www.google.com/recaptcha/api/siteverify?secret={secret}&response={encodedResponse}");
 
@@ -192,7 +191,7 @@ namespace ShaligramInfotechAPI.Controllers
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@company]", objContactUsEntity.Company);
                     bodyAdminTemplate = bodyAdminTemplate.Replace("[@Message]", objContactUsEntity.Message);
 
-                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Contact Details of " + objContactUsEntity.Name, "", null));
+                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Contact us inquiry from " + objContactUsEntity.Name, "", null));
                     Admintask.Start();
                 }
 
@@ -200,7 +199,7 @@ namespace ShaligramInfotechAPI.Controllers
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, "Error!");
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 

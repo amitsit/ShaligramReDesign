@@ -1,4 +1,4 @@
-﻿angular.module('app.controllers').controller('BlogPostController', function ($scope, $sce, $location, $window, $http, configurationService, $state, $stateParams, $rootScope, localStorageService, $timeout) {
+﻿angular.module('app.controllers').controller('BlogPostController', function ($scope, $sce, $location, $window, $http, configurationService, $state, $stateParams, $rootScope, localStorageService, $timeout, $filter) {
 
     $scope.BlogPostList = [];
     $scope.RecentBlogPostList = [];
@@ -18,7 +18,7 @@
         else {
             // list page
             $scope.IsDetailPage = 0;
-
+            $scope.IsCategoryPage = 1;
             $scope.$root.title = 'Shaligram Infotech Blog | Company Portal Software Development | Company Portal Software Development Company USA';
             $scope.$root.metakeyword = 'Software Development  Life cycle, Software Development Models,  Software Development Services, Software Development Company, Software Development Company USA, Software Development Company UK';
             $scope.$root.metadescription = 'Shaligram Infotech present Software Development  Life cycle for business solutions. Our software development models included business intelligence software, retail erp software and healthcare software . We offer software development services in India,USA,UK and Australia.';
@@ -49,8 +49,8 @@
         else {
             $rootScope.layout.loading = true;
 
-            if (categoryId == undefined) {
-                categoryId = null
+            if (categoryId == undefined || categoryId == "") {
+                categoryId = null;
             }
 
             if (pagesize == undefined) {
@@ -113,6 +113,12 @@
     }
 
     $scope.GetAllBlogPost = function () {
+        //localStorage.setItem("RecentBlogPostList", null);
+        //localStorage.setItem("BlogPostList", null);
+        //localStorage.setItem("BlogPostCategoryId", null);
+        //localStorage.setItem("BlogPostCategories", null);
+
+
         var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByCategory?CategoryId=null&pagesize=null');
         getBlogPostList.success(function (data) {
             localStorage.setItem("BlogPostList", JSON.stringify(data));

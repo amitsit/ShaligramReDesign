@@ -1,68 +1,91 @@
-﻿<div class="blogMainPage" style="margin-top: 2%">
+﻿<div class="blogMainPage">
     <div class="container" ng-controller="BlogPostController">
         <div class="col-sm-9">
             <div class="blogslist" ng-repeat="bloglist in BlogPostList | limitTo:limit">
-                <div class="blog_banner">
-                    <a href="#" title="{{bloglist.PostTitle}}">
-                        <img ng-src="/BlogImages/{{bloglist.PostImagePath}}" alt="{{bloglist.PostTitle}}">
-                    </a>
-                </div>
-                <div class="blog-text">
-                    <h2>
-                        <a ng-click="RedirectToBlogDetail(bloglist.PostURL)">{{bloglist.PostTitle}}</a>
-                    </h2>
-                    <h4>{{bloglist.PostDate | date :  "MMMM dd, y" }}</h4>
-                    <div ng-class="{'MainblogContent': IsDetailPage === 0 }" ng-bind-html="toTrustedHTML(bloglist.PostContent)">
+
+                <!-- List Page-->
+                <div ng-if="IsDetailPage == 0" class="list-view">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="blog_banner">
+                                    <img ng-src="/BlogImages/{{bloglist.PostImagePath}}" alt="{{bloglist.PostTitle}}">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="blog-text">
+                                <h2>{{bloglist.PostTitle}}</h2>
+
+                                <div class="date"><span>{{bloglist.PostDate | date :  "MMMM dd, y" }}</span> | <a ui-sref="blog({parameter: bloglist.CategoryId})">{{bloglist.CategoryName}}</a></div>
+
+                                <!-- List Page Div-->
+                                <div class="post-containet" ng-bind-html="toTrustedHTML(bloglist.PostContent)">
+                                </div>
+
+                                <div class="blog-footer">
+                                    <span class="read-more" ng-if="IsDetailPage === 0">
+                                        <a ng-click="RedirectToBlogDetail(bloglist.PostURL)">Continue Reading</a>
+                                    </span>
+
+                                    <div class="blog-icon">
+                                        <a ng-href="http://www.facebook.com/sharer/sharer.php?u=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-facebook"></i></a>
+                                        <a ng-href="https://plus.google.com/share?url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-google-plus"></i></a>
+                                        <a ng-href="http://twitter.com/share?text=Republic-Day-Celebrations&amp;url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        <a ng-href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="blog-footer">
-                    <div class="post-meta1 post-view text-center">
-                        <a ng-href="http://www.facebook.com/sharer/sharer.php?u=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><img src="~/Images/fb.png" alt="fb"></a>
-                        <a ng-href="https://plus.google.com/share?url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><img src="~/Images/google.png" alt="g+"></a>
-                        <a ng-href="http://twitter.com/share?text=Republic-Day-Celebrations&amp;url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><img src="~/Images/twitter.png" alt="twt"></a>
-                        <a ng-href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><img src="~/Images/linkdin.png" alt="ln"></a>
+
+                <!-- Details Page -->
+                <div ng-if="IsDetailPage == 1" class="detail-view">
+                    <div class="blog_banner">
+                            <img ng-src="/BlogImages/{{bloglist.PostImagePath}}" alt="{{bloglist.PostTitle}}">
                     </div>
-                    <div class="post-meta2 post-comm text-center">
-                        <span>
-                            <a class="comment-link" ui-sref="blog({parameter: bloglist.CategoryId})">{{bloglist.CategoryName}}</a>
-                        </span>
+                    <div class="blog-text">
+                        <h2>
+                            <a ng-click="RedirectToBlogDetail(bloglist.PostURL)">{{bloglist.PostTitle}}</a>
+                        </h2>
+
+                        <div class="date"><span>{{bloglist.PostDate | date :  "MMMM dd, y" }}</span> | <a class="comment-link" ui-sref="blog({parameter: bloglist.CategoryId})">{{bloglist.CategoryName}}</a></div>
+
+                        <div ng-if="IsDetailPage === 1" ng-bind-html="toTrustedHTML(bloglist.PostContent)">
+                        </div>
                     </div>
-                    <div class="post-meta1 post-author text-center">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                        <p>
-                            {{bloglist.UserName}}
-                        </p>
-                    </div>
-                    <div class="post-meta1 post-read text-center" ng-if="IsDetailPage === 0">
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i> <span>
-                            <a style="outline: none;" ng-click="RedirectToBlogDetail(bloglist.PostURL)">READ MORE</a>
-                        </span>
+                    <div class="blog-footer">
+                        <div class="blog-icon">
+                            <a ng-href="http://www.facebook.com/sharer/sharer.php?u=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a ng-href="https://plus.google.com/share?url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a ng-href="http://twitter.com/share?text=Republic-Day-Celebrations&amp;url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a ng-href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.shaligraminfotech.com/blog/{{bloglist.PostURL}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <button class="loadMore" ng-click='loadMore()' ng-if="BlogPostList.length > 0 && IsDetailPage == 0">Load More</button>
+
+
+                <button class="loadMore" ng-click='loadMore()' ng-if="$last && ((BlogPostList[0].TotalRecords > limit &&  IsCategoryPage !=1) || (BlogPostList.length > limit && IsCategoryPage == 1)) && IsDetailPage == 0">Load More</button>
             </div>
         </div>
+
         <div class="col-sm-3">
+
             <div class="blog-catagory">
-                <div class="blog-label">
-                    <h2>Blog categories</h2>
-                    <div class="blog-content">
-                        <ul class="p-0">
-                            <li ng-repeat="list in CategoryList"><a ui-sref="blog({parameter: list.CategoryId})">{{list.CategoryName}}</a></li>
-                        </ul>
-                    </div>
+                <h2 class="blog-label"><span>Blog categories</span></h2>
+                <div class="blog-content">
+                    <ul>
+                        <li ng-repeat="list in CategoryList"><a ui-sref="blog({parameter: list.CategoryId})">{{list.CategoryName}}</a></li>
+                    </ul>
                 </div>
             </div>
+
             <div class="recent-post">
-                <div class="post-label">
-                    <h2>Recent Posts</h2>
-                    <div class="post-content">
-                        <ul class="p-0">
-                            <li ng-repeat="list in RecentBlogPostList"><a ui-sref="blog({parameter: list.PostURL})">{{list.PostTitle}}</a></li>
-                        </ul>
-                    </div>
+                <h2 class="post-label"><span>Recent Posts</span></h2>
+                <div class="post-content">
+                    <ul class="p-0">
+                        <li ng-repeat="list in RecentBlogPostList"><a ui-sref="blog({parameter: list.PostURL})">{{list.PostTitle}}</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

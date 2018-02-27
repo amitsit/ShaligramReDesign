@@ -52,7 +52,6 @@ D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotech\bin\System.Web.WebPages.Ra
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotech\obj\Debug\ShaligramInfotech.csprojResolveAssemblyReference.cache
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotech\obj\Debug\App.ShaligramInfotech.dll
 D:\Mansi Data\Projects\SGITInfotech\ShaligramInfotech\obj\Debug\App.ShaligramInfotech.pdb
-E:\Projects\ShaligramInfotech\ShaligramInfotech\obj\Debug\ShaligramInfotech.csprojResolveAssemblyReference.cache
 E:\Projects\ShaligramInfotech\ShaligramInfotech\bin\ApplicationInsights.config
 E:\Projects\ShaligramInfotech\ShaligramInfotech\bin\roslyn\csc.exe
 E:\Projects\ShaligramInfotech\ShaligramInfotech\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -105,5 +104,6 @@ E:\Projects\ShaligramInfotech\ShaligramInfotech\bin\System.Web.Razor.xml
 E:\Projects\ShaligramInfotech\ShaligramInfotech\bin\System.Web.WebPages.xml
 E:\Projects\ShaligramInfotech\ShaligramInfotech\bin\System.Web.WebPages.Deployment.xml
 E:\Projects\ShaligramInfotech\ShaligramInfotech\bin\System.Web.WebPages.Razor.xml
+E:\Projects\ShaligramInfotech\ShaligramInfotech\obj\Debug\ShaligramInfotech.csprojResolveAssemblyReference.cache
 E:\Projects\ShaligramInfotech\ShaligramInfotech\obj\Debug\App.ShaligramInfotech.dll
 E:\Projects\ShaligramInfotech\ShaligramInfotech\obj\Debug\App.ShaligramInfotech.pdb

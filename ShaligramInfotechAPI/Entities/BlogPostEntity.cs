@@ -23,6 +23,7 @@ namespace ShaligramInfotechAPI.Entities
         public string MetaKeywords { get; set; }
         public string MetaDesc { get; set; }
         public int? ViewCount { get; set; }
+        public int? TotalRecords { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime? CreatedDate { get; set; }
     }

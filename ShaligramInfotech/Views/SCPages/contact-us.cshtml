@@ -7,7 +7,6 @@
                     <div class="title text-center">
                         <h4>Send Us a Message</h4>
                     </div>
-                    <br /><br />
                     <form name="ContactUsForm" novalidate>
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
@@ -26,11 +25,6 @@
                                 <input placeholder="Company" type="text" ng-model="ContactUs.Company" name="Company"
                                        class="form-control" />
 
-                                <p>
-                                    <span ng-class="{'span-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
-                                    <div vc-recaptcha key="'6Ld6REYUAAAAAIK11VtasE3g-BL89ZX68JrdSPi-'"></div>
-                                    @*<div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>*@
-                                </p>
                             </div>
                             <div class="col-md-6 col-sm-12">
                                 <textarea placeholder="Message" cols="100" ng-model="ContactUs.Message" class="form-control" id="message" name="Message"
@@ -39,6 +33,11 @@
                                 <p>
                                     <span>Attach File :</span>
                                     <input class="form-control" type="file" upload-files multiple />
+                                </p>
+                                <p>
+                                    <span ng-class="{'span-error' : (ContactUsForm.$submitted && (!ContactUsForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
+                                    @*<div vc-recaptcha key="'6Ld6REYUAAAAAIK11VtasE3g-BL89ZX68JrdSPi-'"></div>*@
+                                    <div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'"></div>
                                 </p>
                             </div>
                             <div class="col-sm-12 text-center">
