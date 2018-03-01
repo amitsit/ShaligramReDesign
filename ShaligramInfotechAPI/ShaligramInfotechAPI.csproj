@@ -17,7 +17,7 @@
     <AssemblyName>ShaligramInfotechAPI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -296,6 +296,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\downloadicon.png" />
     <Content Include="Images\logoHeader.png" />
     <Content Include="Images\services\auto-test\big-logo.jpg" />
     <Content Include="Images\services\auto-test\varshneyinfotechqtptrainingmumbai.jpg" />
@@ -522,9 +523,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63035</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8096/ShaligramInfotechAPI</IISUrl>
-          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost:63035/</IISAppRootUrl>
+          <IISUrl>http://localhost:8080/ShaligramInfotechAPI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

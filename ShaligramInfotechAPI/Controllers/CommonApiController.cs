@@ -16,6 +16,7 @@ using ShaligramInfotechAPI.Helper;
 using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Reflection;
+using System.Drawing;
 
 namespace ShaligramInfotechAPI.Controllers
 {
@@ -114,7 +115,7 @@ namespace ShaligramInfotechAPI.Controllers
             if (string.IsNullOrEmpty(secret)) return false;
 
             var client = new System.Net.WebClient();
-            
+
             var googleReply = client.DownloadString(
                 $"https://www.google.com/recaptcha/api/siteverify?secret={secret}&response={encodedResponse}");
 
@@ -202,9 +203,6 @@ namespace ShaligramInfotechAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
-
-
-
 
         [HttpPost]
         public async Task<HttpResponseMessage> SaveRequestQuote()
@@ -311,6 +309,163 @@ namespace ShaligramInfotechAPI.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.OK, fileList);
             }
+        }
+
+        public class DocumentList
+        {
+            public string FileName { get; set; }
+            public string Image { get; set; }
+            public string Link { get; set; }
+        }
+
+        // for contact us file attachment
+        [HttpGet]
+        public HttpResponseMessage GetContactInquiryAttachment(int contactid)
+        {
+            List<DocumentList> listDocs = new List<DocumentList>();
+
+            SqlParameter[] param = new SqlParameter[] { new SqlParameter("@ContactId", contactid) };
+            var documentList = _unitOfWork.SQLQuery<string>("EXEC getContactInquiryAttachments @ContactId", param).ToList();
+
+            foreach (string document in documentList)
+            {
+                DocumentList docs = new DocumentList();
+                docs.FileName = document;
+                listDocs.Add(docs);
+            }
+
+
+            foreach (DocumentList document in listDocs)
+            {
+                var path = HttpContext.Current.Server.MapPath("~/ContactUsAttachment/");
+                string PathName = string.Empty;
+                PathName = Path.Combine(path, document.FileName);
+
+                bool IsFileExists = System.IO.File.Exists(PathName);
+                if (IsFileExists)
+                {
+                    try
+                    {
+                        using (Image image = Image.FromFile(PathName))
+                        {
+                            using (MemoryStream m = new MemoryStream())
+                            {
+                                image.Save(m, image.RawFormat);
+                                byte[] imageBytes = m.ToArray();
+                                document.Image = Convert.ToBase64String(imageBytes);
+                                document.Link = "data:image/gif;base64," + Convert.ToBase64String(imageBytes);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        path = HttpContext.Current.Server.MapPath("~/Images/downloadicon.png");
+                        using (Image image = Image.FromFile(path))
+                        {
+                            using (MemoryStream m = new MemoryStream())
+                            {
+                                image.Save(m, image.RawFormat);
+                                byte[] imageBytes = m.ToArray();
+                                document.Image = Convert.ToBase64String(imageBytes);
+                                document.Link = "/GetContactAttachmentFile?FileName=" + document.FileName;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return Request.CreateResponse(HttpStatusCode.OK, listDocs);
+        }
+
+        [HttpGet]
+        public HttpResponseMessage GetContactAttachmentFile(string FileName)
+        {
+            string PathName = HttpContext.Current.Server.MapPath("~/ContactUsAttachment/" + FileName);
+            var dataBytes = File.ReadAllBytes(PathName);
+            var dataStream = new MemoryStream(dataBytes);
+
+            HttpResponseMessage httpResponseMessage = Request.CreateResponse(HttpStatusCode.OK);
+            httpResponseMessage.Content = new StreamContent(dataStream);
+            httpResponseMessage.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment");
+            httpResponseMessage.Content.Headers.ContentDisposition.FileName = FileName;
+            httpResponseMessage.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            return httpResponseMessage;
+        }
+
+        // for request quote file attachment
+        [HttpGet]
+        public HttpResponseMessage GetRequestQuoteInquiryAttachment(int requestquoteid)
+        {
+            List<DocumentList> listDocs = new List<DocumentList>();
+
+            SqlParameter[] param = new SqlParameter[] { new SqlParameter("@RequestQuoteId", requestquoteid) };
+            var documentList = _unitOfWork.SQLQuery<string>("EXEC getRequestInquiryAttachments @RequestQuoteId", param).ToList();
+
+            foreach (string document in documentList)
+            {
+                DocumentList docs = new DocumentList();
+                docs.FileName = document;
+                listDocs.Add(docs);
+            }
+
+
+            foreach (DocumentList document in listDocs)
+            {
+                var path = HttpContext.Current.Server.MapPath("~/RequestQuoteAttachment/");
+                string PathName = string.Empty;
+                PathName = Path.Combine(path, document.FileName);
+
+                bool IsFileExists = System.IO.File.Exists(PathName);
+                if (IsFileExists)
+                {
+                    try
+                    {
+                        using (Image image = Image.FromFile(PathName))
+                        {
+                            using (MemoryStream m = new MemoryStream())
+                            {
+                                image.Save(m, image.RawFormat);
+                                byte[] imageBytes = m.ToArray();
+                                document.Image = Convert.ToBase64String(imageBytes);
+                                document.Link = "data:image/gif;base64," + Convert.ToBase64String(imageBytes);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        path = HttpContext.Current.Server.MapPath("~/Images/downloadicon.png");
+                        using (Image image = Image.FromFile(path))
+                        {
+                            using (MemoryStream m = new MemoryStream())
+                            {
+                                image.Save(m, image.RawFormat);
+                                byte[] imageBytes = m.ToArray();
+                                document.Image = Convert.ToBase64String(imageBytes);
+                                document.Link = "/GetRequestQuoteAttachmentFile?FileName=" + document.FileName;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return Request.CreateResponse(HttpStatusCode.OK, listDocs);
+        }
+
+        [HttpGet]
+        public HttpResponseMessage GetRequestQuoteAttachmentFile(string FileName)
+        {
+            string PathName = HttpContext.Current.Server.MapPath("~/RequestQuoteAttachment/" + FileName);
+            var dataBytes = File.ReadAllBytes(PathName);
+            var dataStream = new MemoryStream(dataBytes);
+
+            HttpResponseMessage httpResponseMessage = Request.CreateResponse(HttpStatusCode.OK);
+            httpResponseMessage.Content = new StreamContent(dataStream);
+            httpResponseMessage.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment");
+            httpResponseMessage.Content.Headers.ContentDisposition.FileName = FileName;
+            httpResponseMessage.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            return httpResponseMessage;
         }
     }
 }

@@ -76,7 +76,60 @@ namespace ShaligramInfotechAPI.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<HttpResponseMessage> SaveBlogPostImage()
+        {
+            try
+            {
+                if (!Request.Content.IsMimeMultipartContent())
+                {
+                    throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+                }
 
+                var root = HttpContext.Current.Server.MapPath("~/");
+                string path = System.Configuration.ConfigurationManager.AppSettings["BlogPostImagePath"];
+
+                Directory.CreateDirectory(root);
+                var provider = new MultipartFormDataStreamProvider(root);
+                var result = await Request.Content.ReadAsMultipartAsync(provider);
+
+
+                HttpFileCollection uploadedFiles = HttpContext.Current.Request.Files;
+                for (int i = 0; i < uploadedFiles.Count; i++)
+                {
+                    HttpPostedFile file = uploadedFiles[i];
+                    if (file.ContentLength > 0)
+                    {
+                        string fileName = file.FileName;
+                        file.SaveAs(path + "\\" + fileName);
+                    }
+                }
+
+                return Request.CreateResponse(HttpStatusCode.OK, "success!");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message.ToString());
+            }
+        }
+
+        [HttpGet]
+        public HttpResponseMessage GetBlogPostFileByName(string FileName)
+        {
+            try
+            {
+                string path = System.Configuration.ConfigurationManager.AppSettings["BlogPostImagePath"] + FileName;
+
+                Byte[] bytes = File.ReadAllBytes(path);
+                String file = Convert.ToBase64String(bytes);
+
+                return Request.CreateResponse(HttpStatusCode.OK, file);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "Error!");
+            }
+        }
 
     }
 }
