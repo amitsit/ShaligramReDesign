@@ -1,5 +1,4 @@
 ﻿angular.module('app.controllers').controller('BlogPostController', function ($scope, $sce, $location, $window, $http, configurationService, $state, $stateParams, $rootScope, localStorageService, $timeout, $filter) {
-
     $scope.BlogPostList = [];
     $scope.RecentBlogPostList = [];
     $scope.CategoryList = [];
@@ -34,81 +33,64 @@
     }
 
 
-    $scope.GetBlogPostByCategory = function (categoryId, pagesize) {
-        var blogPostList = JSON.parse(localStorage.getItem("BlogPostList"));
-        if (blogPostList != null) {
-            $scope.BlogPostList = blogPostList;
+    $scope.GetBlogPostByCategory = function (categoryId, pagefrom, pagesize, IsLoadMore) {
+        $rootScope.layout.loading = true;
 
-            $scope.CategoryId = 0;
-
-            if (categoryId != null && categoryId != undefined && categoryId != "") {
-                $scope.CategoryId = categoryId;
-                $scope.BlogPostList = $scope.BlogPostList.filter(function (d) {
-                    return d.CategoryId === parseInt(categoryId)
-                });
-            }
-
-            $rootScope.layout.loading = false;
+        if (categoryId == undefined || categoryId == "") {
+            categoryId = null;
         }
-        else {
-            $rootScope.layout.loading = true;
+        else
+        {
+            $scope.CategoryId = categoryId;
+        }
 
-            if (categoryId == undefined || categoryId == "") {
-                categoryId = null;
-            }
+        if (pagesize == undefined) {
+            pagesize = $scope.limit;
+        }
 
-            if (pagesize == undefined) {
-                pagesize = $scope.limit;
-            }
+        if (pagefrom == undefined) {
+            pagefrom = 1;
+        }
 
-            var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByCategory?CategoryId=' + categoryId + '&pagesize=' + pagesize);
-            getBlogPostList.success(function (data) {
+        var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByCategory?CategoryId=' + categoryId + '&pageFrom=' + pagefrom + '&pagesize=' + pagesize);
+        getBlogPostList.success(function (data) {
+            if (IsLoadMore != 1) {
                 $scope.BlogPostList = [];
                 $scope.BlogPostList = data;
+            }
+            else {
+                $scope.BlogPostList = $scope.BlogPostList.concat(data);
+            }
 
-                $timeout(function () {
-                    $rootScope.layout.loading = false;
-                }, 1500);
-            });
-            getBlogPostList.error(function () {
+            $timeout(function () {
                 $rootScope.layout.loading = false;
-            });
-        }
+            }, 1500);
+        });
+        getBlogPostList.error(function () {
+            $rootScope.layout.loading = false;
+        });
     }
 
     $scope.GetBlogPostByTitle = function (title) {
-        var blogPostList = JSON.parse(localStorage.getItem("BlogPostList"));
-        if (blogPostList != null) {
-            $scope.BlogPostList = blogPostList;
-            $scope.CategoryId = 0;
-            if (title != null && title != undefined && title != "") {
-                $scope.BlogPostList = $scope.BlogPostList.filter(function (d) {
-                    return d.PostURL === title
-                });
-            }
+        $rootScope.layout.loading = true;
 
-            $rootScope.layout.loading = false;
+        if (title == undefined) {
+            title = ''
         }
-        else {
-            $rootScope.layout.loading = true;
 
-            if (title == undefined) {
-                title = ''
-            }
+        var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByTitle?title=' + title);
+        getBlogPostList.success(function (data) {
+            $scope.BlogPostList = [];
+            $scope.BlogPostList = data;
 
-            var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByTitle?title=' + title);
-            getBlogPostList.success(function (data) {
-                $scope.BlogPostList = [];
-                $scope.BlogPostList = data;
-
-                $timeout(function () {
-                    $rootScope.layout.loading = false;
-                }, 1500);
-            });
-            getBlogPostList.error(function () {
+            $timeout(function () {
                 $rootScope.layout.loading = false;
-            });
-        }
+            }, 1500);
+        });
+        getBlogPostList.error(function () {
+            $rootScope.layout.loading = false;
+        });
+
         if ($scope.BlogPostList.length > 0) {
             $scope.$root.title = $scope.BlogPostList[0].PostPageTitle;
             $scope.$root.metakeyword = $scope.BlogPostList[0].MetaKeywords;
@@ -116,36 +98,32 @@
         }
     }
 
-    $scope.GetAllBlogPost = function () {
-        var getBlogPostList = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllBlogPostByCategory?CategoryId=null&pagesize=null');
-        getBlogPostList.success(function (data) {
-            localStorage.setItem("BlogPostList", JSON.stringify(data));
-        });
-        getBlogPostList.error(function () {
-        });
-    }
 
     $scope.toTrustedHTML = function (html) {
         return $sce.trustAsHtml(html);
     }
 
     $scope.loadMore = function () {
+        $scope.LastIndex = $scope.limit + 1;
         $scope.limit = $scope.limit + 5;
-        $scope.GetBlogPostByCategory($scope.parameter, $scope.limit)
+        $scope.size = 5;
+        $scope.GetBlogPostByCategory($scope.parameter, $scope.LastIndex, $scope.size, 1);
     }
 
     function GetAllCategories() {
+        $rootScope.layout.loading = true;
         var categoryList = JSON.parse(localStorage.getItem("BlogPostCategories"));
 
         if (categoryList != null) {
             $scope.CategoryList = categoryList;
-            $rootScope.layout.loading = false;
+            GetRecentBlogPost();
         }
         else {
             var reponse = $http.get(configurationService.basePath + 'api/BlogPostApi/GetAllCategory');
             reponse.success(function (data) {
                 $scope.CategoryList = data;
                 localStorage.setItem("BlogPostCategories", JSON.stringify($scope.CategoryList));
+                GetRecentBlogPost();
             });
             reponse.error(function () {
                 $rootScope.layout.loading = false;
@@ -158,13 +136,24 @@
 
         if (recentblogpostList != null) {
             $scope.RecentBlogPostList = recentblogpostList;
-            $rootScope.layout.loading = false;
+            if ($scope.IsDetailPage == 0) {
+                $scope.GetBlogPostByCategory($scope.parameter, 1, $scope.limit);
+            }
+            else {
+                $scope.GetBlogPostByTitle($scope.parameter);
+            }
         }
         else {
             var reponse = $http.get(configurationService.basePath + 'api/BlogPostApi/GetRecentBlogPost');
             reponse.success(function (data) {
                 $scope.RecentBlogPostList = data;
                 localStorage.setItem("RecentBlogPostList", JSON.stringify($scope.RecentBlogPostList));
+                if ($scope.IsDetailPage == 0) {
+                    $scope.GetBlogPostByCategory($scope.parameter, 1, $scope.limit);
+                }
+                else {
+                    $scope.GetBlogPostByTitle($scope.parameter);
+                }
             });
             reponse.error(function () {
                 $rootScope.layout.loading = false;
@@ -173,14 +162,6 @@
     }
 
     GetAllCategories();
-    GetRecentBlogPost();
-
-    if ($scope.IsDetailPage == 0) {
-        $scope.GetBlogPostByCategory($scope.parameter, $scope.limit);
-    }
-    else {
-        $scope.GetBlogPostByTitle($scope.parameter);
-    }
 
     $scope.RedirectToBlogDetail = function (PostURL) {
         PostURL = PostURL.trim();

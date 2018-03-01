@@ -3341,7 +3341,6 @@ a.remove_field img {
 .list-view{ padding: 25px 0; border-bottom: 1px solid #ededed; }
 .list-view h2,
 .detail-view h2{ color: #232323; font-size: 20px; font-weight: 600; margin:0 0 5px 0;}
-
 .list-view .date,
 .detail-view .date{ color: #939393; font-size: 12px; margin-bottom: 15px; }
 
@@ -3363,7 +3362,7 @@ a.remove_field img {
     background: #232323;
     border-color: #232323;
     color: #fff;
-    font-size: 9px;
+    font-size: 12px;
     padding: 1px 17px;
     line-height: 22px;
     display: inline-block;

@@ -59,7 +59,7 @@ angular.module('app.directives', [])
         restrict: 'A',
         link: function ($scope, elem, attrs) {
             elem.ready(function () {
-                $scope.GetAllBlogPost();
+                //$scope.GetAllBlogPost();
             })
         }
     }

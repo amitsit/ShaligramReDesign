@@ -37,18 +37,38 @@ namespace ShaligramInfotechAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, list);
         }
 
+        //[HttpGet]
+        //public HttpResponseMessage GetAllBlogPostByCategory(int? CategoryId, int? pageSize)
+        //{
+        //    try
+        //    {
+        //        SqlParameter[] param = new SqlParameter[] {
+        //        new SqlParameter("@BlogPostCategoryId",(object)CategoryId??DBNull.Value),
+        //        new SqlParameter("@pageSize",(object)pageSize??DBNull.Value)
+        //        };
+
+
+        //        var list = _unitOfWork.SQLQuery<BlogPostEntity>("EXEC getBlogPost @BlogPostCategoryId, @pageSize", param).ToList();
+        //        return Request.CreateResponse(HttpStatusCode.OK, list);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+        //    }
+        //}
+
         [HttpGet]
-        public HttpResponseMessage GetAllBlogPostByCategory(int? CategoryId, int? pageSize)
+        public HttpResponseMessage GetAllBlogPostByCategory(int? CategoryId, int? pageFrom, int? pageSize)
         {
             try
             {
                 SqlParameter[] param = new SqlParameter[] {
-                new SqlParameter("@BlogPostCategoryId",(object)CategoryId??DBNull.Value),
-                new SqlParameter("@pageSize",(object)pageSize??DBNull.Value)
+                    new SqlParameter("@BlogPostCategoryId",(object)CategoryId??DBNull.Value),
+                    new SqlParameter("@PageFrom",(object)pageFrom??DBNull.Value),
+                    new SqlParameter("@PageSize",(object)pageSize??DBNull.Value)
                 };
 
-
-                var list = _unitOfWork.SQLQuery<BlogPostEntity>("EXEC getBlogPost @BlogPostCategoryId, @pageSize", param).ToList();
+                var list = _unitOfWork.SQLQuery<BlogPostEntity>("EXEC getBlogPostWithPaging @BlogPostCategoryId, @PageFrom, @PageSize", param).ToList();
                 return Request.CreateResponse(HttpStatusCode.OK, list);
             }
             catch (Exception ex)

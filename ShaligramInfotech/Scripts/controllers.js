@@ -13,7 +13,6 @@ angular.module('app.controllers', [])
         $scope.$root.metadescription = 'Shaligram InfoTech is leading Software Development Company USA. We are offering services like application development, product development, web portal development, responsive web development services.';
 
         localStorage.setItem("RecentBlogPostList", null);
-        localStorage.setItem("BlogPostList", null);
         localStorage.setItem("BlogPostCategories", null);
         
         

@@ -14,7 +14,9 @@
 
                         <div class="col-sm-6">
                             <div class="blog-text">
-                                <h2>{{bloglist.PostTitle}}</h2>
+                                <a ng-click="RedirectToBlogDetail(bloglist.PostURL)">
+                                    <h2>{{bloglist.PostTitle}}</h2>
+                                </a>
 
                                 <div class="date"><span>{{bloglist.PostDate | date :  "MMMM dd, y" }}</span> | <a ui-sref="blog({parameter: bloglist.CategoryId})">{{bloglist.CategoryName}}</a></div>
 
@@ -65,7 +67,7 @@
                 </div>
 
 
-                <button class="loadMore" ng-click='loadMore()' ng-if="$last && ((BlogPostList[0].TotalRecords > limit &&  IsCategoryPage !=1) || (BlogPostList.length > limit && IsCategoryPage == 1)) && IsDetailPage == 0">Load More</button>
+                <button class="loadMore" ng-click='loadMore()' ng-if="$last && BlogPostList[0].TotalRecords > limit">Load More</button>
             </div>
         </div>
 

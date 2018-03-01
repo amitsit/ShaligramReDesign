@@ -108,10 +108,10 @@ namespace ShaligramInfotechAPI.Controllers
         {
             if (string.IsNullOrEmpty(encodedResponse)) return false;
             // for local
-            var secret = "6LdSvz8UAAAAAAfUnqC4KtCxgAZx6XWVUl1ZDIno";
+            //var secret = "6LdSvz8UAAAAAAfUnqC4KtCxgAZx6XWVUl1ZDIno";
 
             //for company
-            //var secret = "6Ld6REYUAAAAAOiBvyukVgozNigfy-kZwdL-N2bz";
+            var secret = "6Ld6REYUAAAAAOiBvyukVgozNigfy-kZwdL-N2bz";
             if (string.IsNullOrEmpty(secret)) return false;
 
             var client = new System.Net.WebClient();
