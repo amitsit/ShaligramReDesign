@@ -2649,7 +2649,6 @@
     <Content Include="Views\SCPages\pricecomparisonuk.cshtml" />
     <Content Include="Views\SCPages\requestquote.cshtml" />
     <Content Include="Views\SCPages\BlogPost.cshtml" />
-    <Content Include="Views\SCPages\GetParticularBlogDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

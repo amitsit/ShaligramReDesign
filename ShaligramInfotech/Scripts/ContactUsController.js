@@ -6,8 +6,8 @@ angular.module('app.controllers')
         $scope.$root.metakeyword = 'Ecommerce Portal Development  Company, Ecommerce Portal Development Company USA, Ecommerce Portal Development Company UK';
         $scope.$root.metadescription = 'Shaligram Infotech is leading Ecommerce Portal Development Company USA . We are offering services like Ecommerce shopping cart development, custom erp development, retail erp software development, data migration services etc';
 
+        $scope.widgetId;
         $scope.ContactUs = new Object();
-
         $scope.files = [];
 
         $scope.$on("seletedFile", function (event, args) {
@@ -15,6 +15,10 @@ angular.module('app.controllers')
                 $scope.files.push(args.file);
             });
         });
+
+        $scope.onWidgetCreate = function (_widgetId) {
+            $scope.widgetId = _widgetId;
+        };
 
         $scope.resetForm = function () {
             $scope.ContactUs.Name = null;
@@ -24,6 +28,7 @@ angular.module('app.controllers')
             $scope.ContactUs.Company = null;
             $scope.ContactUs.Message = null;
             angular.element("input[type='file']").val(null);
+            vcRecaptchaService.reload($scope.widgetId);
         }
 
         $scope.SaveContactUsDetails = function (form) {
@@ -69,27 +74,32 @@ angular.module('app.controllers')
 
                             },
                             data: { model: $scope.contactUsData, files: $scope.files }
+                        }).success(function (data, status, headers, config) {
+                            $('.loader').hide();
+                            $("#myModal").modal('show');
+                            vcRecaptchaService.reload($scope.widgetId);
                         }).
-                            success(function (data, status, headers, config) {
-                                $('.loader').hide();
-                                $("#myModal").modal('show');
-                            }).
                             error(function (data, status, headers, config) {
+                                vcRecaptchaService.reload($scope.widgetId);
                                 $('.loader').hide();
                             });
                     }
                     else {
+                        vcRecaptchaService.reload($scope.widgetId);
                         alert("Please fill captcha");
                     }
                 })
                 .error(function (data, status, header, config) {
+                    vcRecaptchaService.reload($scope.widgetId);
                     alert("Something went wrong. Please try again!");
                 });
             }
             else if (googleResponse == "") {
                 ContactUsForm.$valid = false;
+                vcRecaptchaService.reload($scope.widgetId);
                 $scope.googleRecaptchaValidationMessage = true;
             }
         }
+
     }
 );

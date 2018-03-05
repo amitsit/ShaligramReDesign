@@ -4,7 +4,7 @@
             $scope.$root.title = 'Shaligram Infotech Contact Us | Ecommerce Portal Development Company USA | Ecommerce Portal Development Company UK';
             $scope.$root.metakeyword = 'Ecommerce Portal Development  Company, Ecommerce Portal Development Company USA, Ecommerce Portal Development Company UK';
             $scope.$root.metadescription = 'Shaligram Infotech is leading Ecommerce Portal Development Company USA . We are offering services like Ecommerce shopping cart development, custom erp development, retail erp software development, data migration services etc';
-
+            var widgetId;
             $scope.RequestQuote = new Object();
 
             $scope.files = [];
@@ -25,6 +25,7 @@
                 $scope.RequestQuote.BudgetId = null;
                 $scope.RequestQuote.ProjectDescription = null;
                 angular.element("input[type='file']").val(null);
+                vcRecaptchaService.reload(widgetId);
             }
 
             $scope.SaveRequestQuoteDetails = function (form) {
@@ -79,22 +80,31 @@
                              success(function (data, status, headers, config) {
                                  $('.loader').hide();
                                  $("#myModal").modal('show');
+                                 vcRecaptchaService.reload(widgetId);
                              }).
                              error(function (data, status, headers, config) {
                                  $('.loader').hide();
+                                 vcRecaptchaService.reload(widgetId);
                              });
                         }
                         else {
                             alert("Please fill captcha");
+                            vcRecaptchaService.reload(widgetId);
                         }
                     })
                     .error(function (data, status, header, config) {
                         alert("Something went wrong. Please try again!");
+                        vcRecaptchaService.reload(widgetId);
                     });
                 }
                 else if (googleResponse == "") {
                     RequestQuoteForm.$valid = false;
                     $scope.googleRecaptchaValidationMessage = true;
+                    vcRecaptchaService.reload(widgetId);
                 }
             }
+
+            $scope.onWidgetCreate = function (_widgetId) {
+                widgetId = _widgetId;
+            };
         });
