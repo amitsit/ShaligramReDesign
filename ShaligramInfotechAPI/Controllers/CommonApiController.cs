@@ -316,6 +316,7 @@ namespace ShaligramInfotechAPI.Controllers
             public string FileName { get; set; }
             public string Image { get; set; }
             public string Link { get; set; }
+            public bool IsImage { get; set; }
         }
 
         // for contact us file attachment
@@ -354,6 +355,7 @@ namespace ShaligramInfotechAPI.Controllers
                                 byte[] imageBytes = m.ToArray();
                                 document.Image = Convert.ToBase64String(imageBytes);
                                 document.Link = "data:image/gif;base64," + Convert.ToBase64String(imageBytes);
+                                document.IsImage = true;
                             }
                         }
                     }
@@ -368,6 +370,7 @@ namespace ShaligramInfotechAPI.Controllers
                                 byte[] imageBytes = m.ToArray();
                                 document.Image = Convert.ToBase64String(imageBytes);
                                 document.Link = "/GetContactAttachmentFile?FileName=" + document.FileName;
+                                document.IsImage = false;
                             }
                         }
                     }
@@ -429,6 +432,7 @@ namespace ShaligramInfotechAPI.Controllers
                                 byte[] imageBytes = m.ToArray();
                                 document.Image = Convert.ToBase64String(imageBytes);
                                 document.Link = "data:image/gif;base64," + Convert.ToBase64String(imageBytes);
+                                document.IsImage = true;
                             }
                         }
                     }
@@ -443,6 +447,7 @@ namespace ShaligramInfotechAPI.Controllers
                                 byte[] imageBytes = m.ToArray();
                                 document.Image = Convert.ToBase64String(imageBytes);
                                 document.Link = "/GetRequestQuoteAttachmentFile?FileName=" + document.FileName;
+                                document.IsImage = false;
                             }
                         }
                     }
