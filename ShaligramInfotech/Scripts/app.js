@@ -586,7 +586,7 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
 // Gets executed after the injector is created and are used to kickstart the application. Only instances and constants
 // can be injected here. This is to prevent further system configuration during application run time.
 
-app.run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', function ($templateCache, $rootScope, $state, $stateParams, $sce, $timeout) {
+app.run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', '$timeout', function ($templateCache, $rootScope, $state, $stateParams, $sce, $timeout) {
 
     // <ui-view> contains a pre-rendered template for the current view
     // caching it will prevent a round-trip to a server at the first page load
@@ -616,21 +616,9 @@ app.run(['$templateCache', '$rootScope', '$state', '$stateParams', '$sce', funct
         $rootScope.layout.loading = false;
     });
 
-    //$rootScope.tech_image = function (tech_name, tech_url) {
-    //    debugger
-    //    var dir_img_path='/Images/';
-    //    var dire_name= dir_img_path+tech_name;
 
-    //    $.ajax({
-    //        url: dire_name,
-    //        async: false,
-    //        cache: false,
-    //        success: function (data) {
-    //            debugger;
-    //        }
-    //    });
-
-    //    //return $sce.trustAsHtml('<div class="res img-responsive">  <img src="'.$src.$imgname .'" alt="'.$name[0].'" title="'.$name[0].'"  /></div>');
-    //}
+    $rootScope.$on("$locationChangeSuccess", function () {
+        jQuery("html, body").animate({ scrollTop: 0 }, 500);
+    });
 
 }]);
