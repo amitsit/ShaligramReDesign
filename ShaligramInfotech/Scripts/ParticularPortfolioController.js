@@ -62,9 +62,9 @@ angular.module('app.controllers').controller('ParticularPortfolioController', fu
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" w3-white", " ");
             }
+
             x[$scope.slideIndex - 1].style.display = "block";
         }
-        //dots[slideIndex - 1].className += " w3-white";
     }
 
 
