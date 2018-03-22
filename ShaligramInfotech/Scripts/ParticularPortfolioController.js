@@ -19,9 +19,11 @@ angular.module('app.controllers').controller('ParticularPortfolioController', fu
                 if (data.SEOTitleTag != null) {
                     $scope.$root.title = data.SEOTitleTag;
                 }
+
                 if (data.MetaKeyword != null) {
                     $scope.$root.metakeyword = data.MetaKeyword;
                 }
+
                 if (data.MetaDescription != null) {
                     $scope.$root.metadescription = data.MetaDescription;
                 }

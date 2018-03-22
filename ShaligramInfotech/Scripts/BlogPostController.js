@@ -39,8 +39,7 @@
         if (categoryId == undefined || categoryId == "") {
             categoryId = null;
         }
-        else
-        {
+        else {
             $scope.CategoryId = categoryId;
         }
 
@@ -83,6 +82,12 @@
             $scope.BlogPostList = [];
             $scope.BlogPostList = data;
 
+            if ($scope.BlogPostList.length > 0) {
+                $scope.$root.title = $scope.BlogPostList[0].PostPageTitle;
+                $scope.$root.metakeyword = $scope.BlogPostList[0].MetaKeywords;
+                $scope.$root.metadescription = $scope.BlogPostList[0].MetaDesc;
+            }
+
             $timeout(function () {
                 $rootScope.layout.loading = false;
             }, 1500);
@@ -91,11 +96,7 @@
             $rootScope.layout.loading = false;
         });
 
-        if ($scope.BlogPostList.length > 0) {
-            $scope.$root.title = $scope.BlogPostList[0].PostPageTitle;
-            $scope.$root.metakeyword = $scope.BlogPostList[0].MetaKeywords;
-            $scope.$root.metadescription = $scope.BlogPostList[0].MetaDesc;
-        }
+
     }
 
 

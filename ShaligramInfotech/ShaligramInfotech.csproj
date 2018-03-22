@@ -2616,7 +2616,7 @@
     <Content Include="Views\SCPages\angularjs-development.cshtml" />
     <Content Include="Views\SCPages\ajax-development.cshtml" />
     <Content Include="Views\SCPages\html5-development.cshtml" />
-    <Content Include="Views\SCPages\php-open-source.cshtml" />
+    <Content Include="Views\SCPages\php-open-source-development.cshtml" />
     <Content Include="Views\SCPages\hadoop-development.cshtml" />
     <Content Include="Views\SCPages\domain-expertise.cshtml" />
     <Content Include="Views\SCPages\software-product-development.cshtml" />
@@ -2637,11 +2637,11 @@
     <Content Include="Views\SCPages\sr-sharepoint-developer.cshtml" />
     <Content Include="Views\SCPages\sr-java-developer.cshtml" />
     <Content Include="Views\SCPages\application-development.cshtml" />
-    <Content Include="Views\SCPages\biztalk.cshtml" />
-    <Content Include="Views\SCPages\java.cshtml" />
-    <Content Include="Views\SCPages\microsoft-dot-net.cshtml" />
-    <Content Include="Views\SCPages\nodejs.cshtml" />
-    <Content Include="Views\SCPages\sharepoint.cshtml" />
+    <Content Include="Views\SCPages\biztalk-development.cshtml" />
+    <Content Include="Views\SCPages\java-development.cshtml" />
+    <Content Include="Views\SCPages\microsoft-dot-net-development.cshtml" />
+    <Content Include="Views\SCPages\nodejs-development.cshtml" />
+    <Content Include="Views\SCPages\sharepoint-development.cshtml" />
     <Content Include="Views\SCPages\GetParticularPortfolioDetail.cshtml" />
     <Content Include="Views\SCPages\portfolio-index.cshtml" />
     <Content Include="Views\SCPages\pricecomparisonus.cshtml" />

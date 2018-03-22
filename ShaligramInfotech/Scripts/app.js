@@ -80,8 +80,8 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
             controller: 'html5DevelopmentCntrl'
         })
         .state('php-open-source', {
-            url: '/php-open-source',
-            templateUrl: '/views/SCPages/php-open-source',
+            url: '/php-open-source-development',
+            templateUrl: '/views/SCPages/php-open-source-development',
             controller: 'phpOpenSourceCntrl'
         })
         .state('hadoop-development', {
@@ -491,28 +491,28 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
             controller: 'ApplicationDevelopmentCtrl'
         })
         .state('sharepoint', {
-            url: '/sharepoint',
-            templateUrl: '/views/SCPages/sharepoint',
+            url: '/sharepoint-development',
+            templateUrl: '/views/SCPages/sharepoint-development',
             controller: 'SharepointCtrl'
         })
         .state('java', {
-            url: '/java',
-            templateUrl: '/views/SCPages/java',
+            url: '/java-development',
+            templateUrl: '/views/SCPages/java-development',
             controller: 'JavaCtrl'
         })
         .state('biztalk', {
-            url: '/biztalk',
-            templateUrl: '/views/SCPages/biztalk',
+            url: '/biztalk-development',
+            templateUrl: '/views/SCPages/biztalk-development',
             controller: 'BiztalkCtrl'
         })
         .state('microsoft-dot-net', {
-            url: '/microsoft-dot-net',
-            templateUrl: '/views/SCPages/microsoft-dot-net',
+            url: '/microsoft-dot-net-development',
+            templateUrl: '/views/SCPages/microsoft-dot-net-development',
             controller: 'MicrosoftDotNetCtrl'
         })
         .state('nodejs', {
-            url: '/nodejs',
-            templateUrl: '/views/SCPages/nodejs',
+            url: '/nodejs-development',
+            templateUrl: '/views/SCPages/nodejs-development',
             controller: 'NodejsCtrl'
         })
         .state('career', {

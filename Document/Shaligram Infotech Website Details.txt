@@ -1,0 +1,29 @@
+Database Credentials
+======================================
+
+Server : 5.9.90.104
+Databse : ShaligramInfotech 
+User ID = ShaligramInfotech
+Password=Qazxsw@!123456
+
+--------------------------------------------------------------------------
+Staging Publish : http://27.109.4.86:1069/
+Staging Site Folder : \\192.168.1.145\Amitp\ShaligramInfotechTest
+UserName : sitdomain\amit.p
+Password : golmal@123
+--------------------------------------------------------------------------
+
+Live Site Desktop Connection : 5.9.90.104
+
+
+Live Site FTP Credentials For Visitor Side 
+
+Host : 5.9.90.104
+User : sit_user
+Password : Jaypal@1000
+
+Live Site FTP Credentials for Admin Side
+
+Host : 5.9.90.104
+User : sit
+Password : Jaypal@1000

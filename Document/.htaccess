@@ -1,0 +1,56 @@
+
+Redirect 301 /index/index.php /home -- done
+Redirect 301 /index/index /home -- done
+Redirect 301 /about/about-company.php /company/who-we-are.php -- done
+Redirect 301 /about/about-us.php /company/who-we-are.php -- done
+Redirect 301 /about/career.php /company/career.php -- done
+Redirect 301 /about/management.php /company/leadership.php -- done
+Redirect 301 /about/process.php /company/development-process.php -- done
+Redirect 301 /contacts/contact-us.php /contact/contact-us.php --done
+
+
+Redirect 301 /technology /technologies
+Redirect 301 /portfolio/rove-logix.php /portfolio/portfolio.php 
+Redirect 301 /portfolio/porto.php /portfolio/portfolio.php
+Redirect 301 /portfolio/project-management-system.php /portfolio/project_managagement.php
+
+
+Redirect 301 /technologies/technologies.php /technologies/sharepoint.php -- done
+Redirect 301 /career /careers --done
+Redirect 301 /solutions/ad-solution.php /home --done
+Redirect 301 /solutions/job-portal-solution.php /home -- done
+Redirect 301 /services/dedicated-development-center.php /home --done
+Redirect 301 /services/product-development.php /services/software-product-development.php --done
+Redirect 301 /contact/contact.php /contact/contact-us.php --done
+Redirect 301 /careers/jr-java-developer.php /company/career.php --done
+Redirect 301 /contacts/request-for-quote.php /contact/contact-us.php --done
+Redirect 301 /company/work-flow-system.php /company/development-process.php --done
+Redirect 301 /atom /home --done
+Redirect 301 /Services/application-development.php /services/software-application-development.php --done
+Redirect 301 /industries/industries.php /domain-expertise/domain-expertise.php --done
+Redirect 301 /about/about.php /company/who-we-are.php --done
+Redirect 301 /services/application-development.php /services/software-application-development.php --done
+Redirect 301 /solutions/hr-solution.php /solutions/hrandjob-portal-solution.php -- done
+Redirect 301 /about/ip-protection.php /home --done
+Redirect 301 /contacts/ /contact/contact-us.php --done
+Redirect 301 /technologies/alfresco.php /technologies/sharepoint.php --done
+Redirect 301 /solutions/solutions.php /solutions/crm-solution.php --done
+Redirect 301 /solutions/epos-solution.php /solutions/crm-solution.php --done
+Redirect 301 /careers/index.php /company/career.php --done
+Redirect 301 /industries/domain_expertise.php /domain-expertise/domain-expertise.php --done
+Redirect 301 /technologies/liferay.php /technologies/sharepoint.php --done
+Redirect 301 /services/services.php /services/software-application-development.php --done
+Redirect 301 /solutions/hrjob-solution.php /solutions/hrandjob-portal-solution.php --done
+Redirect 301 /portfolio/insurance-policy-admin.php /portfolio/insurance-policy-administration.php --done
+Redirect 301 /domain-expertise/index.php /domain-expertise/domain-expertise.php --done
+Redirect 301 /services/index.php /services/software-application-development.php --done
+Redirect 301 /technologies/sharepoint.php /technologies/sharepoint-development.php --done
+Redirect 301 /technologies/java.php /technologies/java-development.php --done
+Redirect 301 /technologies/biztalk.php /technologies/biztalk-development.php --done
+Redirect 301 /technologies/microsoft-dot-net.php /technologies/microsoft-dot-net-development.php --done
+Redirect 301 /technologies/nodejs.php /technologies/nodejs-development.php --done
+Redirect 301 /technologies/angularjs.php /technologies/angularjs-development.php --done
+Redirect 301 /technologies/ajax.php /technologies/ajax-development.php --done
+Redirect 301 /technologies/html5.php /technologies/html5-development.php --done
+
+
