@@ -568,6 +568,11 @@ app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $lo
             templateUrl: '/views/SCPages/requestquote',
             controller: 'RequestQuoteController'
         })
+          .state('subscribe', {
+              url: '/subscribe',
+              templateUrl: '/views/SCPages/Subscription',
+              controller: 'SubscriptionController'
+          })
         .state('otherwise', {
             url: '*path',
             templateUrl: '/views/404',

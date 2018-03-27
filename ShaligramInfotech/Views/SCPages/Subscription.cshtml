@@ -1,0 +1,92 @@
+﻿<div ng-controller="SubscriptionController">
+    <div class="form-section">
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col-md-6" style="padding:0px;">
+                    <div class="cover-background section2" style="background-image:url('../Images/cont.jpg'); padding-top:30px;">
+                        <div class="opacity-full"></div>
+                        <div class="title text-center">
+                            <h4>Subscribe for updates</h4>
+                        </div>
+                        <form name="SubscriptionForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6 col-sm-12">
+                                    <input placeholder="Full Name" type="text" ng-model="Subscription.Name" name="FullName"
+                                           class="form-control" ng-class="{'required-error' : (SubscriptionForm.$submitted && (!SubscriptionForm.$valid) && SubscriptionForm.FullName.$error.required)}" required />
+
+                                    <input placeholder="Email Address" type="email" ng-model="Subscription.EmailAddress" name="EmailAddress"
+                                           class="form-control" ng-class="{'required-error' : (SubscriptionForm.$submitted && (!SubscriptionForm.$valid) && (SubscriptionForm.EmailAddress.$error.required || SubscriptionForm.EmailAddress.$error.email))}" required />
+
+                                    @*<p>
+                            <span ng-class="{'span-error' : (SubscriptionForm.$submitted && (!SubscriptionForm.$valid) && googleRecaptchaValidationMessage)}">Please fill Captcha</span>
+                            <div vc-recaptcha key="'6Ld6REYUAAAAAIK11VtasE3g-BL89ZX68JrdSPi-'" on-create="onWidgetCreate(widgetId)"></div>
+                            <div vc-recaptcha key="'6LdSvz8UAAAAAKygptbKgD3R3Y4UmDupZtn-nzk6'" on-create="onWidgetCreate(widgetId)"></div>
+                        </p>*@
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn btn1" name='submit' id='submit' ng-click="SaveSubscriptionDetails(SubscriptionForm)">Send Message</button>
+                                    <button type="button" class="btn btn2" ng-click="resetForm()">Reset</button>
+                                </div>
+                                <div style="clear:both;"></div>
+                                <br />
+                            </div>
+                        </form>
+                    </div>
+                    <div style="clear:both"></div><br />
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <img src="/images/shaligrammap.PNG" alt="shaligram-map" title="shaligram infotech" class="img-responsive">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section1 col-md-6">
+                    <br /><br /><br />
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                            <div class="box">
+                                <img alt="flag india" src="/images/flags/india1.png" title="India">
+                                <h4>India</h4>
+                                <p>Shaligram House, Behind Rajpath Club,<br>Off. S.G. Road, Bodakdev,<br>Ahmedabad-380059, India</p>
+                                <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+91-9727212899">+91-9727212899</a><br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                            <div class="box">
+                                <img alt="flag uk" src="/images/flags/uk.png" title="UK">
+                                <h4>UK</h4>
+                                <p>100, College Road, Harrow,<br>London, HA1 1BQ,<br>United Kingdom</p>
+                                <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+44 20 3581 6366">+44 20 3581 6366</a><br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div><br /><br />
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                            <div class="box">
+                                <img alt="flag USA" src="/images/flags/us.png" title="USA">
+                                <h4>USA</h4>
+                                <p>14793 Pensham Drive,<br>Frisco TX 75035, USA</p>
+                                <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+1-210-888-8402">+1-210-888-8402</a><br><strong><i class="fa fa-fax"></i> :</strong> 844-255-9976<br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                            <div class="box">
+                                <img alt="flag australia" src="/images/flags/australia.png" title="Australia">
+                                <h4>Australia</h4>
+                                <p>Level 36, 71 Eagle Street,<br>Brisbane, QLD 4000</p>
+                                <p><strong><i class="fa fa-phone"></i> :</strong> <a href="tel:+61 07 3121 3147">+61 07 3121 3147</a><br><strong><i class="fa fa-phone"></i> :</strong> +61 0422 019 223<br><strong><i class="fa fa-skype"></i></strong> : <a href="skype:shaligraminfotech?chat">shaligraminfotech</a><br><strong><i class="fa fa-envelope-o"></i> :</strong> <a href="mailto:info@shaligraminfotech.com">info@shaligraminfotech.com</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="clear:both"></div>
+                    
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

@@ -35,6 +35,10 @@ namespace App.ShaligramInfotech.Routing
                         {
                             filePath = "~/views/SCPages/GetParticularPortfolioDetail";
                         }
+                        else if (filePath.Equals("~/subscribe", StringComparison.OrdinalIgnoreCase))
+                        {
+                            filePath = "~/views/SCPages/Subscription";
+                        }
                         else if (filePath.Equals("~/portfolio", StringComparison.OrdinalIgnoreCase))
                         {
                             filePath = "~/views/SCPages/portfolio-index";

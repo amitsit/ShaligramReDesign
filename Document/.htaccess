@@ -7,14 +7,10 @@ Redirect 301 /about/career.php /company/career.php -- done
 Redirect 301 /about/management.php /company/leadership.php -- done
 Redirect 301 /about/process.php /company/development-process.php -- done
 Redirect 301 /contacts/contact-us.php /contact/contact-us.php --done
-
-
 Redirect 301 /technology /technologies
 Redirect 301 /portfolio/rove-logix.php /portfolio/portfolio.php 
 Redirect 301 /portfolio/porto.php /portfolio/portfolio.php
 Redirect 301 /portfolio/project-management-system.php /portfolio/project_managagement.php
-
-
 Redirect 301 /technologies/technologies.php /technologies/sharepoint.php -- done
 Redirect 301 /career /careers --done
 Redirect 301 /solutions/ad-solution.php /home --done

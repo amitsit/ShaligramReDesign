@@ -2154,6 +2154,7 @@
     <Content Include="Scripts\services.spec.js">
       <DependentUpon>services.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\SubscriptionController.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\vendor\angular-csp.css" />
     <Content Include="Scripts\vendor\angular-recaptcha.js" />
@@ -2649,6 +2650,7 @@
     <Content Include="Views\SCPages\pricecomparisonuk.cshtml" />
     <Content Include="Views\SCPages\requestquote.cshtml" />
     <Content Include="Views\SCPages\BlogPost.cshtml" />
+    <Content Include="Views\SCPages\Subscription.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

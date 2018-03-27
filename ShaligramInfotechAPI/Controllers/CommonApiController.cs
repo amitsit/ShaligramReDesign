@@ -205,6 +205,36 @@ namespace ShaligramInfotechAPI.Controllers
         }
 
         [HttpPost]
+        public HttpResponseMessage SaveSubscriptionInformation(SubscriptionEntity subscriptiondata)
+        {
+            try
+            {
+                var subscriptionid= _unitOfWork.SQLStringReturn("EXEC SaveSubscriptionInformation @Name,@EmailAddress", new SqlParameter[]
+                             {
+                                new SqlParameter("@Name", subscriptiondata.Name),
+                                new SqlParameter("@EmailAddress",subscriptiondata.EmailAddress),
+                             });
+
+                if (Convert.ToInt32(subscriptionid) > 0)
+                {
+                    string AdminMail = System.Configuration.ConfigurationManager.AppSettings["ContactUsEmailId"];
+                    string bodyAdminTemplate = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.MapPath("~/EmailTemplate/AdminSubscription.html"));
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@FullName]", subscriptiondata.Name);
+                    bodyAdminTemplate = bodyAdminTemplate.Replace("[@Email]", subscriptiondata.EmailAddress);
+
+                    Task Admintask = new Task(() => Email.Send(AdminMail, bodyAdminTemplate, "Subscription Request from " + subscriptiondata.Name, "", null));
+                    Admintask.Start();
+                }
+
+                return Request.CreateResponse(HttpStatusCode.OK, "success!");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPost]
         public async Task<HttpResponseMessage> SaveRequestQuote()
         {
             try

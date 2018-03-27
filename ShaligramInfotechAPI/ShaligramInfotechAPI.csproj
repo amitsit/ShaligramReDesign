@@ -254,6 +254,7 @@
     <Compile Include="Entities\PortfolioResultEntity.cs" />
     <Compile Include="Entities\PortfolioSolutionEntity.cs" />
     <Compile Include="Entities\PortfolioTechnologyEntity.cs" />
+    <Compile Include="Entities\SubscriptionEntity.cs" />
     <Compile Include="Entities\TechnologyEntity.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -289,10 +290,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="EmailTemplate\AdminContactUs.html" />
     <Content Include="EmailTemplate\AdminRequestQuote.html" />
-    <Content Include="EmailTemplate\contactUsEmail.html" />
-    <Content Include="EmailTemplate\contactUsThankuEmail.html" />
-    <Content Include="EmailTemplate\EmailTemplate.html" />
-    <Content Include="EmailTemplate\ThankuEmail.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -459,6 +456,7 @@
       <DependentUpon>ShaligramInfotechModel.edmx</DependentUpon>
     </Content>
     <Compile Include="Entities\RequestQuoteEntity.cs" />
+    <Content Include="EmailTemplate\AdminSubscription.html" />
     <None Include="Properties\PublishProfiles\ShaligramInfotechAPI.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
