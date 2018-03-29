@@ -644,7 +644,7 @@ ol, ul, li {
 }
 
 .contact-us .section1 {
-    padding: 20px;
+    padding: 0 20px;
 }
 /*.form-section .section1 .box p:first-child { margin-bottom: 20px; }*/
 /*.form-section .section1 .box img { width: 50px; margin-bottom: 20px; }/*
@@ -1714,6 +1714,7 @@ section {
         color: #232323;
         font-weight: 600;
         font-size: 15px;
+        display:inline-block;
     }
 
 .form-section .section2 .title {
