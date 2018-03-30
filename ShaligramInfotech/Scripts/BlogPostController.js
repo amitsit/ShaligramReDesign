@@ -86,6 +86,7 @@
                 $scope.$root.title = $scope.BlogPostList[0].PostPageTitle;
                 $scope.$root.metakeyword = $scope.BlogPostList[0].MetaKeywords;
                 $scope.$root.metadescription = $scope.BlogPostList[0].MetaDesc;
+                bindBlogMetatags($scope.BlogPostList[0].MetaKeywords, $scope.BlogPostList[0].MetaDesc);
             }
 
             $timeout(function () {
@@ -97,6 +98,16 @@
         });
 
 
+    }
+
+    function bindBlogMetatags(keyword, description) {
+        var setBlogMetatags = $http.get("/Setmetatags?keyword=" + keyword + "&description=" + description);
+        setBlogMetatags.success(function (data) {
+
+        });
+        setBlogMetatags.error(function () {
+
+        });
     }
 
 

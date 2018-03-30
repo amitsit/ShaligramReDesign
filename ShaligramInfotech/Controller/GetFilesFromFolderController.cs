@@ -27,5 +27,13 @@ namespace App.ShaligramInfotech.Controller
         {
             return Content("Test");
         }
+
+        [Route("Setmetatags")]
+        [HttpGet]
+        public void Setmetatags(string keyword, string description)
+        {
+            MetaTagsList.metakeyword = keyword;
+            MetaTagsList.metakeyword = description;
+        }
     }
 }
